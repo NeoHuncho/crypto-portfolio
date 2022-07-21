@@ -1,5 +1,6 @@
 import { getAllOrders } from "../data/dataBinance";
-import type { Data } from "../types/interfaces";
+import type { Data } from "../../../common/types/interfaces";
+import logToFile from "../utils/log";
 
 const processTrades = async (data: Data) => {
   const checkKey = (key: string) => {
@@ -94,7 +95,7 @@ const processTrades = async (data: Data) => {
         data["meta"].coinSellBalance[key] = priceDataSell;
       }
     } catch (error) {
-      console.log("error", key, error);
+      await logToFile("errors", "error in trades for " + key);
     }
   }
   return data;

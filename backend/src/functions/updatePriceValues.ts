@@ -1,5 +1,6 @@
 import { getAvgPrice } from "../data/dataBinance";
-import type { Data, ExchangeRates } from "../types/interfaces";
+import type { Data, ExchangeRates } from "../../../common/types/interfaces";
+import logToFile from "../utils/log";
 
 const updatePriceValues = async (
   data: Data,
@@ -45,7 +46,6 @@ const updatePriceValues = async (
       data["general"].coinsData.value += coin.amountValue.value;
       data["general"].coinsData.spotValue += coin.spot.value;
 
-
       coin.interest.value = coin.interest.amount * value;
       data["general"].coinsData.stakedValue += coin.staked.value;
       coin.dailyInterest.value = coin.dailyInterest.amount * value;
@@ -59,7 +59,7 @@ const updatePriceValues = async (
         return item;
       });
     } catch (error) {
-      console.log(key, error);
+      await logToFile("errors", "error in updatePriceValues for " + coin);
     }
   }
 

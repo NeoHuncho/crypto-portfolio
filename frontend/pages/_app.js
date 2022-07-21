@@ -6,13 +6,13 @@ import "firebase/auth";
 import { Fuego, FuegoProvider } from "swr-firestore-v9";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCwEypdaCAvyqV34SRILd3_2Njnnely8wY",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "crypto-portfolio-df8df.firebaseapp.com",
   projectId: "crypto-portfolio-df8df",
   storageBucket: "crypto-portfolio-df8df.appspot.com",
-  messagingSenderId: "551415102280",
-  appId: "1:551415102280:web:b1f39f5406302bb385117d",
-  measurementId: "G-MJE4FP5F3T",
+  messagingSenderId: process.env.FIREBASE_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 const fuego = new Fuego(firebaseConfig);

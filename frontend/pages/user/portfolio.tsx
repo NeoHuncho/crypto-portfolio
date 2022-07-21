@@ -7,27 +7,34 @@ import { sortDataDesc } from "../../utils/sortDataCrypto";
 import euroLogo from "../../assets/cryptoLogos/euro.png";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Data } from "@common/types/interfaces";
 
 export default function Home() {
   const router = useRouter();
   const auth = getAuth();
-  const [userUID, setUserUID] = useState(null);
+  const [userUID, setUserUID] = useState("");
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
-      console.log(user);
       if (user?.uid) setUserUID(user.uid);
       else return router.push("/user/signup_login");
     });
   });
 
-  const { data, update, error } = useDocument(`users/${userUID}`, {
+  const { data, update, error } = useDocument<Data>(`users/${userUID}`, {
     listen: true,
   });
 
-  if (!data?.general) return <p>Loading....</p>;
-  const profitLoss = (
-    data.general.totalValue - data.general.totalSpend
-  ).toFixed(2);
+  useEffect(() => {
+    if (!data) return;
+    if (typeof data.coins === "string") data.coins = JSON.parse(data.coins);
+  }, [data?.coins]);
+
+  if (!data?.general || typeof data.coins === "string")
+    return <p>Loading....</p>;
+
+  const profitLoss = parseFloat(
+    (data.general.coinsData.value - data.general.coinsData.spend).toFixed(2)
+  );
   return (
     <div className="bg-gray-900">
       <Head>
@@ -44,7 +51,8 @@ export default function Home() {
           <div className="flex justify-center items-center flex-col mx-10">
             <p className="text-gray-200 text-xl font-bold">Current Value</p>
             <p className="text-gray-200 text-3xl font-bold">
-              {data.general.totalValue.toFixed(2) + data.general.currencySymbol}
+              {data.general.coinsData.value.toFixed(2) +
+                data.general.currencySymbol}
             </p>
           </div>
           <div className="flex justify-center items-center flex-col mx-10">
@@ -63,11 +71,13 @@ export default function Home() {
           <div className="flex justify-center items-center flex-col mx-10">
             <p className="text-gray-200 text-xl font-bold">Total Spend</p>
             <p className="text-gray-200 text-3xl font-bold">
-              {data.general.totalSpend.toFixed(2) + data.general.currencySymbol}
+              {data.general.coinsData.spend.toFixed(2) +
+                data.general.currencySymbol}
             </p>
             <p className="text-gray-200 text-xs">
               (Including Taxes:
-              {data.general.totalTaxes.toFixed(2) + data.general.currencySymbol}
+              {data.general.coinsData.taxes.toFixed(2) +
+                data.general.currencySymbol}
               )
             </p>
           </div>
@@ -91,7 +101,7 @@ export default function Home() {
                     width={30}
                     height={30}
                   />
-                  <h1 className="mx-5 text-gray-200 text-xl text-gray-200 text-center self-center font-semibold">
+                  <h1 className="mx-5  text-xl text-gray-200 text-center self-center font-semibold">
                     {coin}
                   </h1>
                 </div>
@@ -101,16 +111,16 @@ export default function Home() {
                     <h1 className="mx-5 text-gray-200 text-xs item-start">
                       Total:
                     </h1>
-                    <h1 className=" text-gray-200 text-center text-gray-200 text-l justify-self-end w-full">
-                      {values.value?.toFixed(2)}€
+                    <h1 className="  text-center text-gray-200 text-l justify-self-end w-full">
+                      {values.amountValue.value?.toFixed(2)}€
                     </h1>
                   </div>
                   <div className="flex flex-col items-center  w-full">
                     <h1 className="mx-5 text-gray-200 text-xs item-start">
                       Spot/Savings:
                     </h1>
-                    <h1 className="mx-5 text-gray-200 text-l text-gray-200 text-center">
-                      {values.totalSpotValue?.toFixed(2)}€
+                    <h1 className="mx-5  text-l text-gray-200 text-center">
+                      {values.spot.value?.toFixed(2)}€
                     </h1>
                   </div>
 
@@ -119,8 +129,8 @@ export default function Home() {
                       Staking:
                     </h1>
                     <h1 className="mx-5 text-gray-200 text-l">
-                      {values.totalStakedValue
-                        ? values.totalStakedValue.toFixed(2) + "€"
+                      {values.staked.value
+                        ? values.staked.value.toFixed(2) + "€"
                         : "--"}
                     </h1>
                   </div>
@@ -129,7 +139,7 @@ export default function Home() {
                   <div className="flex flex-col items-center justify-center">
                     {values.currentCoinValue && (
                       <>
-                        <h1 className="mx-5 text-gray-200 text-xs text-gray-200 text-center self-center">
+                        <h1 className="mx-5  text-xs text-gray-200 text-center self-center">
                           Current Value:
                         </h1>
                         <div className="flex flex-row items-center ">
@@ -177,7 +187,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className=" col-span-2 flex flex-row items-center">
-                  {values.stakingData && (
+                  {values.staked.amount && (
                     <>
                       {values.remainingStakingAmount && (
                         <div className="flex flex-col items-center mr-5">
@@ -200,7 +210,7 @@ export default function Home() {
                           at expiration :
                         </h1>
                         <h1 className=" text-gray-200 text-l">
-                          {values.totalInterestValue?.toFixed(2)}€
+                          {values.interest.value?.toFixed(2)}€
                         </h1>
                       </div>
                       <div className="flex flex-col items-center">
@@ -211,10 +221,10 @@ export default function Home() {
 
                         <div className="flex flex-row">
                           <h1 className=" text-green-600 text-l">
-                            {values.daysToNextExpiration}d/
+                            {values.daysToStaking.next}d/
                           </h1>
                           <h1 className=" text-red-600 text-l">
-                            {values.daysToLastExpiration}d
+                            {values.daysToStaking.last}d
                           </h1>
                         </div>
                       </div>

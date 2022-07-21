@@ -2,10 +2,17 @@ import React from "react";
 
 import { useDocument } from "swr-firestore-v9";
 import { Modal, Input } from "@mantine/core";
-export default function Settings({ showSettings, setShowSettings }) {
-  const { data, update, error } = useDocument(`users/william`, {
+import { Data } from "@common/types/interfaces";
+interface Props {
+  showSettings: boolean;
+  setShowSettings: (showSettings: boolean) => void;
+}
+
+export default function Settings({ showSettings, setShowSettings }: Props) {
+  const { data, update, error } = useDocument<Data>(`users/william`, {
     listen: true,
   });
+
   if (!data?.general) return <p>Loading...</p>;
   return (
     <Modal
@@ -22,12 +29,15 @@ export default function Settings({ showSettings, setShowSettings }) {
           type="number"
           min={0}
           max={100}
-          defaultValue={data.general.percentageToNotStake}
-          onChange={(e) => {
+          defaultValue={data.general.coinsData.percentageToNotStake}
+          onChange={(e: any) => {
             update({
               general: {
                 ...data.general,
-                percentageToNotStake: parseInt(e.target.value),
+                coinsData: {
+                  ...data.general.coinsData,
+                  percentageToNotStake: e.target.value,
+                },
               },
             });
           }}

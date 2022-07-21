@@ -1,5 +1,7 @@
 import { getStakingPositions, purchaseStaking } from "../data/dataBinance";
-import type { Coin, Data } from "../types/interfaces";
+import type { Coin, Data } from "../../../common/types/interfaces";
+import logToFile from "../utils/log";
+import updateSavingPositions from "./updateSavingPositions";
 
 const updateStakingPositions = async (data: Data) => {
   const coins = data["coins"];
@@ -7,19 +9,14 @@ const updateStakingPositions = async (data: Data) => {
     if (!coins[key]) continue;
     const coin: Coin | undefined = coins[key];
 
-    if (!coin || coin.canBeStaked === false || coin.remainingStakingAmount <= 0)
-      continue;
+    if (!coin || coin.remainingStakingAmount <= 0) continue;
     const stakingPositions = await getStakingPositions(key);
 
-    if (stakingPositions.length === 0) {
-      coin.canBeStaked = false;
-      continue;
-    } else coin.canBeStaked = true;
-
+    await updateSavingPositions(data, key, stakingPositions.length);
+    if (stakingPositions.length === 0) continue;
     for (const index in stakingPositions) {
       let quota = stakingPositions[index].quota.totalPersonalQuota;
       let minimum = stakingPositions[index].quota.minimum;
-
       if (!quota || !minimum) continue;
       quota = parseFloat(quota);
       minimum = parseFloat(minimum);
@@ -27,23 +24,24 @@ const updateStakingPositions = async (data: Data) => {
       if (minimum > coin.remainingStakingAmount) continue;
       const stakingAmount =
         coin.remainingStakingAmount < quota
-          ? coin.remainingStakingAmount
+          ? Number(coin.remainingStakingAmount.toFixed(7))
           : quota;
+      const res = await purchaseStaking(
+        "STAKING",
+        stakingPositions[index].projectId,
+        stakingAmount
+      );
 
-      // const res = await purchaseStaking(
-      //   "STAKING",
-      //   stakingPositions[index].projectId,
-      //   stakingAmount
-      // );
-      console.log(stakingPositions[index].projectId, stakingAmount);
-      // if (!res) continue;
-      // if (!res.success) {
-      //   console.log(res);
-      //   continue;
-      // } else coin.remainingStakingAmount -= stakingAmount;
-      coin.remainingStakingAmount -= stakingAmount;
+      if (!res) continue;
+      if (!res.data?.success) continue;
+      coin.remainingStakingAmount = coin.remainingStakingAmount - stakingAmount;
+      logToFile(
+        "general",
+        `${key} staked ${stakingAmount}. Remaining ${coin.remainingStakingAmount}`
+      );
     }
   }
+  console.log("done");
   return coins;
 };
 export default updateStakingPositions;

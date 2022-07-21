@@ -5,7 +5,7 @@
         "paths": {
             "@functions": ["functions/*"],
             "@data/*": ["data/*"],
-            "@types/*": ["types/*"],
+            "@types/*": ["../../frontend/types/*"],
             "@utils/*": ["utils/*"],
             "@imports/*": ["imports/*"]
         },

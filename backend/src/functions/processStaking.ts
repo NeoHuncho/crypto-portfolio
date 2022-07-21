@@ -1,6 +1,6 @@
 import moment from "moment";
 import { defaultCoin } from "../data/defaultValues";
-import type { Data, StakingHistory } from "../types/interfaces";
+import type { Data, StakingHistory } from "../../../common/types/interfaces";
 import { numDaysBetween } from "../utils/dates";
 
 const processStaking = (data: Data) => {
@@ -12,10 +12,12 @@ const processStaking = (data: Data) => {
     });
   };
   const sortSubscriptions = (subscriptions: any) => {
+
     subscriptions.map((item: any) => {
       if (!item.positionId || !item.asset) return;
       if (data.meta.IDs.stakingIDs.includes(item.positionId)) return;
       data.meta.IDs.stakingIDs.push(item.positionId);
+
       const metaData = data["meta"].stakingHistory[item.asset];
 
       const historyObj = {

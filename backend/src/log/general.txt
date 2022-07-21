@@ -1,0 +1,66 @@
+Sun Jul 10 2022 15:10:28 GMT+0200--  size of Meta: 38472, size Of general and coins: 40 
+Sun Jul 10 2022 15:10:28 GMT+0200--  --END--
+Mon Jul 18 2022 19:47:58 GMT+0200--  size of Meta: 38496, size Of general and coins: 40 
+Mon Jul 18 2022 19:47:59 GMT+0200--  --END--
+Mon Jul 18 2022 19:49:45 GMT+0200--  size of Meta: 38496, size Of general and coins: 40 
+Mon Jul 18 2022 19:49:46 GMT+0200--  --END--
+Tue Jul 19 2022 21:12:59 GMT+0200--  size of Meta: 38568, size Of general and coins: 40 
+Tue Jul 19 2022 21:21:00 GMT+0200--  size of Meta: 38568, size Of general and coins: 40 
+Tue Jul 19 2022 21:21:01 GMT+0200--  --END--
+Tue Jul 19 2022 21:38:06 GMT+0200--  size of Meta: 38568, size Of general and coins: 40 
+Tue Jul 19 2022 21:38:07 GMT+0200--  --END--
+Tue Jul 19 2022 21:54:37 GMT+0200--  size of Meta: 38568, size Of general and coins: 40 
+Tue Jul 19 2022 21:54:38 GMT+0200--  --END--
+Tue Jul 19 2022 21:57:23 GMT+0200--  size of Meta: 38568, size Of general and coins: 40 
+Tue Jul 19 2022 21:57:23 GMT+0200--  --END--
+Tue Jul 19 2022 22:06:00 GMT+0200--  size of Meta: 43308, size Of general and coins: 40 
+Tue Jul 19 2022 22:06:01 GMT+0200--  --END--
+Tue Jul 19 2022 22:11:29 GMT+0200--  size of Meta: 43578, size Of general and coins: 40 
+Tue Jul 19 2022 22:11:30 GMT+0200--  --END--
+Tue Jul 19 2022 22:14:22 GMT+0200--  size of Meta: 46292, size Of general and coins: 40 
+Tue Jul 19 2022 22:14:23 GMT+0200--  --END--
+Tue Jul 19 2022 22:51:01 GMT+0200--  DOT staked 4.8812943. Remaining 1.4999999464748726e-8
+Tue Jul 19 2022 22:51:37 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Tue Jul 19 2022 22:51:37 GMT+0200--  --END--
+Tue Jul 19 2022 23:38:52 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Tue Jul 19 2022 23:38:53 GMT+0200--  --END--
+Tue Jul 19 2022 23:47:01 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Tue Jul 19 2022 23:47:01 GMT+0200--  --END--
+Tue Jul 19 2022 23:55:43 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Tue Jul 19 2022 23:55:44 GMT+0200--  --END--
+Wed Jul 20 2022 00:15:44 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Wed Jul 20 2022 00:15:45 GMT+0200--  --END--
+Wed Jul 20 2022 00:21:55 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Wed Jul 20 2022 00:21:55 GMT+0200--  --END--
+Wed Jul 20 2022 00:22:57 GMT+0200--  SAND staked 6.903969. Remaining 3.7500000438228653e-8
+Wed Jul 20 2022 00:23:24 GMT+0200--  size of Meta: 46562, size Of general and coins: 40 
+Wed Jul 20 2022 00:23:24 GMT+0200--  --END--
+Wed Jul 20 2022 00:26:04 GMT+0200--  size of Meta: 46840, size Of general and coins: 40 
+Wed Jul 20 2022 00:26:05 GMT+0200--  --END--
+Wed Jul 20 2022 00:29:42 GMT+0200--  size of Meta: 46840, size Of general and coins: 40 
+Wed Jul 20 2022 00:29:43 GMT+0200--  --END--
+Wed Jul 20 2022 00:39:08 GMT+0200--  MANA staked 8.2622836. Remaining -3.999999975690116e-8
+Wed Jul 20 2022 00:39:36 GMT+0200--  size of Meta: 46840, size Of general and coins: 40 
+Wed Jul 20 2022 00:39:37 GMT+0200--  --END--
+Wed Jul 20 2022 00:40:50 GMT+0200--  size of Meta: 47118, size Of general and coins: 40 
+Wed Jul 20 2022 00:40:51 GMT+0200--  --END--
+Wed Jul 20 2022 00:42:24 GMT+0200--  size of Meta: 47118, size Of general and coins: 40 
+Wed Jul 20 2022 00:42:24 GMT+0200--  --END--
+Wed Jul 20 2022 10:33:12 GMT+0200--  size of Meta: 47142, size Of general and coins: 40 
+Wed Jul 20 2022 10:33:13 GMT+0200--  --END--
+Wed Jul 20 2022 10:50:56 GMT+0200--  ONE staked 0.0674856. Remaining 2.6117996654306808e-14
+Wed Jul 20 2022 10:50:59 GMT+0200--  ALGO staked 0.0114082. Remaining 2.500001092947679e-8
+Wed Jul 20 2022 10:52:04 GMT+0200--  size of Meta: 47402, size Of general and coins: 40 
+Wed Jul 20 2022 10:52:05 GMT+0200--  --END--
+Wed Jul 20 2022 23:17:05 GMT+0200--  ONE staked 0.0674856. Remaining 2.6117996654306808e-14
+Wed Jul 20 2022 23:17:07 GMT+0200--  ALGO staked 0.0114082. Remaining 2.500001092947679e-8
+Wed Jul 20 2022 23:17:49 GMT+0200--  size of Meta: 47942, size Of general and coins: 40 
+Wed Jul 20 2022 23:17:50 GMT+0200--  --END--
+Thu Jul 21 2022 21:31:47 GMT+0200--  size of Meta: 48658, size Of general and coins: 40 
+Thu Jul 21 2022 21:31:48 GMT+0200--  --END--
+Thu Jul 21 2022 22:20:23 GMT+0200--  ATOM staked 0.0025709. Remaining 2.645453300864631e-16
+Thu Jul 21 2022 22:20:32 GMT+0200--  SOL staked 0.0004503. Remaining 2.500000008469035e-8
+Thu Jul 21 2022 22:20:41 GMT+0200--  CAKE staked 0.00756. Remaining -3.000000002844477e-8
+Thu Jul 21 2022 22:20:42 GMT+0200--  NEAR staked 0.0077232. Remaining 2.7500001427947784e-8
+Thu Jul 21 2022 22:21:18 GMT+0200--  size of Meta: 48658, size Of general and coins: 40 
+Thu Jul 21 2022 22:21:20 GMT+0200--  --END--

@@ -3,37 +3,38 @@ import moment from "moment";
 import { getAvgPrice } from "../data/dataBinance";
 import { getHistoricPriceUSD } from "../data/dataGecko";
 
-import type { Data } from "../types/interfaces";
+import type { Data } from "../../../common/types/interfaces";
 import getCurrencySymbol from "../utils/getCurrencySymbol";
 import XLSX from "xlsx";
+import logToFile from "../utils/log";
 
 const processAccountHistory = async (data: Data, db: Database) => {
   const general = data["general"];
   const processDepositHistory = async (depositHistory: any) => {
-    if (!depositHistory || depositHistory[0]?.length === 0)
-      depositHistory.map((item: any) => {
-        if (
-          item.status === "Successful" &&
-          !data["meta"].IDs.depositIDs.includes(item.orderNo)
-        ) {
-          data["meta"].IDs.depositIDs.push(item.orderNo);
-          data["meta"].depositHistory.push({
-            fiatCurrency: item.fiatCurrency,
-            amount: parseFloat(item.indicatedAmount),
-            timeUnix: moment(item.updateTime).unix(),
-            totalValue: {
-              valuePast: parseFloat(item.indicatedAmount),
-              valuePresent: parseFloat(item.indicatedAmount),
-            },
-            id: item.orderNo,
-          });
-          if (!data["general"].currency)
-            data["general"].currency = item.fiatCurrency;
-          data["general"].currencySymbol = getCurrencySymbol(general.currency);
-          data["general"].coinsData.spend += parseFloat(item.indicatedAmount);
-          data["general"].coinsData.taxes += parseFloat(item.totalFee);
-        }
-      });
+    if (!depositHistory || depositHistory.length === 0) return;
+    depositHistory.map((item: any) => {
+      if (
+        item.status === "Successful" &&
+        !data["meta"].IDs.depositIDs.includes(item.orderNo)
+      ) {
+        data["meta"].IDs.depositIDs.push(item.orderNo);
+        data["meta"].depositHistory.push({
+          fiatCurrency: item.fiatCurrency,
+          amount: parseFloat(item.indicatedAmount),
+          timeUnix: moment(item.updateTime).unix(),
+          totalValue: {
+            valuePast: parseFloat(item.indicatedAmount),
+            valuePresent: parseFloat(item.indicatedAmount),
+          },
+          id: item.orderNo,
+        });
+        if (!data["general"].currency)
+          data["general"].currency = item.fiatCurrency;
+        data["general"].currencySymbol = getCurrencySymbol(general.currency);
+        data["general"].coinsData.spend += parseFloat(item.indicatedAmount);
+        data["general"].coinsData.taxes += parseFloat(item.totalFee);
+      }
+    });
   };
 
   const processDirectBuyHistory = (directHistory: any) => {
@@ -129,8 +130,9 @@ const processAccountHistory = async (data: Data, db: Database) => {
               data["general"].coinsData.spend -=
                 parseFloat(item.amount) * historicPrice;
             } else
-              console.log(
-                "important error- did not find historic price for " + item.coin
+              await logToFile(
+                "errors",
+                `${item.coin} historic price not found`
               );
           }
         }
@@ -250,7 +252,7 @@ const processAccountHistory = async (data: Data, db: Database) => {
       XLSX.utils.sheet_to_json(buyWorkbook.Sheets[buySheet[0]])
     );
   } catch (error) {
-    console.log(error, "cardHistory does not exist");
+    await logToFile("errors", "cardHistory does not exist");
   }
 
   return data;

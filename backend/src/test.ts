@@ -1,13 +1,12 @@
 import { Spot } from "@binance/connector";
+
 import moment from "moment";
 let date = moment("2021-10-01");
-const apiKey =
-  "x9RZvrvBwhmTHY3a0rPedtXgLHSwixu2QKk2YnaUk56adK5q1Z9gPHs6t4yTerfs";
-const apiSecret =
-  "XIw5VDBOHv38p6fyFFmoKxj9s9yuWXvu5jr1PHxvYrWoqemSqKEothKlFl5AktlD";
+const apiKey = process.env["BINANCE_API_KEY"];
+const apiSecret = process.env["BINANCE_API_SECRET"];
 const client = new Spot(apiKey, apiSecret);
 
 const run = async () => {
-  console.log((await client.stakingHistory("STAKING", "SUBSCRIPTION")).data);
+  console.log((await client.depositWithdrawalHistory(0)).data.data);
 };
 run();

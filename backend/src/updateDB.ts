@@ -1,7 +1,10 @@
-import { writeFile } from "fs/promises";
 import initFireStore from "./initFireBase";
 
-import type { Coin, ExchangeRates, General } from "./types/interfaces";
+import type {
+  Coin,
+  ExchangeRates,
+  General,
+} from "../../common/types/interfaces";
 import { getDBData } from "./data/dataDB";
 import { getAvgPrice, getBinanceData } from "./data/dataBinance";
 
@@ -14,6 +17,8 @@ import type { DocumentData } from "firebase-admin/firestore";
 import processStaking from "./functions/processStaking";
 import sizeof from "object-sizeof";
 import updateStakingPositions from "./functions/updateStakingPositions";
+import logToFile from "./utils/log";
+import { writeFile } from "fs/promises";
 
 const exchangeRatesUSDT: ExchangeRates = {};
 
@@ -49,11 +54,16 @@ const calculateSyncData = (data: DocumentData) => {
 const run = async (test: boolean) => {
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
-  // data.coins = await updateStakingPositions(data);
+
+ 
+
   data["binance"] = await getBinanceData({
     passedFirstRun: data["general"].passedFirstRun,
   });
 
+  data["coins"] = data["general"].passedFirstRun
+  ? await updateStakingPositions(data)
+  : data["coins"];
   if (data["general"].currency) {
     exchangeRatesUSDT["currency"] = parseFloat(
       await getAvgPrice(data["general"].currency + "USDT")
@@ -61,7 +71,7 @@ const run = async (test: boolean) => {
   }
 
   data["general"] = resetData(data["general"]);
-  console.log("beforeactions");
+
   await checkAndUpdateCardHistory();
 
   data["coins"] = await processSpot(data);
@@ -73,17 +83,13 @@ const run = async (test: boolean) => {
   data.coins = await calculateSyncData(data);
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
-  console.log(data);
-  await writeFile("coinsNext.json", JSON.stringify(data["coins"]));
-  await writeFile("binanceNext.json", JSON.stringify(data["binance"]));
-  console.log("beforeWrite");
-  console.log(
+  await logToFile(
+    "general",
     `size of Meta: ${sizeof(data["meta"])}, size Of general and coins: ${sizeof(
       data["general"] + sizeof(JSON.stringify(data["coins"]))
     )} `
   );
 
-  
   await db.ref("users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1").set(data["meta"]);
   await fireStore
     .collection("users")
@@ -92,9 +98,10 @@ const run = async (test: boolean) => {
       general: { ...data["general"] },
       coins: JSON.stringify(data["coins"]),
     })
-    .then(() => process.exit());
-
-  console.log("afterWrite");
+    .then(async () => {
+      await logToFile("general", "--END--");
+      process.exit();
+    });
 };
 
 run(false);

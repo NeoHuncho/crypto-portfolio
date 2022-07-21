@@ -1,0 +1,60 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "static/*": [
+        "static/*"
+      ],
+      "helpers/*": [
+        "src/helpers/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "reducers/*": [
+        "src/redux-flow/reducers/*"
+      ],
+      "requests/*": [
+        "src/requests/*"
+      ],
+      "routes/*": [
+        "routes.js"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@common/*": [
+        "../common/*"
+      ]
+    },
+    "allowJs": true,
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "pages/_app.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

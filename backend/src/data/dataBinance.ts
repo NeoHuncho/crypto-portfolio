@@ -1,18 +1,39 @@
 //
 import { Spot } from "@binance/connector";
 import moment from "moment";
-import type { BinanceData } from "../types/interfaces";
+import type { BinanceData } from "../../../common/types/interfaces";
+import logToFile from "../utils/log";
 
 const apiKey =
-  "x9RZvrvBwhmTHY3a0rPedtXgLHSwixu2QKk2YnaUk56adK5q1Z9gPHs6t4yTerfs";
+ process.env['BINANCE_API_KEY'] 
 const apiSecret =
-  "XIw5VDBOHv38p6fyFFmoKxj9s9yuWXvu5jr1PHxvYrWoqemSqKEothKlFl5AktlD";
+process.env['BINANCE_API_SECRET'] ;
 
 let client = new Spot(apiKey, apiSecret);
 let date = moment("2021-08-01");
 
 type Props = {
   passedFirstRun: boolean;
+};
+
+const flattenAndFilter = (data: any, ids: number[] | undefined) => {
+  if (!ids) return data;
+  return [].concat(...data).filter((item: any) => {
+    if (!item) return false;
+
+    const id = item.positionId
+      ? item.positionId
+      : item.txId
+      ? item.txId
+      : item.operationId
+      ? item.operationId
+      : item.orderNo
+      ? item.orderNo
+      : item.id;
+    if (ids.includes(id)) return false;
+    ids.push(id);
+    return true;
+  });
 };
 const getBinanceData = async ({ passedFirstRun }: Props) => {
   const makeRequest = async (
@@ -31,10 +52,9 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
       return (await client[name](params)).data;
     } catch (error) {
       try {
-        console.log("cld error");
-        console.log("waiting");
+        await logToFile("errors", "error from binance- waiting");
+
         await new Promise((resolve) => setTimeout(resolve, 60000));
-        console.log("waiting");
 
         if (setting1 === 0 && !setting2)
           return (await client[name](setting1, { ...params })).data;
@@ -43,7 +63,11 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
           return (await client[name](setting1, setting2, { ...params })).data;
         return (await client[name](params)).data;
       } catch (error) {
-        console.log("error while doing ", name);
+        await logToFile(
+          "errors",
+          `error while making request ${name}, ${params}`
+        );
+
         return;
       }
     }
@@ -72,26 +96,6 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
   };
 
   if (!passedFirstRun) {
-    const flattenAndFilter = (data: any, ids: number[] | undefined) => {
-      if (!ids) return data;
-      return [].concat(...data).filter((item: any) => {
-        if (!item) return false;
-
-        const id = item.positionId
-          ? item.positionId
-          : item.txId
-          ? item.txId
-          : item.operationId
-          ? item.operationId
-          : item.orderNo
-          ? item.orderNo
-          : item.id;
-        if (ids.includes(id)) return false;
-        ids.push(id);
-        return true;
-      });
-    };
-
     while (moment(date).add(89, "days") < moment().add(4, "months")) {
       if (moment(date).unix() < moment().unix()) {
         const requestSettings =
@@ -164,39 +168,6 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
       }
       date.add(89, "days");
     }
-
-    data.stakingSubscriptionHistory = flattenAndFilter(
-      data.stakingSubscriptionHistory,
-      data.IDs["subscriptionIDs"]
-    );
-    data.stakingRedemptionHistory = flattenAndFilter(
-      data.stakingRedemptionHistory,
-      data.IDs["redemptionIDs"]
-    );
-    data.stakingInterestHistory = flattenAndFilter(
-      data.stakingInterestHistory,
-      data.IDs["interestIDs"]
-    );
-    data.depositHistory = flattenAndFilter(
-      data.depositHistory.filter((item: any) => item),
-      data.IDs["depositIDs"]
-    );
-    data.directHistory = flattenAndFilter(
-      data.directHistory,
-      data.IDs["directIDs"]
-    );
-    data.coinDepositHistory = flattenAndFilter(
-      data.coinDepositHistory,
-      data.IDs["coinDepositIDs"]
-    );
-    data.coinWithdrawalHistory = flattenAndFilter(
-      data.coinWithdrawalHistory,
-      data.IDs["coinWithdrawalIDs"]
-    );
-    data.liquidityHistory = flattenAndFilter(
-      data.liquidityHistory,
-      data.IDs["liquidityIDs"]
-    );
   } else {
     data.stakingSubscriptionHistory.push(
       (await client.stakingHistory("STAKING", "SUBSCRIPTION", { size: 100 }))
@@ -219,7 +190,42 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     );
   }
   data.spotAccount = (await client.account()).data;
-  console.log(data);
+  data.spotAccount.balances = data.spotAccount.balances.filter(
+    (item: any) => parseFloat(item.free) > 0
+  );
+  data.stakingSubscriptionHistory = flattenAndFilter(
+    data.stakingSubscriptionHistory,
+    data.IDs["subscriptionIDs"]
+  );
+  data.stakingRedemptionHistory = flattenAndFilter(
+    data.stakingRedemptionHistory,
+    data.IDs["redemptionIDs"]
+  );
+  data.stakingInterestHistory = flattenAndFilter(
+    data.stakingInterestHistory,
+    data.IDs["interestIDs"]
+  );
+  data.depositHistory = flattenAndFilter(
+    data.depositHistory.filter((item: any) => item),
+    data.IDs["depositIDs"]
+  );
+  data.directHistory = flattenAndFilter(
+    data.directHistory,
+    data.IDs["directIDs"]
+  );
+  data.coinDepositHistory = flattenAndFilter(
+    data.coinDepositHistory,
+    data.IDs["coinDepositIDs"]
+  );
+  data.coinWithdrawalHistory = flattenAndFilter(
+    data.coinWithdrawalHistory,
+    data.IDs["coinWithdrawalIDs"]
+  );
+  data.liquidityHistory = flattenAndFilter(
+    data.liquidityHistory,
+    data.IDs["liquidityIDs"]
+  );
+
   return data;
 };
 
@@ -234,6 +240,14 @@ const getAllOrders = async (key: string) => {
 const getStakingPositions = async (key: string) => {
   return (await client.stakingProductList("STAKING", { asset: key })).data;
 };
+const getSavingPositions = async () => {
+  return (
+    await client.savingsFlexibleProducts({
+      status: "ALL",
+      featured: "ALL",
+    })
+  ).data;
+};
 
 const purchaseStaking = async (
   type: string,
@@ -241,12 +255,27 @@ const purchaseStaking = async (
   amount: number
 ) => {
   const res = await client
-    .stakingPurchaseProduct(type, product, Math.round(amount))
-    .catch((err) => {
-      console.log(`error when purchasing: ${product} for amount ${amount}`);
-      console.log(product.includes("ADA"), console.log(err));
+    .stakingPurchaseProduct(type, product, amount)
+    .catch(() => {
+      console.log(
+        `error when purchasing staking: ${product} for amount ${amount}`
+      );
     });
   return res;
+};
+const purchaseSaving = async (productID: string, amount: number) => {
+  client.savingsPurchaseFlexibleProduct(productID, amount).catch(() => {
+    console.log(
+      `error when purchasing saving: ${productID} for amount ${amount}`
+    );
+  });
+};
+const redeemSaving = async (productID: string, amount: number) => {
+  client.savingsFlexibleRedeem(productID, amount, "FAST").catch(() => {
+    console.log(
+      `error when redeeming saving: ${productID} for amount ${amount}`
+    );
+  });
 };
 export {
   getBinanceData,
@@ -254,4 +283,7 @@ export {
   getAllOrders,
   getStakingPositions,
   purchaseStaking,
+  getSavingPositions,
+  purchaseSaving,
+  redeemSaving,
 };

@@ -1,4 +1,4 @@
-import type { FirebaseData } from "../types/interfaces";
+import type { FirebaseData } from "../../../common/types/interfaces";
 import { defaultData } from "./defaultValues";
 
 const getDBData = async ({ fireStore, db, test }: FirebaseData) => {
