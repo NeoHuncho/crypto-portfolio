@@ -2,6 +2,7 @@
   "name": "crypto-portfolio",
   "private": true,
   "scripts": {
+    "export": "next export",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
