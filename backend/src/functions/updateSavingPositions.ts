@@ -4,6 +4,7 @@ import {
   redeemSaving,
 } from "../data/dataBinance";
 import type { Data } from "../../../common/types/interfaces";
+import logToFile from "../utils/log";
 
 const updateSavingPositions = async (
   data: Data,
@@ -21,7 +22,7 @@ const updateSavingPositions = async (
     if (!coin) continue;
 
     if (!canBeStaked) {
-      let remainingSavingsAmount = null;
+      let remainingSavingsAmount: any = null;
       data["binance"]?.spotAccount.balances.map((balance: any) => {
         if (balance.asset === asset)
           remainingSavingsAmount = parseFloat(balance.free);
@@ -32,12 +33,11 @@ const updateSavingPositions = async (
           savingPositions[key].productId,
           remainingSavingsAmount
         );
-        console.log("purchased saving", asset, remainingSavingsAmount);
         continue;
       }
     } else {
       if (parseFloat(coin.remainingStakingAmount.toFixed(7)) <= 0) {
-        let remainingSavingsAmount = null;
+        let remainingSavingsAmount: any = null;
         data["binance"]?.spotAccount.balances.map((balance: any) => {
           if (balance.asset === asset)
             remainingSavingsAmount = parseFloat(balance.free);
@@ -48,7 +48,6 @@ const updateSavingPositions = async (
             savingPositions[key].productId,
             remainingSavingsAmount
           );
-          console.log("purchased saving", asset, remainingSavingsAmount);
           continue;
         }
       } else {

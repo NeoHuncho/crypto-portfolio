@@ -52,18 +52,17 @@ const calculateSyncData = (data: DocumentData) => {
 };
 
 const run = async (test: boolean) => {
+  await logToFile("general", "--START--");
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
-
- 
 
   data["binance"] = await getBinanceData({
     passedFirstRun: data["general"].passedFirstRun,
   });
 
   data["coins"] = data["general"].passedFirstRun
-  ? await updateStakingPositions(data)
-  : data["coins"];
+    ? await updateStakingPositions(data)
+    : data["coins"];
   if (data["general"].currency) {
     exchangeRatesUSDT["currency"] = parseFloat(
       await getAvgPrice(data["general"].currency + "USDT")

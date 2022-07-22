@@ -4,10 +4,8 @@ import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
 import logToFile from "../utils/log";
 
-const apiKey =
- process.env['BINANCE_API_KEY'] 
-const apiSecret =
-process.env['BINANCE_API_SECRET'] ;
+const apiKey = process.env["BINANCE_API_KEY"];
+const apiSecret = process.env["BINANCE_API_SECRET"];
 
 let client = new Spot(apiKey, apiSecret);
 let date = moment("2021-08-01");
@@ -256,26 +254,40 @@ const purchaseStaking = async (
 ) => {
   const res = await client
     .stakingPurchaseProduct(type, product, amount)
+    .then(async () => {
+      await logToFile("general", `${product} staked ${amount}.`);
+    })
     .catch(() => {
       console.log(
         `error when purchasing staking: ${product} for amount ${amount}`
       );
     });
+
   return res;
 };
 const purchaseSaving = async (productID: string, amount: number) => {
-  client.savingsPurchaseFlexibleProduct(productID, amount).catch(() => {
-    console.log(
-      `error when purchasing saving: ${productID} for amount ${amount}`
-    );
-  });
+  await client
+    .savingsPurchaseFlexibleProduct(productID, amount)
+    .then(async () => {
+      await logToFile("general", `${productID} staked ${amount}.`);
+    })
+    .catch(() => {
+      console.log(
+        `error when purchasing saving: ${productID} for amount ${amount}`
+      );
+    });
 };
 const redeemSaving = async (productID: string, amount: number) => {
-  client.savingsFlexibleRedeem(productID, amount, "FAST").catch(() => {
-    console.log(
-      `error when redeeming saving: ${productID} for amount ${amount}`
-    );
-  });
+  await client
+    .savingsFlexibleRedeem(productID, amount, "FAST")
+    .then(async () => {
+      await logToFile("general", `${productID} staked ${amount}.`);
+    })
+    .catch(() => {
+      console.log(
+        `error when redeeming saving: ${productID} for amount ${amount}`
+      );
+    });
 };
 export {
   getBinanceData,

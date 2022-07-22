@@ -35,13 +35,8 @@ const updateStakingPositions = async (data: Data) => {
       if (!res) continue;
       if (!res.data?.success) continue;
       coin.remainingStakingAmount = coin.remainingStakingAmount - stakingAmount;
-      logToFile(
-        "general",
-        `${key} staked ${stakingAmount}. Remaining ${coin.remainingStakingAmount}`
-      );
     }
   }
-  console.log("done");
   return coins;
 };
 export default updateStakingPositions;
