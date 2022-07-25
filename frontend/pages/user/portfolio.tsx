@@ -186,51 +186,49 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className=" col-span-2 flex flex-row items-center">
-                  {values.staked.amount && (
-                    <>
-                      {values.remainingStakingAmount && (
-                        <div className="flex flex-col items-center mr-5">
-                          <h1 className=" text-gray-200 text-xs">
-                            Remaining Amount
-                          </h1>
-                          <h1 className=" text-gray-200 text-xs">
-                            to be Stacked :
-                          </h1>
-                          <h1 className=" text-gray-200 text-l">
-                            {values.remainingStakingAmount.toFixed(2)}
-                          </h1>
-                        </div>
-                      )}
-                      <div className="flex flex-col items-center">
+                {values.staked.amount ? (
+                  <div className="col-span-2 flex flex-row items-center">
+                    {values.remainingStakingAmount && (
+                      <div className="flex flex-col items-center mr-5">
                         <h1 className=" text-gray-200 text-xs">
-                          Total interest
+                          Remaining Amount
                         </h1>
                         <h1 className=" text-gray-200 text-xs">
-                          at expiration :
+                          to be Stacked :
                         </h1>
                         <h1 className=" text-gray-200 text-l">
-                          {values.interest.value?.toFixed(2)}€
+                          {values.remainingStakingAmount.toFixed(2)}
                         </h1>
                       </div>
-                      <div className="flex flex-col items-center">
-                        <h1 className=" text-gray-200 text-xs">days to</h1>
-                        <h1 className=" text-gray-200 text-xs">
-                          next/last expiration:
-                        </h1>
+                    )}
+                    <div className="flex flex-col items-center">
+                      <h1 className=" text-gray-200 text-xs">Total interest</h1>
+                      <h1 className=" text-gray-200 text-xs">
+                        at expiration :
+                      </h1>
+                      <h1 className=" text-gray-200 text-l">
+                        {values.interest.value?.toFixed(2)}€
+                      </h1>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <h1 className=" text-gray-200 text-xs">days to</h1>
+                      <h1 className=" text-gray-200 text-xs">
+                        next/last expiration:
+                      </h1>
 
-                        <div className="flex flex-row">
-                          <h1 className=" text-green-600 text-l">
-                            {values.daysToStaking.next}d/
-                          </h1>
-                          <h1 className=" text-red-600 text-l">
-                            {values.daysToStaking.last}d
-                          </h1>
-                        </div>
+                      <div className="flex flex-row">
+                        <h1 className=" text-green-600 text-l">
+                          {values.daysToStaking.next}d/
+                        </h1>
+                        <h1 className=" text-red-600 text-l">
+                          {values.daysToStaking.last}d
+                        </h1>
                       </div>
-                    </>
-                  )}
-                </div>
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             );
           })}

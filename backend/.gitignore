@@ -2,4 +2,5 @@
 /node_modules
 /src/.env
 /src/test.ts
-/src/addGeckoIDs.ts
+/src/log
+/src/addGeckoIDS.ts

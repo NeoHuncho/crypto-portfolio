@@ -3,7 +3,6 @@ import { Coin } from "../../common/types/interfaces";
 const sortDataDesc = (a: any, b: any) => {
   const aData: Coin = a[1];
   const bData: Coin = b[1];
-  console.log(aData.amountValue.value, bData.amountValue.value);
   if (aData.amountValue.value > bData.amountValue.value) {
     return -1;
   }

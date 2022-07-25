@@ -60,9 +60,6 @@ const run = async (test: boolean) => {
     passedFirstRun: data["general"].passedFirstRun,
   });
 
-  data["coins"] = data["general"].passedFirstRun
-    ? await updateStakingPositions(data)
-    : data["coins"];
   if (data["general"].currency) {
     exchangeRatesUSDT["currency"] = parseFloat(
       await getAvgPrice(data["general"].currency + "USDT")
@@ -80,6 +77,10 @@ const run = async (test: boolean) => {
   data = await processStaking(data);
   data = await updatePriceValues(data, exchangeRatesUSDT);
   data.coins = await calculateSyncData(data);
+
+  data["coins"] = data["general"].passedFirstRun
+    ? await updateStakingPositions(data)
+    : data["coins"];
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
   await logToFile(
