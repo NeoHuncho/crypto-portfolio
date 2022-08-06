@@ -1,0 +1,6930 @@
+{
+  "stakingSubscriptionHistory": [
+    {
+      "time": 1659019222000,
+      "asset": "DOT",
+      "amount": "0.0072591",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "FAILED"
+    },
+    {
+      "positionId": 96786728,
+      "time": 1659019211000,
+      "asset": "CAKE",
+      "amount": "0.0075987",
+      "lockPeriod": 90,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 96786461,
+      "time": 1659019134000,
+      "asset": "BNB",
+      "amount": "0.0862026",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 96370279,
+      "time": 1658932442000,
+      "asset": "SOL",
+      "amount": "0.1888761",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 96370254,
+      "time": 1658932433000,
+      "asset": "ATOM",
+      "amount": "0.7428489",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 96370237,
+      "time": 1658932430000,
+      "asset": "MATIC",
+      "amount": "9.3133954",
+      "lockPeriod": 90,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 96370202,
+      "time": 1658932421000,
+      "asset": "BNB",
+      "amount": "0.0292373",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95937675,
+      "time": 1658830626000,
+      "asset": "BNB",
+      "amount": "0.0304117",
+      "lockPeriod": 120,
+      "type": "NORMAL",
+      "status": "SUCCESS"
+    }
+  ],
+  "stakingRedemptionHistory": [
+    {
+      "positionId": 62396450,
+      "time": 1658624667000,
+      "asset": "ADA",
+      "amount": "14.9",
+      "deliverDate": 1658707200000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 62396498,
+      "time": 1658624708000,
+      "asset": "AVAX",
+      "amount": "0.3",
+      "deliverDate": 1658707200000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 62396587,
+      "time": 1658624776000,
+      "asset": "MATIC",
+      "amount": "8.27",
+      "deliverDate": 1658707200000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 62396338,
+      "time": 1658624893000,
+      "asset": "NEAR",
+      "amount": "1.34",
+      "deliverDate": 1658707200000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407561,
+      "time": 1657448628000,
+      "asset": "ADA",
+      "amount": "35",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404834,
+      "time": 1657448799000,
+      "asset": "ADA",
+      "amount": "138",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404873,
+      "time": 1657448752000,
+      "asset": "ALGO",
+      "amount": "1",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89406622,
+      "time": 1657448636000,
+      "asset": "ALGO",
+      "amount": "1",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404847,
+      "time": 1657448784000,
+      "asset": "ATOM",
+      "amount": "4",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407581,
+      "time": 1657447318000,
+      "asset": "ATOM",
+      "amount": "1",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404915,
+      "time": 1657448711000,
+      "asset": "AVAX",
+      "amount": "2",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404921,
+      "time": 1657448704000,
+      "asset": "CAKE",
+      "amount": "5",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407627,
+      "time": 1657448560000,
+      "asset": "CAKE",
+      "amount": "1",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404901,
+      "time": 1657448719000,
+      "asset": "CTSI",
+      "amount": "215",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407601,
+      "time": 1657448567000,
+      "asset": "CTSI",
+      "amount": "54",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407570,
+      "time": 1657448610000,
+      "asset": "MATIC",
+      "amount": "16",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404843,
+      "time": 1657448793000,
+      "asset": "MATIC",
+      "amount": "64",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404934,
+      "time": 1657448696000,
+      "asset": "NEAR",
+      "amount": "10",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407635,
+      "time": 1657448548000,
+      "asset": "NEAR",
+      "amount": "3",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89406618,
+      "time": 1657448677000,
+      "asset": "ONE",
+      "amount": "7",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89406614,
+      "time": 1657448687000,
+      "asset": "ONE",
+      "amount": "7",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404867,
+      "time": 1657448766000,
+      "asset": "ONE",
+      "amount": "7",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404888,
+      "time": 1657448731000,
+      "asset": "SOL",
+      "amount": "1",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89404880,
+      "time": 1657448745000,
+      "asset": "XTZ",
+      "amount": "29",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 89407589,
+      "time": 1657448580000,
+      "asset": "XTZ",
+      "amount": "7",
+      "deliverDate": 1657584000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 46154252,
+      "time": 1657243587000,
+      "asset": "DOT",
+      "amount": "3.7790005",
+      "deliverDate": 1657324800000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 45674087,
+      "time": 1657077590000,
+      "asset": "DOT",
+      "amount": "0.91908",
+      "deliverDate": 1657152000000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 54526809,
+      "time": 1656723282000,
+      "asset": "ADA",
+      "amount": "108.75",
+      "deliverDate": 1656806400000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 54656527,
+      "time": 1656723378000,
+      "asset": "AVAX",
+      "amount": "0.5",
+      "deliverDate": 1656806400000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 54655808,
+      "time": 1656723640000,
+      "asset": "NEAR",
+      "amount": "6.35",
+      "deliverDate": 1656806400000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 54527194,
+      "time": 1656723543000,
+      "asset": "SOL",
+      "amount": "1.10410384",
+      "deliverDate": 1656806400000,
+      "status": "PAID"
+    },
+    {
+      "positionId": 53376950,
+      "time": 1656464875000,
+      "asset": "SOL",
+      "amount": "0.49864134",
+      "deliverDate": 1656547200000,
+      "status": "PAID"
+    }
+  ],
+  "stakingInterestHistory": [
+    {
+      "positionId": 93256986,
+      "time": 1658969804000,
+      "asset": "XTZ",
+      "amount": "0.00567655",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93282900,
+      "time": 1658969744000,
+      "asset": "MANA",
+      "amount": "0.00226361",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256993,
+      "time": 1658969714000,
+      "asset": "CTSI",
+      "amount": "0.07145848",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93280356,
+      "time": 1658969604000,
+      "asset": "SAND",
+      "amount": "0.00160779",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392067,
+      "time": 1658969601000,
+      "asset": "MATIC",
+      "amount": "0.00187142",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648995,
+      "time": 1658969540000,
+      "asset": "NEAR",
+      "amount": "0.00047773",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648992,
+      "time": 1658969488000,
+      "asset": "NEAR",
+      "amount": "0.0011115",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93257009,
+      "time": 1658969485000,
+      "asset": "NEAR",
+      "amount": "0.00850684",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648973,
+      "time": 1658969255000,
+      "asset": "AVAX",
+      "amount": "0.00025067",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93251682,
+      "time": 1658969244000,
+      "asset": "AVAX",
+      "amount": "0.00177176",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256999,
+      "time": 1658969193000,
+      "asset": "EGLD",
+      "amount": "0.0003342",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93720927,
+      "time": 1658969122000,
+      "asset": "ALGO",
+      "amount": "0.00000257",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93559939,
+      "time": 1658969121000,
+      "asset": "ALGO",
+      "amount": "0.00000257",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256983,
+      "time": 1658969120000,
+      "asset": "ALGO",
+      "amount": "0.00022108",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93720921,
+      "time": 1658969048000,
+      "asset": "ONE",
+      "amount": "0.00002919",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93559921,
+      "time": 1658969047000,
+      "asset": "ONE",
+      "amount": "0.00002919",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256978,
+      "time": 1658969044000,
+      "asset": "ONE",
+      "amount": "0.0009578",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 89404862,
+      "time": 1658969031000,
+      "asset": "ONE",
+      "amount": "0.0030282",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 62396669,
+      "time": 1658968995000,
+      "asset": "ALGO",
+      "amount": "0.00211753",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 54655491,
+      "time": 1658968928000,
+      "asset": "ALGO",
+      "amount": "0.0130935",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 54657778,
+      "time": 1658968827000,
+      "asset": "ONE",
+      "amount": "0.0869526",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93257004,
+      "time": 1658968808000,
+      "asset": "CAKE",
+      "amount": "0.01007998",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648994,
+      "time": 1658968802000,
+      "asset": "NEAR",
+      "amount": "0.00090395",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392177,
+      "time": 1658968796000,
+      "asset": "NEAR",
+      "amount": "0.00000516",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392761,
+      "time": 1658968796000,
+      "asset": "NEAR",
+      "amount": "0.00000471",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94102883,
+      "time": 1658968795000,
+      "asset": "NEAR",
+      "amount": "0.00000516",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392075,
+      "time": 1658968630000,
+      "asset": "ATOM",
+      "amount": "0.00000214",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392686,
+      "time": 1658968630000,
+      "asset": "ATOM",
+      "amount": "0.00000214",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94102825,
+      "time": 1658968628000,
+      "asset": "ATOM",
+      "amount": "0.00000214",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256977,
+      "time": 1658968624000,
+      "asset": "ATOM",
+      "amount": "0.00342792",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93241972,
+      "time": 1658968616000,
+      "asset": "ADA",
+      "amount": "0.04326",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95937675,
+      "time": 1658968347000,
+      "asset": "BNB",
+      "amount": "0.00001082",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256957,
+      "time": 1658968314000,
+      "asset": "BNB",
+      "amount": "0.0000123",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95912674,
+      "time": 1658968144000,
+      "asset": "CAKE",
+      "amount": "0.00001035",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648985,
+      "time": 1658968142000,
+      "asset": "CAKE",
+      "amount": "0.00002072",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392757,
+      "time": 1658968131000,
+      "asset": "CAKE",
+      "amount": "0.00001032",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392166,
+      "time": 1658968131000,
+      "asset": "CAKE",
+      "amount": "0.00001032",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94102878,
+      "time": 1658968128000,
+      "asset": "CAKE",
+      "amount": "0.00001032",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95648928,
+      "time": 1658967767000,
+      "asset": "ADA",
+      "amount": "0.00469248",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 95897154,
+      "time": 1658967753000,
+      "asset": "DOT",
+      "amount": "0.00058427",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93244177,
+      "time": 1658967743000,
+      "asset": "ADA",
+      "amount": "0.01206348",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256969,
+      "time": 1658967743000,
+      "asset": "ADA",
+      "amount": "0.00446444",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392679,
+      "time": 1658967725000,
+      "asset": "MATIC",
+      "amount": "0.00529003",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392115,
+      "time": 1658967725000,
+      "asset": "SOL",
+      "amount": "0.00000018",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94392713,
+      "time": 1658967725000,
+      "asset": "SOL",
+      "amount": "0.00000018",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 94102849,
+      "time": 1658967720000,
+      "asset": "SOL",
+      "amount": "0.00000018",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93264161,
+      "time": 1658967713000,
+      "asset": "DOT",
+      "amount": "0.00280571",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93256292,
+      "time": 1658967706000,
+      "asset": "MATIC",
+      "amount": "0.0376726",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93249544,
+      "time": 1658967706000,
+      "asset": "SOL",
+      "amount": "0.00019523",
+      "status": "SUCCESS"
+    },
+    {
+      "positionId": 93245847,
+      "time": 1658967705000,
+      "asset": "SOL",
+      "amount": "0.00040521",
+      "status": "SUCCESS"
+    }
+  ],
+  "depositHistory": [
+    {
+      "orderNo": "03245876038403000320071945",
+      "fiatCurrency": "EUR",
+      "indicatedAmount": "200.00",
+      "amount": "199.00",
+      "totalFee": "1",
+      "method": "Offline Charge",
+      "status": "Successful",
+      "createTime": 1658235165000,
+      "updateTime": 1658235164711
+    }
+  ],
+  "directHistory": [],
+  "coinDepositHistory": [],
+  "coinWithdrawalHistory": [
+    {
+      "id": "1c4c6fda86ec482c9feeaacc240ea42f",
+      "amount": "13.63337713",
+      "transactionFee": "0.033",
+      "coin": "CAKE",
+      "status": 6,
+      "address": "0x5c0f7747e6e9d916f927d127dBc57e515985adBD",
+      "txId": "0xffd211834062fee1d633a19662a1e24fe0632d1d783f4eb1b94be2f5b2635ffa",
+      "applyTime": "2022-06-10 07:16:40",
+      "network": "BSC",
+      "transferType": 0,
+      "info": "0xe2fc31f816a9b94326492132018c3aecc4a93ae1",
+      "confirmNo": 20,
+      "walletType": 0,
+      "txKey": ""
+    },
+    {
+      "id": "c1ba1d573c194d9c8447e681315e4ff2",
+      "amount": "0.031476",
+      "transactionFee": "0.0005",
+      "coin": "BNB",
+      "status": 6,
+      "address": "0x5c0f7747e6e9d916f927d127dBc57e515985adBD",
+      "txId": "0x07af945987873fc83f5dffb830476397a7428c73cbf1ec58410f148f47dd99b8",
+      "applyTime": "2022-06-02 08:43:41",
+      "network": "BSC",
+      "transferType": 0,
+      "info": "0xeb2d2f1b8c558a40207669291fda468e50c8a0bb",
+      "confirmNo": 20,
+      "walletType": 0,
+      "txKey": ""
+    },
+    {
+      "id": "98b3e93b1f5f43e194cb5d3dde8517fb",
+      "amount": "12.51256266",
+      "transactionFee": "0.035",
+      "coin": "CAKE",
+      "status": 6,
+      "address": "0x5c0f7747e6e9d916f927d127dBc57e515985adBD",
+      "txId": "0x9bb4abee36638a9c4a01575ff6524926232468ed64312d7f077b8fa377540486",
+      "applyTime": "2022-06-02 08:40:44",
+      "network": "BSC",
+      "transferType": 0,
+      "info": "0xdccf3b77da55107280bd850ea519df3705d1a75a",
+      "confirmNo": 20,
+      "walletType": 0,
+      "txKey": ""
+    }
+  ],
+  "liquidityHistory": [
+    {
+      "operationId": 3423680,
+      "poolId": 35,
+      "poolName": "LINK/USDT",
+      "operation": "REMOVE",
+      "status": 1,
+      "updateTime": 1647957326000,
+      "shareAmount": "2.27685897",
+      "liquidityAmount": [
+        { "asset": "LINK", "amount": "0.59917258" },
+        { "asset": "USDT", "amount": "9.37032377" }
+      ]
+    },
+    {
+      "operationId": 3423676,
+      "poolId": 124,
+      "poolName": "FTM/USDT",
+      "operation": "REMOVE",
+      "status": 1,
+      "updateTime": 1647957291000,
+      "shareAmount": "6.82547453",
+      "liquidityAmount": [
+        { "asset": "FTM", "amount": "5.96628837" },
+        { "asset": "USDT", "amount": "7.80839947" }
+      ]
+    },
+    {
+      "operationId": 3423674,
+      "poolId": 148,
+      "poolName": "ALGO/USDT",
+      "operation": "REMOVE",
+      "status": 1,
+      "updateTime": 1647957234000,
+      "shareAmount": "11.48835558",
+      "liquidityAmount": [
+        { "asset": "ALGO", "amount": "12.56179716" },
+        { "asset": "USDT", "amount": "10.50662636" }
+      ]
+    }
+  ],
+  "stakingProducts": {
+    "AXS": [
+      {
+        "projectId": "Axs*90",
+        "detail": {
+          "asset": "AXS",
+          "rewardAsset": "AXS",
+          "duration": 90,
+          "renewable": true,
+          "apy": "1.0462"
+        },
+        "quota": { "totalPersonalQuota": "2", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Axs*30",
+        "detail": {
+          "asset": "AXS",
+          "rewardAsset": "AXS",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.6387"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.001" }
+      }
+    ],
+    "MC": [
+      {
+        "projectId": "Mc*120",
+        "detail": {
+          "asset": "MC",
+          "rewardAsset": "MC",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.8019"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Mc*30",
+        "detail": {
+          "asset": "MC",
+          "rewardAsset": "MC",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1793"
+        },
+        "quota": { "totalPersonalQuota": "3000", "minimum": "0.1" }
+      }
+    ],
+    "CAKE": [
+      {
+        "projectId": "Cake*120",
+        "detail": {
+          "asset": "CAKE",
+          "rewardAsset": "CAKE",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.7987"
+        },
+        "quota": { "totalPersonalQuota": "10", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Cake*90",
+        "detail": {
+          "asset": "CAKE",
+          "rewardAsset": "CAKE",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.4986"
+        },
+        "quota": { "totalPersonalQuota": "30", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Cake*30",
+        "detail": {
+          "asset": "CAKE",
+          "rewardAsset": "CAKE",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0879"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      }
+    ],
+    "BSW": [
+      {
+        "projectId": "Bsw*90",
+        "detail": {
+          "asset": "BSW",
+          "rewardAsset": "BSW",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.539"
+        },
+        "quota": { "totalPersonalQuota": "300", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Bsw*30",
+        "detail": {
+          "asset": "BSW",
+          "rewardAsset": "BSW",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.229"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "0.1" }
+      }
+    ],
+    "SANTOS": [
+      {
+        "projectId": "Santos*60",
+        "detail": {
+          "asset": "SANTOS",
+          "rewardAsset": "SANTOS",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.4997"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Santos*30",
+        "detail": {
+          "asset": "SANTOS",
+          "rewardAsset": "SANTOS",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.3289"
+        },
+        "quota": { "totalPersonalQuota": "20000", "minimum": "0.1" }
+      }
+    ],
+    "PORTO": [
+      {
+        "projectId": "Porto*90",
+        "detail": {
+          "asset": "PORTO",
+          "rewardAsset": "PORTO",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.4588"
+        },
+        "quota": { "totalPersonalQuota": "1200", "minimum": "1" }
+      },
+      {
+        "projectId": "Porto*60",
+        "detail": {
+          "asset": "PORTO",
+          "rewardAsset": "PORTO",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.3326"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "1" }
+      },
+      {
+        "projectId": "Porto*30",
+        "detail": {
+          "asset": "PORTO",
+          "rewardAsset": "PORTO",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.297"
+        },
+        "quota": { "totalPersonalQuota": "8000", "minimum": "1" }
+      }
+    ],
+    "OM": [
+      {
+        "projectId": "Om*90",
+        "detail": {
+          "asset": "OM",
+          "rewardAsset": "OM",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.42"
+        },
+        "quota": { "totalPersonalQuota": "600", "minimum": "1" }
+      },
+      {
+        "projectId": "Om*30",
+        "detail": {
+          "asset": "OM",
+          "rewardAsset": "OM",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.2863"
+        },
+        "quota": { "totalPersonalQuota": "90000", "minimum": "1" }
+      }
+    ],
+    "ACH": [
+      {
+        "projectId": "Ach*90",
+        "detail": {
+          "asset": "ACH",
+          "rewardAsset": "ACH",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.4"
+        },
+        "quota": { "totalPersonalQuota": "8000", "minimum": "1" }
+      },
+      {
+        "projectId": "Ach*60",
+        "detail": {
+          "asset": "ACH",
+          "rewardAsset": "ACH",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.3"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      },
+      {
+        "projectId": "Ach*30",
+        "detail": {
+          "asset": "ACH",
+          "rewardAsset": "ACH",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.25"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "1" }
+      }
+    ],
+    "FIO": [
+      {
+        "projectId": "Fio*90",
+        "detail": {
+          "asset": "FIO",
+          "rewardAsset": "FIO",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.3986"
+        },
+        "quota": { "totalPersonalQuota": "600", "minimum": "0.1" }
+      }
+    ],
+    "GLMR": [
+      {
+        "projectId": "Glmr*90",
+        "detail": {
+          "asset": "GLMR",
+          "rewardAsset": "GLMR",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.3986"
+        },
+        "quota": { "totalPersonalQuota": "20", "minimum": "0.1" }
+      }
+    ],
+    "DODO": [
+      {
+        "projectId": "Dodo*120",
+        "detail": {
+          "asset": "DODO",
+          "rewardAsset": "DODO",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.3539"
+        },
+        "quota": { "totalPersonalQuota": "60", "minimum": "0.001" }
+      }
+    ],
+    "ATOM": [
+      {
+        "projectId": "Atom*120",
+        "detail": {
+          "asset": "ATOM",
+          "rewardAsset": "ATOM",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.3049"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Atom*30",
+        "detail": {
+          "asset": "ATOM",
+          "rewardAsset": "ATOM",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1011"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      }
+    ],
+    "NEAR": [
+      {
+        "projectId": "Near*120",
+        "detail": {
+          "asset": "NEAR",
+          "rewardAsset": "NEAR",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2999"
+        },
+        "quota": { "totalPersonalQuota": "20", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Near*90",
+        "detail": {
+          "asset": "NEAR",
+          "rewardAsset": "NEAR",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2439"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Near*60",
+        "detail": {
+          "asset": "NEAR",
+          "rewardAsset": "NEAR",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1289"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Near*30",
+        "detail": {
+          "asset": "NEAR",
+          "rewardAsset": "NEAR",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.092"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "0.1" }
+      }
+    ],
+    "LEVER": [
+      {
+        "projectId": "Lever*90",
+        "detail": {
+          "asset": "LEVER",
+          "rewardAsset": "LEVER",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2986"
+        },
+        "quota": { "totalPersonalQuota": "15000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Lever*30",
+        "detail": {
+          "asset": "LEVER",
+          "rewardAsset": "LEVER",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0967"
+        },
+        "quota": { "totalPersonalQuota": "800000", "minimum": "0.1" }
+      }
+    ],
+    "MINA": [
+      {
+        "projectId": "Mina*120",
+        "detail": {
+          "asset": "MINA",
+          "rewardAsset": "MINA",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2979"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Mina*90",
+        "detail": {
+          "asset": "MINA",
+          "rewardAsset": "MINA",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.254"
+        },
+        "quota": { "totalPersonalQuota": "60", "minimum": "0.05" }
+      }
+    ],
+    "AVAX": [
+      {
+        "projectId": "Avax*120",
+        "detail": {
+          "asset": "AVAX",
+          "rewardAsset": "AVAX",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2975"
+        },
+        "quota": { "totalPersonalQuota": "3", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Avax*90",
+        "detail": {
+          "asset": "AVAX",
+          "rewardAsset": "AVAX",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.205"
+        },
+        "quota": { "totalPersonalQuota": "10", "minimum": "0.0001" }
+      },
+      {
+        "projectId": "Avax*30",
+        "detail": {
+          "asset": "AVAX",
+          "rewardAsset": "AVAX",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0628"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "0.01" }
+      }
+    ],
+    "ROSE": [
+      {
+        "projectId": "Rose*120",
+        "detail": {
+          "asset": "ROSE",
+          "rewardAsset": "ROSE",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2738"
+        },
+        "quota": { "totalPersonalQuota": "1500", "minimum": "0.01" }
+      }
+    ],
+    "OGN": [
+      {
+        "projectId": "Ogn*120",
+        "detail": {
+          "asset": "OGN",
+          "rewardAsset": "OGN",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2579"
+        },
+        "quota": { "totalPersonalQuota": "150", "minimum": "1" }
+      },
+      {
+        "projectId": "Ogn*30",
+        "detail": {
+          "asset": "OGN",
+          "rewardAsset": "OGN",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0749"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "10" }
+      }
+    ],
+    "ICP": [
+      {
+        "projectId": "Icp*120",
+        "detail": {
+          "asset": "ICP",
+          "rewardAsset": "ICP",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2539"
+        },
+        "quota": { "totalPersonalQuota": "10", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Icp*30",
+        "detail": {
+          "asset": "ICP",
+          "rewardAsset": "ICP",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0671"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      }
+    ],
+    "BTTC": [
+      {
+        "projectId": "Bttc*90",
+        "detail": {
+          "asset": "BTTC",
+          "rewardAsset": "BTTC",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2519"
+        },
+        "quota": { "totalPersonalQuota": "40000000", "minimum": "300" }
+      },
+      {
+        "projectId": "Bttc*30",
+        "detail": {
+          "asset": "BTTC",
+          "rewardAsset": "BTTC",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1459"
+        },
+        "quota": { "totalPersonalQuota": "50000000000", "minimum": "300" }
+      }
+    ],
+    "CHESS": [
+      {
+        "projectId": "Chess*120",
+        "detail": {
+          "asset": "CHESS",
+          "rewardAsset": "CHESS",
+          "extraRewardAsset": "BNB",
+          "extraRewardsAPY": "0.2429",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "200", "minimum": "1" }
+      },
+      {
+        "projectId": "Chess*30",
+        "detail": {
+          "asset": "CHESS",
+          "rewardAsset": "CHESS",
+          "extraRewardAsset": "BNB",
+          "extraRewardsAPY": "0.0498",
+          "duration": 30,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "10" }
+      }
+    ],
+    "REEF": [
+      {
+        "projectId": "Reef*90",
+        "detail": {
+          "asset": "REEF",
+          "rewardAsset": "REEF",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2359"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      }
+    ],
+    "EGLD": [
+      {
+        "projectId": "Egld*120",
+        "detail": {
+          "asset": "EGLD",
+          "rewardAsset": "EGLD",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2359"
+        },
+        "quota": { "totalPersonalQuota": "4", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Egld*60",
+        "detail": {
+          "asset": "EGLD",
+          "rewardAsset": "EGLD",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0986"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.2" }
+      },
+      {
+        "projectId": "Egld*30",
+        "detail": {
+          "asset": "EGLD",
+          "rewardAsset": "EGLD",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0786"
+        },
+        "quota": { "totalPersonalQuota": "600", "minimum": "0.2" }
+      }
+    ],
+    "ZIL": [
+      {
+        "projectId": "Zil*120",
+        "detail": {
+          "asset": "ZIL",
+          "rewardAsset": "ZIL",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2279"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "1" }
+      },
+      {
+        "projectId": "Zil*90",
+        "detail": {
+          "asset": "ZIL",
+          "rewardAsset": "ZIL",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1879"
+        },
+        "quota": { "totalPersonalQuota": "6000", "minimum": "1" }
+      },
+      {
+        "projectId": "Zil*30",
+        "detail": {
+          "asset": "ZIL",
+          "rewardAsset": "ZIL",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1189"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "100" }
+      }
+    ],
+    "KSM": [
+      {
+        "projectId": "Ksm*120",
+        "detail": {
+          "asset": "KSM",
+          "rewardAsset": "KSM",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2239"
+        },
+        "quota": { "totalPersonalQuota": "3", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Ksm*60",
+        "detail": {
+          "asset": "KSM",
+          "rewardAsset": "KSM",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1287"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Ksm*30",
+        "detail": {
+          "asset": "KSM",
+          "rewardAsset": "KSM",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1129"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      }
+    ],
+    "FRONT": [
+      {
+        "projectId": "Front*90",
+        "detail": {
+          "asset": "FRONT",
+          "rewardAsset": "FRONT",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2166"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Front*60",
+        "detail": {
+          "asset": "FRONT",
+          "rewardAsset": "FRONT",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1599"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Front*30",
+        "detail": {
+          "asset": "FRONT",
+          "rewardAsset": "FRONT",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1279"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "0.1" }
+      }
+    ],
+    "MATIC": [
+      {
+        "projectId": "Matic*90",
+        "detail": {
+          "asset": "MATIC",
+          "rewardAsset": "MATIC",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2154"
+        },
+        "quota": { "totalPersonalQuota": "250", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Matic*30",
+        "detail": {
+          "asset": "MATIC",
+          "rewardAsset": "MATIC",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0762"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "1" }
+      }
+    ],
+    "ELF": [
+      {
+        "projectId": "Elf*90",
+        "detail": {
+          "asset": "ELF",
+          "rewardAsset": "ELF",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.2098"
+        },
+        "quota": { "totalPersonalQuota": "150", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Elf*60",
+        "detail": {
+          "asset": "ELF",
+          "rewardAsset": "ELF",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1629"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Elf*30",
+        "detail": {
+          "asset": "ELF",
+          "rewardAsset": "ELF",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1276"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "0.01" }
+      }
+    ],
+    "DOT": [
+      {
+        "projectId": "Dot*120",
+        "detail": {
+          "asset": "DOT",
+          "rewardAsset": "DOT",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2098"
+        },
+        "quota": { "totalPersonalQuota": "20", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Dot*30",
+        "detail": {
+          "asset": "DOT",
+          "rewardAsset": "DOT",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1151"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "1" }
+      }
+    ],
+    "ONT": [
+      {
+        "projectId": "Ont*120",
+        "detail": {
+          "asset": "ONT",
+          "rewardAsset": "ONT",
+          "extraRewardAsset": "ONG",
+          "extraRewardsAPY": "0.2038",
+          "duration": 120,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "300", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Ont_30",
+        "detail": {
+          "asset": "ONT",
+          "rewardAsset": "ONT",
+          "extraRewardAsset": "ONG",
+          "extraRewardsAPY": "0.0521",
+          "duration": 30,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "1" }
+      }
+    ],
+    "IOST": [
+      {
+        "projectId": "Iost*120",
+        "detail": {
+          "asset": "IOST",
+          "rewardAsset": "IOST",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2019"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Iost*30",
+        "detail": {
+          "asset": "IOST",
+          "rewardAsset": "IOST",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0395"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "100" }
+      }
+    ],
+    "CELR": [
+      {
+        "projectId": "Celr*120",
+        "detail": {
+          "asset": "CELR",
+          "rewardAsset": "CELR",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.2"
+        },
+        "quota": { "totalPersonalQuota": "6000", "minimum": "1" }
+      },
+      {
+        "projectId": "Celr*30",
+        "detail": {
+          "asset": "CELR",
+          "rewardAsset": "CELR",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0557"
+        },
+        "quota": { "totalPersonalQuota": "200000", "minimum": "50" }
+      }
+    ],
+    "AMB": [
+      {
+        "projectId": "Amb*90",
+        "detail": {
+          "asset": "AMB",
+          "rewardAsset": "AMB",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1979"
+        },
+        "quota": { "totalPersonalQuota": "150000", "minimum": "1" }
+      },
+      {
+        "projectId": "Amb*60",
+        "detail": {
+          "asset": "AMB",
+          "rewardAsset": "AMB",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1779"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "1" }
+      },
+      {
+        "projectId": "Amb*30",
+        "detail": {
+          "asset": "AMB",
+          "rewardAsset": "AMB",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1589"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "1" }
+      }
+    ],
+    "SOL": [
+      {
+        "projectId": "Sol*120",
+        "detail": {
+          "asset": "SOL",
+          "rewardAsset": "SOL",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1947"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Sol*90",
+        "detail": {
+          "asset": "SOL",
+          "rewardAsset": "SOL",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1479"
+        },
+        "quota": { "totalPersonalQuota": "30", "minimum": "0.0001" }
+      },
+      {
+        "projectId": "Sol*60",
+        "detail": {
+          "asset": "SOL",
+          "rewardAsset": "SOL",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0628"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Sol*30",
+        "detail": {
+          "asset": "SOL",
+          "rewardAsset": "SOL",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0539"
+        },
+        "quota": { "totalPersonalQuota": "7000", "minimum": "0.01" }
+      }
+    ],
+    "LIT": [
+      {
+        "projectId": "Lit*90",
+        "detail": {
+          "asset": "LIT",
+          "rewardAsset": "LIT",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1897"
+        },
+        "quota": { "totalPersonalQuota": "40", "minimum": "0.1" }
+      }
+    ],
+    "CTK": [
+      {
+        "projectId": "Ctk*30",
+        "detail": {
+          "asset": "CTK",
+          "rewardAsset": "CTK",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1857"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "1" }
+      }
+    ],
+    "SUSHI": [
+      {
+        "projectId": "Sushi*120",
+        "detail": {
+          "asset": "SUSHI",
+          "rewardAsset": "SUSHI",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1757"
+        },
+        "quota": { "totalPersonalQuota": "40", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Sushi*90",
+        "detail": {
+          "asset": "SUSHI",
+          "rewardAsset": "SUSHI",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.139"
+        },
+        "quota": { "totalPersonalQuota": "80", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Sushi*30",
+        "detail": {
+          "asset": "SUSHI",
+          "rewardAsset": "SUSHI",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.095"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "10" }
+      },
+      {
+        "projectId": "Sushi*15",
+        "detail": {
+          "asset": "SUSHI",
+          "rewardAsset": "SUSHI",
+          "duration": 15,
+          "renewable": true,
+          "apy": "0.067"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "10" }
+      }
+    ],
+    "FIL": [
+      {
+        "projectId": "Fil*90",
+        "detail": {
+          "asset": "FIL",
+          "rewardAsset": "FIL",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1725"
+        },
+        "quota": { "totalPersonalQuota": "12", "minimum": "0.0001" }
+      }
+    ],
+    "DOCK": [
+      {
+        "projectId": "Dock*90",
+        "detail": {
+          "asset": "DOCK",
+          "rewardAsset": "DOCK",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1721"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "10" }
+      },
+      {
+        "projectId": "Dock*60",
+        "detail": {
+          "asset": "DOCK",
+          "rewardAsset": "DOCK",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1524"
+        },
+        "quota": { "totalPersonalQuota": "20000", "minimum": "10" }
+      },
+      {
+        "projectId": "Dock*30",
+        "detail": {
+          "asset": "DOCK",
+          "rewardAsset": "DOCK",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1332"
+        },
+        "quota": { "totalPersonalQuota": "200000", "minimum": "10" }
+      }
+    ],
+    "WOO": [
+      {
+        "projectId": "Woo*90",
+        "detail": {
+          "asset": "WOO",
+          "rewardAsset": "WOO",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1695"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      }
+    ],
+    "NKN": [
+      {
+        "projectId": "Nkn*90",
+        "detail": {
+          "asset": "NKN",
+          "rewardAsset": "NKN",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1682"
+        },
+        "quota": { "totalPersonalQuota": "600", "minimum": "1" }
+      },
+      {
+        "projectId": "Nkn*30",
+        "detail": {
+          "asset": "NKN",
+          "rewardAsset": "NKN",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0759"
+        },
+        "quota": { "totalPersonalQuota": "75000", "minimum": "1" }
+      }
+    ],
+    "BURGER": [
+      {
+        "projectId": "Burger*90",
+        "detail": {
+          "asset": "BURGER",
+          "rewardAsset": "BURGER",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.158"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Burger*60",
+        "detail": {
+          "asset": "BURGER",
+          "rewardAsset": "BURGER",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.126"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Burger*30",
+        "detail": {
+          "asset": "BURGER",
+          "rewardAsset": "BURGER",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.098"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "0.1" }
+      }
+    ],
+    "ADA": [
+      {
+        "projectId": "Ada*120",
+        "detail": {
+          "asset": "ADA",
+          "rewardAsset": "ADA",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1579"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Ada*90",
+        "detail": {
+          "asset": "ADA",
+          "rewardAsset": "ADA",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1129"
+        },
+        "quota": { "totalPersonalQuota": "1500", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Ada*60",
+        "detail": {
+          "asset": "ADA",
+          "rewardAsset": "ADA",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0465"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "1" }
+      },
+      {
+        "projectId": "Ada*30",
+        "detail": {
+          "asset": "ADA",
+          "rewardAsset": "ADA",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0431"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "1" }
+      }
+    ],
+    "ONE": [
+      {
+        "projectId": "One*120",
+        "detail": {
+          "asset": "ONE",
+          "rewardAsset": "ONE",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1579"
+        },
+        "quota": { "totalPersonalQuota": "1200", "minimum": "0.01" }
+      }
+    ],
+    "STX": [
+      {
+        "projectId": "Stx*120",
+        "detail": {
+          "asset": "STX",
+          "rewardAsset": "STX",
+          "extraRewardAsset": "BTC",
+          "extraRewardsAPY": "0.1555",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "100", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Stx*90",
+        "detail": {
+          "asset": "STX",
+          "rewardAsset": "STX",
+          "extraRewardAsset": "BTC",
+          "extraRewardsAPY": "0.1055",
+          "duration": 90,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Stx*30",
+        "detail": {
+          "asset": "STX",
+          "rewardAsset": "STX",
+          "extraRewardAsset": "BTC",
+          "extraRewardsAPY": "0.0625",
+          "duration": 30,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      }
+    ],
+    "TOMO": [
+      {
+        "projectId": "Tomo*60",
+        "detail": {
+          "asset": "TOMO",
+          "rewardAsset": "TOMO",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.1479"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "50" }
+      },
+      {
+        "projectId": "Tomo*30",
+        "detail": {
+          "asset": "TOMO",
+          "rewardAsset": "TOMO",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0949"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "50" }
+      }
+    ],
+    "NEO": [
+      {
+        "projectId": "Neo*120",
+        "detail": {
+          "asset": "NEO",
+          "rewardAsset": "NEO",
+          "extraRewardAsset": "GAS",
+          "extraRewardsAPY": "0.1356",
+          "duration": 120,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Neo*90",
+        "detail": {
+          "asset": "NEO",
+          "rewardAsset": "NEO",
+          "extraRewardAsset": "GAS",
+          "extraRewardsAPY": "0.1159",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "15", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Neo*30",
+        "detail": {
+          "asset": "NEO",
+          "rewardAsset": "NEO",
+          "extraRewardAsset": "GAS",
+          "extraRewardsAPY": "0.0749",
+          "duration": 30,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "1000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Neo*15",
+        "detail": {
+          "asset": "NEO",
+          "rewardAsset": "NEO",
+          "extraRewardAsset": "GAS",
+          "extraRewardsAPY": "0.0579",
+          "duration": 15,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "0.1" }
+      }
+    ],
+    "BNB": [
+      {
+        "projectId": "Bnb*120",
+        "detail": {
+          "asset": "BNB",
+          "rewardAsset": "BNB",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1299"
+        },
+        "quota": { "totalPersonalQuota": "0.5", "minimum": "0.001" }
+      }
+    ],
+    "BAKE": [
+      {
+        "projectId": "Bake*120",
+        "detail": {
+          "asset": "BAKE",
+          "rewardAsset": "BAKE",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1295"
+        },
+        "quota": { "totalPersonalQuota": "50", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Bake*30",
+        "detail": {
+          "asset": "BAKE",
+          "rewardAsset": "BAKE",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.032"
+        },
+        "quota": { "totalPersonalQuota": "25000", "minimum": "1" }
+      }
+    ],
+    "FLOW": [
+      {
+        "projectId": "Flow*90",
+        "detail": {
+          "asset": "FLOW",
+          "rewardAsset": "FLOW",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1279"
+        },
+        "quota": { "totalPersonalQuota": "80", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Flow*60",
+        "detail": {
+          "asset": "FLOW",
+          "rewardAsset": "FLOW",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0729"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Flow*30",
+        "detail": {
+          "asset": "FLOW",
+          "rewardAsset": "FLOW",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0597"
+        },
+        "quota": { "totalPersonalQuota": "8000", "minimum": "0.1" }
+      }
+    ],
+    "TRX": [
+      {
+        "projectId": "Trx*120",
+        "detail": {
+          "asset": "TRX",
+          "rewardAsset": "TRX",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1238"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Trx*90",
+        "detail": {
+          "asset": "TRX",
+          "rewardAsset": "TRX",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.068"
+        },
+        "quota": { "totalPersonalQuota": "10000000", "minimum": "100" }
+      },
+      {
+        "projectId": "Trx*60",
+        "detail": {
+          "asset": "TRX",
+          "rewardAsset": "TRX",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0486"
+        },
+        "quota": { "totalPersonalQuota": "10000000", "minimum": "100" }
+      },
+      {
+        "projectId": "Trx*30",
+        "detail": {
+          "asset": "TRX",
+          "rewardAsset": "TRX",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0427"
+        },
+        "quota": { "totalPersonalQuota": "10000000", "minimum": "100" }
+      }
+    ],
+    "CTSI": [
+      {
+        "projectId": "Ctsi*30",
+        "detail": {
+          "asset": "CTSI",
+          "rewardAsset": "CTSI",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1214"
+        },
+        "quota": { "totalPersonalQuota": "25000", "minimum": "5" }
+      }
+    ],
+    "SHIB": [
+      {
+        "projectId": "Shib*120",
+        "detail": {
+          "asset": "SHIB",
+          "rewardAsset": "SHIB",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1209"
+        },
+        "quota": { "totalPersonalQuota": "7000000", "minimum": "200" }
+      },
+      {
+        "projectId": "Shib*10",
+        "detail": {
+          "asset": "SHIB",
+          "rewardAsset": "SHIB",
+          "duration": 10,
+          "renewable": true,
+          "apy": "0.1012"
+        },
+        "quota": { "totalPersonalQuota": "7000000", "minimum": "200" }
+      },
+      {
+        "projectId": "Shib*90",
+        "detail": {
+          "asset": "SHIB",
+          "rewardAsset": "SHIB",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.0152"
+        },
+        "quota": { "totalPersonalQuota": "500000000", "minimum": "1000000" }
+      },
+      {
+        "projectId": "Shib*60",
+        "detail": {
+          "asset": "SHIB",
+          "rewardAsset": "SHIB",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0112"
+        },
+        "quota": { "totalPersonalQuota": "1000000000", "minimum": "1000000" }
+      },
+      {
+        "projectId": "Shib*30",
+        "detail": {
+          "asset": "SHIB",
+          "rewardAsset": "SHIB",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0052"
+        },
+        "quota": { "totalPersonalQuota": "5000000000", "minimum": "1000000" }
+      }
+    ],
+    "CLV": [
+      {
+        "projectId": "Clv*90",
+        "detail": {
+          "asset": "CLV",
+          "rewardAsset": "CLV",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1198"
+        },
+        "quota": { "totalPersonalQuota": "250", "minimum": "0.1" }
+      }
+    ],
+    "SKL": [
+      {
+        "projectId": "Skl*90",
+        "detail": {
+          "asset": "SKL",
+          "rewardAsset": "SKL",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1176"
+        },
+        "quota": { "totalPersonalQuota": "800", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Skl*30",
+        "detail": {
+          "asset": "SKL",
+          "rewardAsset": "SKL",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0579"
+        },
+        "quota": { "totalPersonalQuota": "80000", "minimum": "0.1" }
+      }
+    ],
+    "CHR": [
+      {
+        "projectId": "Chr*30",
+        "detail": {
+          "asset": "CHR",
+          "rewardAsset": "CHR",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.116"
+        },
+        "quota": { "totalPersonalQuota": "150000", "minimum": "100" }
+      }
+    ],
+    "STMX": [
+      {
+        "projectId": "Stmx*90",
+        "detail": {
+          "asset": "STMX",
+          "rewardAsset": "STMX",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.1156"
+        },
+        "quota": { "totalPersonalQuota": "8000", "minimum": "1" }
+      },
+      {
+        "projectId": "Stmx*60",
+        "detail": {
+          "asset": "STMX",
+          "rewardAsset": "STMX",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0789"
+        },
+        "quota": { "totalPersonalQuota": "60000", "minimum": "1" }
+      },
+      {
+        "projectId": "Stmx*30",
+        "detail": {
+          "asset": "STMX",
+          "rewardAsset": "STMX",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0585"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "1" }
+      }
+    ],
+    "BAND": [
+      {
+        "projectId": "Band*30",
+        "detail": {
+          "asset": "BAND",
+          "rewardAsset": "BAND",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.112"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "20" }
+      }
+    ],
+    "WAVES": [
+      {
+        "projectId": "Waves*120",
+        "detail": {
+          "asset": "WAVES",
+          "rewardAsset": "WAVES",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1089"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Waves*60",
+        "detail": {
+          "asset": "WAVES",
+          "rewardAsset": "WAVES",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0749"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "1" }
+      },
+      {
+        "projectId": "Waves*30",
+        "detail": {
+          "asset": "WAVES",
+          "rewardAsset": "WAVES",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0579"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "1" }
+      },
+      {
+        "projectId": "Waves*15",
+        "detail": {
+          "asset": "WAVES",
+          "rewardAsset": "WAVES",
+          "duration": 15,
+          "renewable": true,
+          "apy": "0.0474"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "1" }
+      }
+    ],
+    "ICX": [
+      {
+        "projectId": "Icx*30",
+        "detail": {
+          "asset": "ICX",
+          "rewardAsset": "ICX",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.1049"
+        },
+        "quota": { "totalPersonalQuota": "20000", "minimum": "10" }
+      }
+    ],
+    "COS": [
+      {
+        "projectId": "Cos*15",
+        "detail": {
+          "asset": "COS",
+          "rewardAsset": "COS",
+          "duration": 15,
+          "renewable": true,
+          "apy": "0.1029"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "1000" }
+      }
+    ],
+    "DAR": [
+      {
+        "projectId": "Dar*120",
+        "detail": {
+          "asset": "DAR",
+          "rewardAsset": "DAR",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.1009"
+        },
+        "quota": { "totalPersonalQuota": "20", "minimum": "0.001" }
+      }
+    ],
+    "EOS": [
+      {
+        "projectId": "Eos*120",
+        "detail": {
+          "asset": "EOS",
+          "rewardAsset": "EOS",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.0978"
+        },
+        "quota": { "totalPersonalQuota": "40", "minimum": "0.01" }
+      }
+    ],
+    "HIGH": [
+      {
+        "projectId": "High*90",
+        "detail": {
+          "asset": "HIGH",
+          "rewardAsset": "HIGH",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.096"
+        },
+        "quota": { "totalPersonalQuota": "30", "minimum": "0.01" }
+      },
+      {
+        "projectId": "High*30",
+        "detail": {
+          "asset": "HIGH",
+          "rewardAsset": "HIGH",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.049"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "0.01" }
+      }
+    ],
+    "KAVA": [
+      {
+        "projectId": "Kava*60",
+        "detail": {
+          "asset": "KAVA",
+          "rewardAsset": "KAVA",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0898"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Kava*30",
+        "detail": {
+          "asset": "KAVA",
+          "rewardAsset": "KAVA",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.072"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      }
+    ],
+    "RAY": [
+      {
+        "projectId": "Ray*30",
+        "detail": {
+          "asset": "RAY",
+          "rewardAsset": "RAY",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0894"
+        },
+        "quota": { "totalPersonalQuota": "20000", "minimum": "1" }
+      }
+    ],
+    "SAND": [
+      {
+        "projectId": "Sand*30",
+        "detail": {
+          "asset": "SAND",
+          "rewardAsset": "SAND",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.085"
+        },
+        "quota": { "totalPersonalQuota": "30000", "minimum": "1" }
+      }
+    ],
+    "AUCTION": [
+      {
+        "projectId": "Auction*60",
+        "detail": {
+          "asset": "AUCTION",
+          "rewardAsset": "AUCTION",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0847"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Auction*90",
+        "detail": {
+          "asset": "AUCTION",
+          "rewardAsset": "AUCTION",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.08"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Auction*30",
+        "detail": {
+          "asset": "AUCTION",
+          "rewardAsset": "AUCTION",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.061"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.1" }
+      }
+    ],
+    "ALGO": [
+      {
+        "projectId": "Algo*120",
+        "detail": {
+          "asset": "ALGO",
+          "rewardAsset": "ALGO",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.0824"
+        },
+        "quota": { "totalPersonalQuota": "200", "minimum": "0.01" }
+      }
+    ],
+    "GRT": [
+      {
+        "projectId": "Grt*120",
+        "detail": {
+          "asset": "GRT",
+          "rewardAsset": "GRT",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.0819"
+        },
+        "quota": { "totalPersonalQuota": "300", "minimum": "0.01" }
+      }
+    ],
+    "XEM": [
+      {
+        "projectId": "Xem*90",
+        "detail": {
+          "asset": "XEM",
+          "rewardAsset": "XEM",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.0759"
+        },
+        "quota": { "totalPersonalQuota": "1500", "minimum": "1" }
+      }
+    ],
+    "DASH": [
+      {
+        "projectId": "Dash*30",
+        "detail": {
+          "asset": "DASH",
+          "rewardAsset": "DASH",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0739"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "0.01" }
+      }
+    ],
+    "QTUM": [
+      {
+        "projectId": "Qtum*120",
+        "detail": {
+          "asset": "QTUM",
+          "rewardAsset": "QTUM",
+          "duration": 120,
+          "renewable": true,
+          "apy": "0.0739"
+        },
+        "quota": { "totalPersonalQuota": "20", "minimum": "0.1" }
+      },
+      {
+        "projectId": "Qtum*90",
+        "detail": {
+          "asset": "QTUM",
+          "rewardAsset": "QTUM",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.036"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "5" }
+      },
+      {
+        "projectId": "Qtum*60",
+        "detail": {
+          "asset": "QTUM",
+          "rewardAsset": "QTUM",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.029"
+        },
+        "quota": { "totalPersonalQuota": "100000", "minimum": "1" }
+      },
+      {
+        "projectId": "Qtum*30",
+        "detail": {
+          "asset": "QTUM",
+          "rewardAsset": "QTUM",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.021"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "1" }
+      }
+    ],
+    "VET": [
+      {
+        "projectId": "Vet*90",
+        "detail": {
+          "asset": "VET",
+          "rewardAsset": "VET",
+          "extraRewardAsset": "VTHO",
+          "extraRewardsAPY": "0.0732",
+          "duration": 90,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      },
+      {
+        "projectId": "Vet*15",
+        "detail": {
+          "asset": "VET",
+          "rewardAsset": "VET",
+          "extraRewardAsset": "VTHO",
+          "extraRewardsAPY": "0.0247",
+          "duration": 15,
+          "renewable": false,
+          "apy": "0"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "1" }
+      }
+    ],
+    "FARM": [
+      {
+        "projectId": "Farm*30",
+        "detail": {
+          "asset": "FARM",
+          "rewardAsset": "FARM",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0728"
+        },
+        "quota": { "totalPersonalQuota": "50", "minimum": "0.2" }
+      }
+    ],
+    "CRV": [
+      {
+        "projectId": "Crv*90",
+        "detail": {
+          "asset": "CRV",
+          "rewardAsset": "CRV",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.0723"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.001" }
+      },
+      {
+        "projectId": "Crv*30",
+        "detail": {
+          "asset": "CRV",
+          "rewardAsset": "CRV",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0267"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "1" }
+      },
+      {
+        "projectId": "Crv*15",
+        "detail": {
+          "asset": "CRV",
+          "rewardAsset": "CRV",
+          "duration": 15,
+          "renewable": true,
+          "apy": "0.0251"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "1" }
+      }
+    ],
+    "XTZ": [
+      {
+        "projectId": "Xtz*30",
+        "detail": {
+          "asset": "XTZ",
+          "rewardAsset": "XTZ",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0712"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      }
+    ],
+    "LPT": [
+      {
+        "projectId": "Lpt*30",
+        "detail": {
+          "asset": "LPT",
+          "rewardAsset": "LPT",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.062"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "0.01" }
+      }
+    ],
+    "ARPA": [
+      {
+        "projectId": "Arpa*30",
+        "detail": {
+          "asset": "ARPA",
+          "rewardAsset": "ARPA",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0586"
+        },
+        "quota": { "totalPersonalQuota": "500000", "minimum": "500" }
+      }
+    ],
+    "FIRO": [
+      {
+        "projectId": "Firo*30",
+        "detail": {
+          "asset": "FIRO",
+          "rewardAsset": "FIRO",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0578"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "100" }
+      }
+    ],
+    "IRIS": [
+      {
+        "projectId": "Iris*30",
+        "detail": {
+          "asset": "IRIS",
+          "rewardAsset": "IRIS",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0569"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "100" }
+      }
+    ],
+    "CELO": [
+      {
+        "projectId": "Celo*30",
+        "detail": {
+          "asset": "CELO",
+          "rewardAsset": "CELO",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0521"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      }
+    ],
+    "ALPHA": [
+      {
+        "projectId": "Alpha*60",
+        "detail": {
+          "asset": "ALPHA",
+          "rewardAsset": "ALPHA",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0456"
+        },
+        "quota": { "totalPersonalQuota": "8000", "minimum": "1" }
+      },
+      {
+        "projectId": "Alpha*30",
+        "detail": {
+          "asset": "ALPHA",
+          "rewardAsset": "ALPHA",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0373"
+        },
+        "quota": { "totalPersonalQuota": "20000", "minimum": "1" }
+      }
+    ],
+    "IOTX": [
+      {
+        "projectId": "Iotx*30",
+        "detail": {
+          "asset": "IOTX",
+          "rewardAsset": "IOTX",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0432"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "1" }
+      }
+    ],
+    "KLAY": [
+      {
+        "projectId": "Klay*30",
+        "detail": {
+          "asset": "KLAY",
+          "rewardAsset": "KLAY",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.041"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      }
+    ],
+    "INJ": [
+      {
+        "projectId": "Inj*90",
+        "detail": {
+          "asset": "INJ",
+          "rewardAsset": "INJ",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.0365"
+        },
+        "quota": { "totalPersonalQuota": "500", "minimum": "1" }
+      },
+      {
+        "projectId": "Inj*60",
+        "detail": {
+          "asset": "INJ",
+          "rewardAsset": "INJ",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0268"
+        },
+        "quota": { "totalPersonalQuota": "2000", "minimum": "1" }
+      },
+      {
+        "projectId": "Inj*30",
+        "detail": {
+          "asset": "INJ",
+          "rewardAsset": "INJ",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0239"
+        },
+        "quota": { "totalPersonalQuota": "5000", "minimum": "1" }
+      }
+    ],
+    "FET": [
+      {
+        "projectId": "Fet*60",
+        "detail": {
+          "asset": "FET",
+          "rewardAsset": "FET",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0321"
+        },
+        "quota": { "totalPersonalQuota": "10000", "minimum": "1" }
+      },
+      {
+        "projectId": "Fet*30",
+        "detail": {
+          "asset": "FET",
+          "rewardAsset": "FET",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0232"
+        },
+        "quota": { "totalPersonalQuota": "40000", "minimum": "1" }
+      }
+    ],
+    "LTO": [
+      {
+        "projectId": "Lto*7",
+        "detail": {
+          "asset": "LTO",
+          "rewardAsset": "LTO",
+          "duration": 7,
+          "renewable": true,
+          "apy": "0.029"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "100" }
+      }
+    ],
+    "BIFI": [
+      {
+        "projectId": "Bifi*60",
+        "detail": {
+          "asset": "BIFI",
+          "rewardAsset": "BIFI",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.02473"
+        },
+        "quota": { "totalPersonalQuota": "50", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Bifi*30",
+        "detail": {
+          "asset": "BIFI",
+          "rewardAsset": "BIFI",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0179"
+        },
+        "quota": { "totalPersonalQuota": "50", "minimum": "0.01" }
+      }
+    ],
+    "LSK": [
+      {
+        "projectId": "Lsk*90",
+        "detail": {
+          "asset": "LSK",
+          "rewardAsset": "LSK",
+          "duration": 90,
+          "renewable": true,
+          "apy": "0.0223"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "1" }
+      },
+      {
+        "projectId": "Lsk*60",
+        "detail": {
+          "asset": "LSK",
+          "rewardAsset": "LSK",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0186"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "1" }
+      },
+      {
+        "projectId": "Lsk*30",
+        "detail": {
+          "asset": "LSK",
+          "rewardAsset": "LSK",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0149"
+        },
+        "quota": { "totalPersonalQuota": "1000000", "minimum": "100" }
+      }
+    ],
+    "YFI": [
+      {
+        "projectId": "Yfi*30",
+        "detail": {
+          "asset": "YFI",
+          "rewardAsset": "YFI",
+          "duration": 30,
+          "renewable": true,
+          "apy": "0.0209"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.01" }
+      },
+      {
+        "projectId": "Yfi*15",
+        "detail": {
+          "asset": "YFI",
+          "rewardAsset": "YFI",
+          "duration": 15,
+          "renewable": true,
+          "apy": "0.0149"
+        },
+        "quota": { "totalPersonalQuota": "5", "minimum": "0.01" }
+      }
+    ],
+    "1INCH": [
+      {
+        "projectId": "1inch*60",
+        "detail": {
+          "asset": "1INCH",
+          "rewardAsset": "1INCH",
+          "duration": 60,
+          "renewable": true,
+          "apy": "0.0173"
+        },
+        "quota": { "totalPersonalQuota": "50000", "minimum": "0.1" }
+      }
+    ]
+  },
+  "savingProducts": {
+    "ETH": [
+      {
+        "productId": "ETH001",
+        "asset": "ETH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0240024",
+        "latestAnnualInterestRate": "0.0240024",
+        "purchasedAmount": "657473.16365844",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.01",
+        "tierAnnualInterestRate": {
+          ">0.2ETH": "0.00100010",
+          "0-0.2ETH": "0.02400240"
+        }
+      }
+    ],
+    "EGLD": [
+      {
+        "productId": "EGLD001",
+        "asset": "EGLD",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "118880.23284274",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "BTC": [
+      {
+        "productId": "BTC001",
+        "asset": "BTC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.05000135",
+        "latestAnnualInterestRate": "0.05000135",
+        "purchasedAmount": "90136.53695817",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.001",
+        "tierAnnualInterestRate": {
+          ">0.5BTC": "0.00100010",
+          "0-0.01BTC": "0.05000135",
+          "0.01-0.5BTC": "0.00800080"
+        }
+      }
+    ],
+    "MANA": [
+      {
+        "productId": "MANA001",
+        "asset": "MANA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "40469086.30301887",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "USDT": [
+      {
+        "productId": "USDT001",
+        "asset": "USDT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.09999905",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "2270263674.89271413",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "150000000",
+        "minPurchaseAmount": "0.1",
+        "tierAnnualInterestRate": {
+          "2000-20000USDT": "0.03000000",
+          ">20000USDT": "0.00500000",
+          "0-2000USDT": "0.10000000"
+        }
+      }
+    ],
+    "ATOM": [
+      {
+        "productId": "ATOM001",
+        "asset": "ATOM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.014235",
+        "latestAnnualInterestRate": "0.0142358",
+        "purchasedAmount": "1864242.06393521",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "3500000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "SOL": [
+      {
+        "productId": "SOL001",
+        "asset": "SOL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00780005",
+        "latestAnnualInterestRate": "0.0078",
+        "purchasedAmount": "1463955.72508854",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "ALGO": [
+      {
+        "productId": "ALGO001",
+        "asset": "ALGO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "24342622.38636945",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "30000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "AAVE": [
+      {
+        "productId": "AAVE001",
+        "asset": "AAVE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "141626.02266433",
+        "upLimit": "4000000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "ONE": [
+      {
+        "productId": "ONE001",
+        "asset": "ONE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050516",
+        "latestAnnualInterestRate": "0.0050516",
+        "purchasedAmount": "126839897.02197428",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "CAKE": [
+      {
+        "productId": "CAKE001",
+        "asset": "CAKE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.12000105",
+        "latestAnnualInterestRate": "0.12000105",
+        "purchasedAmount": "5287152.43928459",
+        "upLimit": "6000000",
+        "upLimitPerUser": "500",
+        "minPurchaseAmount": "0.01",
+        "tierAnnualInterestRate": {
+          "0-50CAKE": "0.12000105",
+          ">50CAKE": "0.02000200"
+        }
+      }
+    ],
+    "FTM": [
+      {
+        "productId": "FTM001",
+        "asset": "FTM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "78408503.20462228",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "XRP": [
+      {
+        "productId": "XRP001",
+        "asset": "XRP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00450045",
+        "latestAnnualInterestRate": "0.0045",
+        "purchasedAmount": "534875433.70613815",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "LINK": [
+      {
+        "productId": "LINK001",
+        "asset": "LINK",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0020002",
+        "latestAnnualInterestRate": "0.002",
+        "purchasedAmount": "7750343.9286525",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "THETA": [
+      {
+        "productId": "THETA001",
+        "asset": "THETA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00381425",
+        "latestAnnualInterestRate": "0.00381291",
+        "purchasedAmount": "13330799.52066845",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BUSD": [
+      {
+        "productId": "BUSD001",
+        "asset": "BUSD",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.09999905",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "1752823442.19098273",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000000",
+        "minPurchaseAmount": "0.1",
+        "tierAnnualInterestRate": {
+          "0-2000BUSD": "0.10000000",
+          "2000-20000BUSD": "0.04000000",
+          ">20000BUSD": "0.00500000"
+        }
+      }
+    ],
+    "AVAX": [
+      {
+        "productId": "AVAX001",
+        "asset": "AVAX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.030003",
+        "latestAnnualInterestRate": "0.030003",
+        "purchasedAmount": "965779.03666085",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1",
+        "tierAnnualInterestRate": {
+          ">5AVAX": "0.00200020",
+          "0-5AVAX": "0.03000300"
+        }
+      }
+    ],
+    "ADA": [
+      {
+        "productId": "ADA001",
+        "asset": "ADA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "262543442.10749997",
+        "upLimit": "300000000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MATIC": [
+      {
+        "productId": "MATIC001",
+        "asset": "MATIC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0699997",
+        "latestAnnualInterestRate": "0.07",
+        "purchasedAmount": "65239350.82184797",
+        "upLimit": "120000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1",
+        "tierAnnualInterestRate": {
+          "0-1000MATIC": "0.07000000",
+          ">1000MATIC": "0.01500000"
+        }
+      }
+    ],
+    "XTZ": [
+      {
+        "productId": "XTZ001",
+        "asset": "XTZ",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02999935",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "2608722.11545008",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "NEAR": [
+      {
+        "productId": "NEAR001",
+        "asset": "NEAR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0599987",
+        "latestAnnualInterestRate": "0.06",
+        "purchasedAmount": "2479532.48747457",
+        "upLimit": "3200000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "0.1",
+        "tierAnnualInterestRate": {
+          ">200NEAR": "0.00400000",
+          "0-200NEAR": "0.06000000"
+        }
+      }
+    ],
+    "AXS": [
+      {
+        "productId": "AXS001",
+        "asset": "AXS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.20000175",
+        "latestAnnualInterestRate": "0.20000175",
+        "purchasedAmount": "901975.12071639",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01",
+        "tierAnnualInterestRate": {
+          ">20AXS": "0.01000100",
+          "5-20AXS": "0.02000200",
+          "0-5AXS": "0.20000175"
+        }
+      }
+    ],
+    "BNX": [
+      {
+        "productId": "BNX001",
+        "asset": "BNX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.14999675",
+        "latestAnnualInterestRate": "0.15",
+        "purchasedAmount": "168737.95317416",
+        "upLimit": "200000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "COTI": [
+      {
+        "productId": "COTI001",
+        "asset": "COTI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.09999905",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "137258484.68239626",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "15000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DREP": [
+      {
+        "productId": "DREP001",
+        "asset": "DREP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.14999675",
+        "latestAnnualInterestRate": "0.15",
+        "purchasedAmount": "1272104.8825765",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MTL": [
+      {
+        "productId": "MTL001",
+        "asset": "MTL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.09999905",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "1218898.34117664",
+        "upLimit": "2000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "QTUM": [
+      {
+        "productId": "QTUM001",
+        "asset": "QTUM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.05000135",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1075371.72657781",
+        "upLimit": "2564836",
+        "upLimitPerUser": "20000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RAD": [
+      {
+        "productId": "RAD001",
+        "asset": "RAD",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "138572.99467257",
+        "upLimit": "250000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "SAND": [
+      {
+        "productId": "SAND001",
+        "asset": "SAND",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.07999705",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "41215618.0937006",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "WAVES": [
+      {
+        "productId": "WAVES001",
+        "asset": "WAVES",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.1714259",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "1892416.42618332",
+        "upLimit": "2000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "WNXM": [
+      {
+        "productId": "WNXM001",
+        "asset": "WNXM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "11016.2204347",
+        "upLimit": "20000",
+        "upLimitPerUser": "4000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "AKRO": [
+      {
+        "productId": "AKRO001",
+        "asset": "AKRO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "114460415.99895061",
+        "upLimit": "260000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "ANC": [
+      {
+        "productId": "ANC001",
+        "asset": "ANC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "6696367.67281497",
+        "upLimit": "8000000",
+        "upLimitPerUser": "400000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "BCH": [
+      {
+        "productId": "BCH001",
+        "asset": "BCH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "132138.1186279",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "BLZ": [
+      {
+        "productId": "BLZ001",
+        "asset": "BLZ",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "9629695.62724737",
+        "upLimit": "11000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "C98": [
+      {
+        "productId": "C98001",
+        "asset": "C98",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02999935",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "4605906.03214009",
+        "upLimit": "5000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "CHZ": [
+      {
+        "productId": "CHZ001",
+        "asset": "CHZ",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0771391",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "417032793.8449973",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "CRV": [
+      {
+        "productId": "CRV001",
+        "asset": "CRV",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "7995334.40348405",
+        "upLimit": "8000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "CVX": [
+      {
+        "productId": "CVX001",
+        "asset": "CVX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "39737.42067392",
+        "upLimit": "40000",
+        "upLimitPerUser": "20000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DNT": [
+      {
+        "productId": "DNT001",
+        "asset": "DNT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "7761504.20814869",
+        "upLimit": "10000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "DYDX": [
+      {
+        "productId": "DYDX001",
+        "asset": "DYDX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0771391",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "4168946.63866784",
+        "upLimit": "4500000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "FIDA": [
+      {
+        "productId": "FIDA001",
+        "asset": "FIDA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "135769.94710458",
+        "upLimit": "400000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "FLM": [
+      {
+        "productId": "FLM001",
+        "asset": "FLM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "7472173.75831459",
+        "upLimit": "8000000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "FLOW": [
+      {
+        "productId": "FLOW001",
+        "asset": "FLOW",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "3293230.57683638",
+        "upLimit": "4000000",
+        "upLimitPerUser": "60000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "FORTH": [
+      {
+        "productId": "FORTH001",
+        "asset": "FORTH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "16672.42785739",
+        "upLimit": "200000",
+        "upLimitPerUser": "2000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "FTT": [
+      {
+        "productId": "FTT001",
+        "asset": "FTT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "626475.4532213",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "GMT": [
+      {
+        "productId": "GMT001",
+        "asset": "GMT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.1999981",
+        "latestAnnualInterestRate": "0.2",
+        "purchasedAmount": "60543927.28990488",
+        "upLimit": "75000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "HIGH": [
+      {
+        "productId": "HIGH001",
+        "asset": "HIGH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "438004.51943937",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "HIVE": [
+      {
+        "productId": "HIVE001",
+        "asset": "HIVE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "703017.5516051",
+        "upLimit": "1000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "ICX": [
+      {
+        "productId": "ICX001",
+        "asset": "ICX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "1270967.0394704",
+        "upLimit": "3000000",
+        "upLimitPerUser": "300000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "IOTA": [
+      {
+        "productId": "IOTA001",
+        "asset": "IOTA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "36475285.28978447",
+        "upLimit": "40000000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "JASMY": [
+      {
+        "productId": "JASMY001",
+        "asset": "JASMY",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00499685",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "834994054.32574429",
+        "upLimit": "835388732",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "KAVA": [
+      {
+        "productId": "KAVA001",
+        "asset": "KAVA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "944049.48775196",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "KNC": [
+      {
+        "productId": "KNC001",
+        "asset": "KNC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.05000135",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1876496.02496447",
+        "upLimit": "2000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MBL": [
+      {
+        "productId": "MBL001",
+        "asset": "MBL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.04570895",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "171545327.54490191",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "5000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "MBOX": [
+      {
+        "productId": "MBOX001",
+        "asset": "MBOX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0699997",
+        "latestAnnualInterestRate": "0.07",
+        "purchasedAmount": "6074344.12586291",
+        "upLimit": "10000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "NMR": [
+      {
+        "productId": "NMR001",
+        "asset": "NMR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0214255",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "8626.13811055",
+        "upLimit": "150000",
+        "upLimitPerUser": "50",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "OGN": [
+      {
+        "productId": "OGN001",
+        "asset": "OGN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "2627824.85248308",
+        "upLimit": "5000000",
+        "upLimitPerUser": "250000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "ONG": [
+      {
+        "productId": "ONG001",
+        "asset": "ONG",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "184695.38633234",
+        "upLimit": "2000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "OP": [
+      {
+        "productId": "OP001",
+        "asset": "OP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "5412393.49903625",
+        "upLimit": "15000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RARE": [
+      {
+        "productId": "RARE001",
+        "asset": "RARE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.04570895",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "2160830.6716645",
+        "upLimit": "3500000",
+        "upLimitPerUser": "250000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "RAY": [
+      {
+        "productId": "RAY001",
+        "asset": "RAY",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02999935",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "277498.18486878",
+        "upLimit": "825000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RIF": [
+      {
+        "productId": "RIF001",
+        "asset": "RIF",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "641835.60051503",
+        "upLimit": "3000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "ROSE": [
+      {
+        "productId": "ROSE001",
+        "asset": "ROSE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "60367734.88558721",
+        "upLimit": "60345016",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "SNX": [
+      {
+        "productId": "SNX001",
+        "asset": "SNX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1671424.86936102",
+        "upLimit": "1800000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "STORJ": [
+      {
+        "productId": "STORJ001",
+        "asset": "STORJ",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1902489.5193584",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "STX": [
+      {
+        "productId": "STX001",
+        "asset": "STX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "1299422.04423328",
+        "upLimit": "2000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "SUSHI": [
+      {
+        "productId": "SUSHI001",
+        "asset": "SUSHI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "2797828.54913486",
+        "upLimit": "2800000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TRX": [
+      {
+        "productId": "TRX001",
+        "asset": "TRX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "388128066.3281976",
+        "upLimit": "550000000",
+        "upLimitPerUser": "700000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "UNFI": [
+      {
+        "productId": "UNFI001",
+        "asset": "UNFI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "161076.46713902",
+        "upLimit": "1000000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "XEC": [
+      {
+        "productId": "XEC001",
+        "asset": "XEC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "66041001200.39",
+        "upLimit": "66000000000",
+        "upLimitPerUser": "2000000000",
+        "minPurchaseAmount": "10000"
+      }
+    ],
+    "ZEN": [
+      {
+        "productId": "ZEN001",
+        "asset": "ZEN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.05000135",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "355239.11009997",
+        "upLimit": "500000",
+        "upLimitPerUser": "2000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ZRX": [
+      {
+        "productId": "ZRX001",
+        "asset": "ZRX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "4984946.03478242",
+        "upLimit": "5000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "1INCH": [
+      {
+        "productId": "1INCH001",
+        "asset": "1INCH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "13763431.86518227",
+        "upLimit": "13768093",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ANKR": [
+      {
+        "productId": "ANKR001",
+        "asset": "ANKR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "150621777.54152262",
+        "upLimit": "155856773",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "API3": [
+      {
+        "productId": "API3001",
+        "asset": "API3",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "329903.23471522",
+        "upLimit": "400000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BNT": [
+      {
+        "productId": "BNT001",
+        "asset": "BNT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.09999905",
+        "latestAnnualInterestRate": "0.1",
+        "purchasedAmount": "798377.63195066",
+        "upLimit": "800000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BSW": [
+      {
+        "productId": "BSW001",
+        "asset": "BSW",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "2133759.86560319",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BTS": [
+      {
+        "productId": "BTS001",
+        "asset": "BTS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "10510067.19737116",
+        "upLimit": "50000000",
+        "upLimitPerUser": "300000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "BTTC": [
+      {
+        "productId": "BTTC001",
+        "asset": "BTTC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01499785",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "23422795471.2",
+        "upLimit": "108000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "100000"
+      }
+    ],
+    "BURGER": [
+      {
+        "productId": "BURGER001",
+        "asset": "BURGER",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "99985.82997954",
+        "upLimit": "100000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "DOT": [
+      {
+        "productId": "DOT001",
+        "asset": "DOT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "7649358.5522512",
+        "upLimit": "10000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ETC": [
+      {
+        "productId": "ETC001",
+        "asset": "ETC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "1492734.87918399",
+        "upLimit": "2647628",
+        "upLimitPerUser": "10",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "GLMR": [
+      {
+        "productId": "GLMR001",
+        "asset": "GLMR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "241522.67789768",
+        "upLimit": "1500000",
+        "upLimitPerUser": "300",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "GTC": [
+      {
+        "productId": "GTC001",
+        "asset": "GTC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "206067.78348198",
+        "upLimit": "450000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "HOT": [
+      {
+        "productId": "HOT001",
+        "asset": "HOT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00299665",
+        "latestAnnualInterestRate": "0.003",
+        "purchasedAmount": "1000000000",
+        "upLimit": "1000000000",
+        "upLimitPerUser": "1000000000",
+        "minPurchaseAmount": "1000"
+      }
+    ],
+    "JST": [
+      {
+        "productId": "JST001",
+        "asset": "JST",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "10064138.64607603",
+        "upLimit": "11000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "KLAY": [
+      {
+        "productId": "KLAY001",
+        "asset": "KLAY",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0442818",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "5303477.14836277",
+        "upLimit": "10000000",
+        "upLimitPerUser": "20000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LUNC": [
+      {
+        "productId": "LUNC001",
+        "asset": "LUNC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "89999975242.11687087",
+        "upLimit": "90000000000",
+        "upLimitPerUser": "1000000000",
+        "minPurchaseAmount": "100000"
+      }
+    ],
+    "MC": [
+      {
+        "productId": "MC001",
+        "asset": "MC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "16556.29735017",
+        "upLimit": "800000",
+        "upLimitPerUser": "100",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "MOVR": [
+      {
+        "productId": "MOVR001",
+        "asset": "MOVR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "21507.90211459",
+        "upLimit": "100000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "NBS": [
+      {
+        "productId": "NBS001",
+        "asset": "NBS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "73330279.98960851",
+        "upLimit": "80000000",
+        "upLimitPerUser": "5000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "SRM": [
+      {
+        "productId": "SRM001",
+        "asset": "SRM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "2843398.00876595",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "STMX": [
+      {
+        "productId": "STMX001",
+        "asset": "STMX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "33814284.8078738",
+        "upLimit": "60000000",
+        "upLimitPerUser": "6000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "SUPER": [
+      {
+        "productId": "SUPER001",
+        "asset": "SUPER",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "4499075.20102274",
+        "upLimit": "4500000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "VIDT": [
+      {
+        "productId": "VIDT001",
+        "asset": "VIDT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "554400.50120672",
+        "upLimit": "1000000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "ACH": [
+      {
+        "productId": "ACH001",
+        "asset": "ACH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0642838",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "37926298.25747768",
+        "upLimit": "60155093",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "AERGO": [
+      {
+        "productId": "AERGO001",
+        "asset": "AERGO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "4522056.09093416",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "AGLD": [
+      {
+        "productId": "AGLD001",
+        "asset": "AGLD",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "2010077.18058437",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "ALICE": [
+      {
+        "productId": "ALICE001",
+        "asset": "ALICE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "1473280.08701282",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "APE": [
+      {
+        "productId": "APE001",
+        "asset": "APE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0642838",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "5274763.46957746",
+        "upLimit": "45500000",
+        "upLimitPerUser": "100",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "AR": [
+      {
+        "productId": "AR001",
+        "asset": "AR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "329377.55815892",
+        "upLimit": "360000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ARK": [
+      {
+        "productId": "ARK001",
+        "asset": "ARK",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "856915.72802415",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "ARPA": [
+      {
+        "productId": "ARPA001",
+        "asset": "ARPA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01250125",
+        "latestAnnualInterestRate": "0.0125",
+        "purchasedAmount": "41203548.91536561",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1470000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "AVA": [
+      {
+        "productId": "AVA001",
+        "asset": "AVA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00199655",
+        "latestAnnualInterestRate": "0.002",
+        "purchasedAmount": "3800181.51578643",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BAKE": [
+      {
+        "productId": "BAKE001",
+        "asset": "BAKE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0237177",
+        "latestAnnualInterestRate": "0.0237177",
+        "purchasedAmount": "12437924.74223513",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "BAL": [
+      {
+        "productId": "BAL001",
+        "asset": "BAL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0420991",
+        "latestAnnualInterestRate": "0.0421",
+        "purchasedAmount": "261963.52170397",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BAT": [
+      {
+        "productId": "BAT001",
+        "asset": "BAT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0044822",
+        "latestAnnualInterestRate": "0.00448265",
+        "purchasedAmount": "22182751.23708305",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "65000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "BEL": [
+      {
+        "productId": "BEL001",
+        "asset": "BEL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "723058.60165083",
+        "upLimit": "1000000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BOND": [
+      {
+        "productId": "BOND001",
+        "asset": "BOND",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "35216.78079574",
+        "upLimit": "200000",
+        "upLimitPerUser": "20000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "BRL": [
+      {
+        "productId": "BRL001",
+        "asset": "BRL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "17856644.39142252",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "CELO": [
+      {
+        "productId": "CELO001",
+        "asset": "CELO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "1449464.43139006",
+        "upLimit": "1500000",
+        "upLimitPerUser": "60000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "CELR": [
+      {
+        "productId": "CELR001",
+        "asset": "CELR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "89121095.87432661",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "CHR": [
+      {
+        "productId": "CHR001",
+        "asset": "CHR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "25547316.06585029",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "CKB": [
+      {
+        "productId": "CKB001",
+        "asset": "CKB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "300923129.33377817",
+        "upLimit": "300000000",
+        "upLimitPerUser": "20000000",
+        "minPurchaseAmount": "1000"
+      }
+    ],
+    "COCOS": [
+      {
+        "productId": "COCOS001",
+        "asset": "COCOS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0085702",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "17009627.05013023",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "COMP": [
+      {
+        "productId": "COMP001",
+        "asset": "COMP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "65385.80760008",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "CVC": [
+      {
+        "productId": "CVC001",
+        "asset": "CVC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02834955",
+        "latestAnnualInterestRate": "0.02834955",
+        "purchasedAmount": "13086995.39264811",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "DAI": [
+      {
+        "productId": "DAI001",
+        "asset": "DAI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02199855",
+        "latestAnnualInterestRate": "0.022",
+        "purchasedAmount": "26080425.95477374",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DASH": [
+      {
+        "productId": "DASH001",
+        "asset": "DASH",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0070153",
+        "latestAnnualInterestRate": "0.00701417",
+        "purchasedAmount": "96957.3504928",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "130000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "DIA": [
+      {
+        "productId": "DIA001",
+        "asset": "DIA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0150015",
+        "latestAnnualInterestRate": "0.015",
+        "purchasedAmount": "3827905.09314899",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DOCK": [
+      {
+        "productId": "DOCK001",
+        "asset": "DOCK",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00009855",
+        "latestAnnualInterestRate": "0.0001",
+        "purchasedAmount": "23349183.05863896",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DODO": [
+      {
+        "productId": "DODO001",
+        "asset": "DODO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "11471652.50507607",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "DOGE": [
+      {
+        "productId": "DOGE001",
+        "asset": "DOGE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "1986248891.3980204",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000000",
+        "minPurchaseAmount": "0.1",
+        "tierAnnualInterestRate": {
+          "0-5000DOGE": "0.01000100",
+          ">5000DOGE": "0.00500050"
+        }
+      }
+    ],
+    "ENJ": [
+      {
+        "productId": "ENJ001",
+        "asset": "ENJ",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "24101386.90346919",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ENS": [
+      {
+        "productId": "ENS001",
+        "asset": "ENS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "398733.02383576",
+        "upLimit": "400000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "EOS": [
+      {
+        "productId": "EOS001",
+        "asset": "EOS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00353685",
+        "latestAnnualInterestRate": "0.00353776",
+        "purchasedAmount": "12819987.14387716",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ERN": [
+      {
+        "productId": "ERN001",
+        "asset": "ERN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "473958.03577402",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "FET": [
+      {
+        "productId": "FET001",
+        "asset": "FET",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00469755",
+        "latestAnnualInterestRate": "0.00469932",
+        "purchasedAmount": "19048055.3949989",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "FIL": [
+      {
+        "productId": "FIL001",
+        "asset": "FIL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0040004",
+        "latestAnnualInterestRate": "0.004",
+        "purchasedAmount": "4236120.31935785",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "FOR": [
+      {
+        "productId": "FOR001",
+        "asset": "FOR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "31257680.50821306",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "FUN": [
+      {
+        "productId": "FUN001",
+        "asset": "FUN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02499885",
+        "latestAnnualInterestRate": "0.025",
+        "purchasedAmount": "269954472.6294046",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "FXS": [
+      {
+        "productId": "FXS001",
+        "asset": "FXS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0085702",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "132727.12594765",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "GAL": [
+      {
+        "productId": "GAL001",
+        "asset": "GAL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "1499321.77560842",
+        "upLimit": "1500000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "GALA": [
+      {
+        "productId": "GALA001",
+        "asset": "GALA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "240576954.42687289",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "GLM": [
+      {
+        "productId": "GLM001",
+        "asset": "GLM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "3616807.15177007",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "GRT": [
+      {
+        "productId": "GRT001",
+        "asset": "GRT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "39300381.38748375",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "HBAR": [
+      {
+        "productId": "HBAR001",
+        "asset": "HBAR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "231617322.17634258",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "HNT": [
+      {
+        "productId": "HNT001",
+        "asset": "HNT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "975440.07945704",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "ICP": [
+      {
+        "productId": "ICP001",
+        "asset": "ICP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "578713.39951991",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ILV": [
+      {
+        "productId": "ILV001",
+        "asset": "ILV",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.0050005",
+        "purchasedAmount": "8038.42609548",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "50",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "IMX": [
+      {
+        "productId": "IMX001",
+        "asset": "IMX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "1999925.79492071",
+        "upLimit": "2000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "IOST": [
+      {
+        "productId": "IOST001",
+        "asset": "IOST",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0033434",
+        "latestAnnualInterestRate": "0.0033434",
+        "purchasedAmount": "693248493.7751152",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "4000000000",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "IOTX": [
+      {
+        "productId": "IOTX001",
+        "asset": "IOTX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "41449357.14346592",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "JOE": [
+      {
+        "productId": "JOE001",
+        "asset": "JOE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "600214.5680044",
+        "upLimit": "600000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "KDA": [
+      {
+        "productId": "KDA001",
+        "asset": "KDA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "5781483.20683101",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "KMD": [
+      {
+        "productId": "KMD001",
+        "asset": "KMD",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0106361",
+        "latestAnnualInterestRate": "0.01063644",
+        "purchasedAmount": "1672604.54067894",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "20000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "KSM": [
+      {
+        "productId": "KSM001",
+        "asset": "KSM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0178558",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "23035.66583044",
+        "upLimit": "825000",
+        "upLimitPerUser": "10",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "LEVER": [
+      {
+        "productId": "LEVER001",
+        "asset": "LEVER",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.02999935",
+        "latestAnnualInterestRate": "0.03",
+        "purchasedAmount": "222731454.78553915",
+        "upLimit": "320000000",
+        "upLimitPerUser": "250000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "LIT": [
+      {
+        "productId": "LIT001",
+        "asset": "LIT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "1966586.9879597",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "LOOM": [
+      {
+        "productId": "LOOM001",
+        "asset": "LOOM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00250025",
+        "latestAnnualInterestRate": "0.00250025",
+        "purchasedAmount": "14444721.07214341",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LPT": [
+      {
+        "productId": "LPT001",
+        "asset": "LPT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "104738.33263013",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "LRC": [
+      {
+        "productId": "LRC001",
+        "asset": "LRC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "21442842.61136248",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LSK": [
+      {
+        "productId": "LSK001",
+        "asset": "LSK",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "1041028.49713815",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LTC": [
+      {
+        "productId": "LTC001",
+        "asset": "LTC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0032193",
+        "latestAnnualInterestRate": "0.0032193",
+        "purchasedAmount": "595197.66057225",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "MINA": [
+      {
+        "productId": "MINA001",
+        "asset": "MINA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "2869357.14998978",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MIR": [
+      {
+        "productId": "MIR001",
+        "asset": "MIR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "2482216.16733675",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "MKR": [
+      {
+        "productId": "MKR001",
+        "asset": "MKR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "1908.76277956",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "MOB": [
+      {
+        "productId": "MOB001",
+        "asset": "MOB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "734048.378482",
+        "upLimit": "1000000",
+        "upLimitPerUser": "20000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MULTI": [
+      {
+        "productId": "MULTI001",
+        "asset": "MULTI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "91753.57621573",
+        "upLimit": "100000",
+        "upLimitPerUser": "5000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "NEO": [
+      {
+        "productId": "NEO001",
+        "asset": "NEO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0044384",
+        "latestAnnualInterestRate": "0.00443954",
+        "purchasedAmount": "628986.9538319",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "NEXO": [
+      {
+        "productId": "NEXO001",
+        "asset": "NEXO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "676233.85310476",
+        "upLimit": "1000000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "OG": [
+      {
+        "productId": "OG001",
+        "asset": "OG",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "80024.27851592",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "OMG": [
+      {
+        "productId": "OMG001",
+        "asset": "OMG",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.05000135",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "2958680.27834152",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "ONT": [
+      {
+        "productId": "ONT001",
+        "asset": "ONT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00212795",
+        "latestAnnualInterestRate": "0.00212814",
+        "purchasedAmount": "11001969.42065575",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "2000000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "PAXG": [
+      {
+        "productId": "PAXG001",
+        "asset": "PAXG",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "8132.84153855",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "PEOPLE": [
+      {
+        "productId": "PEOPLE001",
+        "asset": "PEOPLE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "41239055.49724812",
+        "upLimit": "45000000",
+        "upLimitPerUser": "25000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "PERP": [
+      {
+        "productId": "PERP001",
+        "asset": "PERP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "612912.36053359",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "PHA": [
+      {
+        "productId": "PHA001",
+        "asset": "PHA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "6699599.0122144",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "PIVX": [
+      {
+        "productId": "PIVX001",
+        "asset": "PIVX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "1039460.91793189",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "POLY": [
+      {
+        "productId": "POLY001",
+        "asset": "POLY",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.0050005",
+        "purchasedAmount": "4513146.46233469",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "REEF": [
+      {
+        "productId": "REEF001",
+        "asset": "REEF",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "1203404874.28712265",
+        "upLimit": "1305524700",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "REN": [
+      {
+        "productId": "REN001",
+        "asset": "REN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "16574713.49101104",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "REP": [
+      {
+        "productId": "REP001",
+        "asset": "REP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "103890.42252809",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "RLC": [
+      {
+        "productId": "RLC001",
+        "asset": "RLC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "1198839.68721862",
+        "upLimit": "1200000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RNDR": [
+      {
+        "productId": "RNDR001",
+        "asset": "RNDR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "1055858.67260123",
+        "upLimit": "1200000",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RSR": [
+      {
+        "productId": "RSR001",
+        "asset": "RSR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "950247467.18825967",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "RUB": [
+      {
+        "productId": "RUB001",
+        "asset": "RUB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "80061427.59083128",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "RUNE": [
+      {
+        "productId": "RUNE001",
+        "asset": "RUNE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "3565879.62732429",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "SHIB": [
+      {
+        "productId": "SHIB001",
+        "asset": "SHIB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "3561503250015.77000127",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000000",
+        "minPurchaseAmount": "100000"
+      }
+    ],
+    "SKL": [
+      {
+        "productId": "SKL001",
+        "asset": "SKL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "12999995.8257175",
+        "upLimit": "13000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "SLP": [
+      {
+        "productId": "SLP001",
+        "asset": "SLP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "2822364888.48582472",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "2000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "STPT": [
+      {
+        "productId": "STPT001",
+        "asset": "STPT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.0050005",
+        "purchasedAmount": "6724005.74975108",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "SXP": [
+      {
+        "productId": "SXP001",
+        "asset": "SXP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "15294312.36855051",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "TCT": [
+      {
+        "productId": "TCT001",
+        "asset": "TCT",
+        "status": "PREHEATING",
+        "canPurchase": false,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "49948639.53570118",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TFUEL": [
+      {
+        "productId": "TFUEL001",
+        "asset": "TFUEL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "37336604.20832637",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TKO": [
+      {
+        "productId": "TKO001",
+        "asset": "TKO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "15494383.86236545",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TLM": [
+      {
+        "productId": "TLM001",
+        "asset": "TLM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "100218003.62181021",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "TOMO": [
+      {
+        "productId": "TOMO001",
+        "asset": "TOMO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.004599",
+        "latestAnnualInterestRate": "0.00459973",
+        "purchasedAmount": "649495.6473596",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "TRB": [
+      {
+        "productId": "TRB001",
+        "asset": "TRB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "62232.5557502",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TROY": [
+      {
+        "productId": "TROY001",
+        "asset": "TROY",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00363905",
+        "latestAnnualInterestRate": "0.00363973",
+        "purchasedAmount": "271842393.69240964",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "100000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "TVK": [
+      {
+        "productId": "TVK001",
+        "asset": "TVK",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "43479843.8531172",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "TWT": [
+      {
+        "productId": "TWT001",
+        "asset": "TWT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "20625489.38409641",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "UNI": [
+      {
+        "productId": "UNI001",
+        "asset": "UNI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00675615",
+        "latestAnnualInterestRate": "0.00675759",
+        "purchasedAmount": "3710738.78805345",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "USDC": [
+      {
+        "productId": "USDC001",
+        "asset": "USDC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0120012",
+        "latestAnnualInterestRate": "0.0120012",
+        "purchasedAmount": "401593441.08207386",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000000",
+        "minPurchaseAmount": "1",
+        "tierAnnualInterestRate": {
+          ">75000USDC": "0.00300030",
+          "0-75000USDC": "0.01200120"
+        }
+      }
+    ],
+    "VET": [
+      {
+        "productId": "VET001",
+        "asset": "VET",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "3567710718.7303627",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "2000000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "VITE": [
+      {
+        "productId": "VITE001",
+        "asset": "VITE",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "46099930.78122447",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "WAXP": [
+      {
+        "productId": "WAXP001",
+        "asset": "WAXP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "27240521.13188064",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "5000000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "XLM": [
+      {
+        "productId": "XLM001",
+        "asset": "XLM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0035259",
+        "latestAnnualInterestRate": "0.00352768",
+        "purchasedAmount": "148824829.6563551",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "XMR": [
+      {
+        "productId": "XMR001",
+        "asset": "XMR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01834125",
+        "latestAnnualInterestRate": "0.01834237",
+        "purchasedAmount": "141668.26284797",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "XVG": [
+      {
+        "productId": "XVG001",
+        "asset": "XVG",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "108260710.62810067",
+        "upLimit": "100000000",
+        "upLimitPerUser": "30000000",
+        "minPurchaseAmount": "1000"
+      }
+    ],
+    "YFI": [
+      {
+        "productId": "YFI001",
+        "asset": "YFI",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "200.21920331",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "YFII": [
+      {
+        "productId": "YFII001",
+        "asset": "YFII",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.010001",
+        "purchasedAmount": "687.40192189",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.001"
+      }
+    ],
+    "ZEC": [
+      {
+        "productId": "ZEC001",
+        "asset": "ZEC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0056867",
+        "latestAnnualInterestRate": "0.00568654",
+        "purchasedAmount": "442039.4706548",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "300000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "ZIL": [
+      {
+        "productId": "ZIL001",
+        "asset": "ZIL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0030003",
+        "latestAnnualInterestRate": "0.0030003",
+        "purchasedAmount": "131898801.61846852",
+        "upLimit": "1000000000000000000",
+        "upLimitPerUser": "500000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "AMP": [
+      {
+        "productId": "AMP001",
+        "asset": "AMP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00499685",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "41285824.82953222",
+        "upLimit": "41287000",
+        "upLimitPerUser": "2000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "ASTR": [
+      {
+        "productId": "ASTR001",
+        "asset": "ASTR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.010001",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "2500000",
+        "upLimit": "2500000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "BIDR": [
+      {
+        "productId": "BIDR001",
+        "asset": "BIDR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00299665",
+        "latestAnnualInterestRate": "0.003",
+        "purchasedAmount": "1691574265.95",
+        "upLimit": "110050240",
+        "upLimitPerUser": "5000000000",
+        "minPurchaseAmount": "100000"
+      }
+    ],
+    "DAR": [
+      {
+        "productId": "DAR001",
+        "asset": "DAR",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "4631800.58485631",
+        "upLimit": "4500000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "DGB": [
+      {
+        "productId": "DGB001",
+        "asset": "DGB",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00499685",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "129999999.97232584",
+        "upLimit": "130000000",
+        "upLimitPerUser": "2000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "EPX": [
+      {
+        "productId": "EPX001",
+        "asset": "EPX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "149951355.42328076",
+        "upLimit": "150000000",
+        "upLimitPerUser": "50000000",
+        "minPurchaseAmount": "1000"
+      }
+    ],
+    "FIRO": [
+      {
+        "productId": "FIRO001",
+        "asset": "FIRO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "200780.30322427",
+        "upLimit": "200000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "GTO": [
+      {
+        "productId": "GTO001",
+        "asset": "GTO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "14835292.98092638",
+        "upLimit": "15000000",
+        "upLimitPerUser": "3000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "IQ": [
+      {
+        "productId": "IQ001",
+        "asset": "IQ",
+        "status": "PREHEATING",
+        "canPurchase": false,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "908.35289736",
+        "upLimit": "52627955",
+        "upLimitPerUser": "10000000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "LDO": [
+      {
+        "productId": "LDO001",
+        "asset": "LDO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "500000",
+        "upLimit": "500000",
+        "upLimitPerUser": "30000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LOKA": [
+      {
+        "productId": "LOKA001",
+        "asset": "LOKA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "649999.69343462",
+        "upLimit": "650000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "LTO": [
+      {
+        "productId": "LTO001",
+        "asset": "LTO",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "3444733.77936844",
+        "upLimit": "3500000",
+        "upLimitPerUser": "600000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "LUNA": [
+      {
+        "productId": "LUNA001",
+        "asset": "LUNA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "803926.61360866",
+        "upLimit": "800000",
+        "upLimitPerUser": "10000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "MDX": [
+      {
+        "productId": "MDX001",
+        "asset": "MDX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "23480361.47316556",
+        "upLimit": "23619094",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "NKN": [
+      {
+        "productId": "NKN001",
+        "asset": "NKN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "3005964.55057597",
+        "upLimit": "3000000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "PLA": [
+      {
+        "productId": "PLA001",
+        "asset": "PLA",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "399975.13497239",
+        "upLimit": "400000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "PROM": [
+      {
+        "productId": "PROM001",
+        "asset": "PROM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0030003",
+        "latestAnnualInterestRate": "0.003",
+        "purchasedAmount": "3195432.13754241",
+        "upLimit": "3195446",
+        "upLimitPerUser": "100",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "RVN": [
+      {
+        "productId": "RVN001",
+        "asset": "RVN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "92000000",
+        "upLimit": "92000000",
+        "upLimitPerUser": "3000000",
+        "minPurchaseAmount": "100"
+      }
+    ],
+    "SC": [
+      {
+        "productId": "SC001",
+        "asset": "SC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00499685",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "941073089.34394991",
+        "upLimit": "945351421",
+        "upLimitPerUser": "1000000",
+        "minPurchaseAmount": "0.1"
+      }
+    ],
+    "SFP": [
+      {
+        "productId": "SFP001",
+        "asset": "SFP",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0050005",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "110258781.87457746",
+        "upLimit": "11042912",
+        "upLimitPerUser": "1000",
+        "minPurchaseAmount": "0.01"
+      }
+    ],
+    "STEEM": [
+      {
+        "productId": "STEEM001",
+        "asset": "STEEM",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00499685",
+        "latestAnnualInterestRate": "0.005",
+        "purchasedAmount": "500007.68926458",
+        "upLimit": "500000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "STRAX": [
+      {
+        "productId": "STRAX001",
+        "asset": "STRAX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00999735",
+        "latestAnnualInterestRate": "0.01",
+        "purchasedAmount": "300000",
+        "upLimit": "300000",
+        "upLimitPerUser": "100000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "SYS": [
+      {
+        "productId": "SYS001",
+        "asset": "SYS",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "3499997.7633544",
+        "upLimit": "3500000",
+        "upLimitPerUser": "600000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "UFT": [
+      {
+        "productId": "UFT001",
+        "asset": "UFT",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "500027.40574864",
+        "upLimit": "500000",
+        "upLimitPerUser": "200000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "VOXEL": [
+      {
+        "productId": "VOXEL001",
+        "asset": "VOXEL",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1700000",
+        "upLimit": "1700000",
+        "upLimitPerUser": "50000",
+        "minPurchaseAmount": "1"
+      }
+    ],
+    "WIN": [
+      {
+        "productId": "WIN001",
+        "asset": "WIN",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.00099645",
+        "latestAnnualInterestRate": "0.001",
+        "purchasedAmount": "14823147449.022504",
+        "upLimit": "1665671083",
+        "upLimitPerUser": "5000000",
+        "minPurchaseAmount": "10000"
+      }
+    ],
+    "WRX": [
+      {
+        "productId": "WRX001",
+        "asset": "WRX",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.01999835",
+        "latestAnnualInterestRate": "0.02",
+        "purchasedAmount": "3500000",
+        "upLimit": "3500000",
+        "upLimitPerUser": "500000",
+        "minPurchaseAmount": "10"
+      }
+    ],
+    "WTC": [
+      {
+        "productId": "WTC001",
+        "asset": "WTC",
+        "status": "PURCHASING",
+        "canPurchase": true,
+        "canRedeem": true,
+        "featured": true,
+        "avgAnnualInterestRate": "0.0499977",
+        "latestAnnualInterestRate": "0.05",
+        "purchasedAmount": "1608985.26339828",
+        "upLimit": "1500000",
+        "upLimitPerUser": "300000",
+        "minPurchaseAmount": "10"
+      }
+    ]
+  },
+  "IDs": {
+    "subscriptionIDs": [
+      null,
+      96786728,
+      96786461,
+      96370279,
+      96370254,
+      96370237,
+      96370202,
+      95937675
+    ],
+    "redemptionIDs": [
+      62396450, 62396498, 62396587, 62396338, 89407561, 89404834, 89404873,
+      89406622, 89404847, 89407581, 89404915, 89404921, 89407627, 89404901,
+      89407601, 89407570, 89404843, 89404934, 89407635, 89406618, 89406614,
+      89404867, 89404888, 89404880, 89407589, 46154252, 45674087, 54526809,
+      54656527, 54655808, 54527194, 53376950
+    ],
+    "interestIDs": [
+      93256986, 93282900, 93256993, 93280356, 94392067, 95648995, 95648992,
+      93257009, 95648973, 93251682, 93256999, 93720927, 93559939, 93256983,
+      93720921, 93559921, 93256978, 89404862, 62396669, 54655491, 54657778,
+      93257004, 95648994, 94392177, 94392761, 94102883, 94392075, 94392686,
+      94102825, 93256977, 93241972, 95937675, 93256957, 95912674, 95648985,
+      94392757, 94392166, 94102878, 95648928, 95897154, 93244177, 93256969,
+      94392679, 94392115, 94392713, 94102849, 93264161, 93256292, 93249544,
+      93245847
+    ],
+    "depositIDs": ["03245876038403000320071945"],
+    "directIDs": [],
+    "coinDepositIDs": [],
+    "coinWithdrawalIDs": [
+      "0xffd211834062fee1d633a19662a1e24fe0632d1d783f4eb1b94be2f5b2635ffa",
+      "0x07af945987873fc83f5dffb830476397a7428c73cbf1ec58410f148f47dd99b8",
+      "0x9bb4abee36638a9c4a01575ff6524926232468ed64312d7f077b8fa377540486"
+    ],
+    "liquidityIDs": [3423680, 3423676, 3423674]
+  },
+  "spotAccount": {
+    "makerCommission": 10,
+    "takerCommission": 10,
+    "buyerCommission": 0,
+    "sellerCommission": 0,
+    "canTrade": true,
+    "canWithdraw": true,
+    "canDeposit": true,
+    "updateTime": 1659031014361,
+    "accountType": "SPOT",
+    "balances": [
+      { "asset": "BTC", "free": "0.00014748", "locked": "0.00000000" },
+      { "asset": "ETH", "free": "0.00631104", "locked": "0.00000000" },
+      { "asset": "BNB", "free": "0.06013766", "locked": "0.00000000" },
+      { "asset": "USDT", "free": "1.05772991", "locked": "0.00000000" },
+      { "asset": "LINK", "free": "0.00018800", "locked": "0.00000000" },
+      { "asset": "XRP", "free": "0.00463144", "locked": "0.00000000" },
+      { "asset": "MANA", "free": "2.77220336", "locked": "0.00000000" },
+      { "asset": "ADA", "free": "0.20975364", "locked": "0.00000000" },
+      { "asset": "THETA", "free": "0.00057624", "locked": "0.00000000" },
+      { "asset": "MATIC", "free": "0.09895388", "locked": "0.00000000" },
+      { "asset": "ATOM", "free": "0.00698509", "locked": "0.00000000" },
+      { "asset": "ONE", "free": "0.64260764", "locked": "0.00000000" },
+      { "asset": "FTM", "free": "0.02036288", "locked": "0.00000000" },
+      { "asset": "ALGO", "free": "0.11180811", "locked": "0.00000000" },
+      { "asset": "BUSD", "free": "0.00046152", "locked": "0.00000000" },
+      { "asset": "XTZ", "free": "0.05179032", "locked": "0.00000000" },
+      { "asset": "EUR", "free": "80.04240000", "locked": "0.00000000" },
+      { "asset": "LDBUSD", "free": "0.21058536", "locked": "0.00000000" },
+      { "asset": "LDETH", "free": "0.02106200", "locked": "0.00000000" },
+      { "asset": "LDLINK", "free": "5.95522116", "locked": "0.00000000" },
+      { "asset": "SOL", "free": "0.00122442", "locked": "0.00000000" },
+      { "asset": "LDXRP", "free": "46.95300000", "locked": "0.00000000" },
+      { "asset": "LDXLM", "free": "718.38789423", "locked": "0.00000000" },
+      { "asset": "LDXMR", "free": "0.57512283", "locked": "0.00000000" },
+      { "asset": "CTSI", "free": "72.20360505", "locked": "0.00000000" },
+      { "asset": "LDBAT", "free": "13.00948878", "locked": "0.00000000" },
+      { "asset": "LDADA", "free": "56.20113882", "locked": "0.00000000" },
+      { "asset": "LDATOM", "free": "1.61806403", "locked": "0.00000000" },
+      { "asset": "LDIOTA", "free": "180.40950041", "locked": "0.00000000" },
+      { "asset": "LDMATIC", "free": "30.35939371", "locked": "0.00000000" },
+      { "asset": "LDXTZ", "free": "9.70002900", "locked": "0.00000000" },
+      { "asset": "LUNA", "free": "0.65175541", "locked": "0.00000000" },
+      { "asset": "EGLD", "free": "0.17504110", "locked": "0.00000000" },
+      { "asset": "AVAX", "free": "0.00599508", "locked": "0.00000000" },
+      { "asset": "CAKE", "free": "0.00305311", "locked": "0.00000000" },
+      { "asset": "LDTHETA", "free": "6.89310000", "locked": "0.00000000" },
+      { "asset": "LDALGO", "free": "22.79426961", "locked": "0.00000000" },
+      { "asset": "LDONE", "free": "67.78396690", "locked": "0.00000000" },
+      { "asset": "NEAR", "free": "0.02222941", "locked": "0.00000000" },
+      { "asset": "AAVE", "free": "0.00018344", "locked": "0.00000000" },
+      { "asset": "LDDOT", "free": "1.97587888", "locked": "0.00000000" },
+      { "asset": "LDCAKE", "free": "1.56076942", "locked": "0.00000000" },
+      { "asset": "LDSOL", "free": "0.55734805", "locked": "0.00000000" },
+      { "asset": "LDHBAR", "free": "329.24185658", "locked": "0.00000000" },
+      { "asset": "LDAAVE", "free": "0.83689610", "locked": "0.00000000" },
+      { "asset": "LDFTM", "free": "92.89655269", "locked": "0.00000000" },
+      { "asset": "LDAVAX", "free": "0.82710487", "locked": "0.00000000" },
+      { "asset": "LDSAND", "free": "2.31895543", "locked": "0.00000000" },
+      { "asset": "LDNEAR", "free": "1.21254245", "locked": "0.00000000" },
+      { "asset": "XNO", "free": "59.16786000", "locked": "0.00000000" },
+      { "asset": "LUNC", "free": "28551.51286568", "locked": "0.00000000" }
+    ],
+    "permissions": ["SPOT", "TRD_GRP_002"]
+  }
+}

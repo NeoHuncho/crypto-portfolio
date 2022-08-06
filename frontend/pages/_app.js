@@ -4,6 +4,8 @@ import { initializeApp } from "firebase/app";
 import "firebase/app";
 import "firebase/auth";
 import { Fuego, FuegoProvider } from "swr-firestore-v9";
+import { AppShell, MantineProvider } from "@mantine/core";
+import { Header } from "components/app_shell/header/Header";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -20,9 +22,17 @@ initializeApp(firebaseConfig);
 
 function MyApp({ Component, pageProps }) {
   return (
-    <FuegoProvider fuego={fuego}>
-      <Component {...pageProps} />
-    </FuegoProvider>
+    <MantineProvider
+      theme={{ colorScheme: "dark" }}
+      withGlobalStyles
+      withNormalizeCSS
+    >
+      <AppShell unstyled header={<Header />}>
+        <FuegoProvider fuego={fuego}>
+          <Component {...pageProps} />
+        </FuegoProvider>
+      </AppShell>
+    </MantineProvider>
   );
 }
 

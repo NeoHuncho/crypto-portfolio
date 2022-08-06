@@ -36,6 +36,8 @@ export interface BinanceData {
     [key: string]: number[];
   };
   spotAccount: any;
+
+  savingProducts: { [key: string]: any };
 }
 export interface ExchangeRates {
   [key: string]: number;
@@ -47,10 +49,10 @@ export interface FirebaseData {
   test?: boolean;
 }
 export interface Data {
-  general: General;
-  coins: Coins;
-  meta: Meta;
-  binance?: BinanceData;
+  general: General | null;
+  coins: Coins | null;
+  meta: Meta | null;
+  binance?: BinanceData | null;
 }
 export interface CoinsData {
   percentageToNotStake: number;
@@ -67,6 +69,7 @@ export interface General {
   currencySymbol: string;
   passedFirstRun: boolean;
   coinsData: CoinsData;
+  lastRunTime: number;
 }
 export interface Coins {
   [key: string]: Coin;

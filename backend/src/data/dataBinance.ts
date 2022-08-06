@@ -1,4 +1,3 @@
-//
 import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
@@ -80,6 +79,8 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     coinDepositHistory: [],
     coinWithdrawalHistory: [],
     liquidityHistory: [],
+
+    savingProducts: {},
     IDs: {
       subscriptionIDs: [],
       redemptionIDs: [],
@@ -191,6 +192,25 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
   data.spotAccount.balances = data.spotAccount.balances.filter(
     (item: any) => parseFloat(item.free) > 0
   );
+  let index = 1;
+  while (true) {
+    const savingData = (
+      await client.savingsFlexibleProducts({
+        status: "ALL",
+        featured: "ALL",
+        size: 10,
+        current: index,
+      })
+    ).data;
+    if (savingData.length === 0) break;
+    for (const index in savingData) {
+      data.savingProducts[savingData[index].asset]
+        ? data.savingProducts[savingData[index].asset].push(savingData[index])
+        : (data.savingProducts[savingData[index].asset] = [savingData[index]]);
+    }
+    index++;
+  }
+
   data.stakingSubscriptionHistory = flattenAndFilter(
     data.stakingSubscriptionHistory,
     data.IDs["subscriptionIDs"]
@@ -243,6 +263,7 @@ const getSavingPositions = async () => {
     await client.savingsFlexibleProducts({
       status: "ALL",
       featured: "ALL",
+      size: 100,
     })
   ).data;
 };
@@ -255,7 +276,10 @@ const purchaseStaking = async (
   const res = await client
     .stakingPurchaseProduct(type, product, amount)
     .then(async () => {
-      await logToFile("general", `${product} staked ${amount}.`);
+      await logToFile(
+        "general",
+        `${product} (staking) purchased for amount  ${amount}.`
+      );
     })
     .catch(() => {
       console.log(
@@ -269,7 +293,10 @@ const purchaseSaving = async (productID: string, amount: number) => {
   await client
     .savingsPurchaseFlexibleProduct(productID, amount)
     .then(async () => {
-      await logToFile("general", `${productID} staked ${amount}.`);
+      await logToFile(
+        "general",
+        `${productID} (saving) purchased for amount  ${amount}.`
+      );
     })
     .catch(() => {
       console.log(
@@ -281,7 +308,10 @@ const redeemSaving = async (productID: string, amount: number) => {
   await client
     .savingsFlexibleRedeem(productID, amount, "FAST")
     .then(async () => {
-      await logToFile("general", `${productID} staked ${amount}.`);
+      await logToFile(
+        "general",
+        `${productID}(saving) redeemed for amount of ${amount}.`
+      );
     })
     .catch(() => {
       console.log(

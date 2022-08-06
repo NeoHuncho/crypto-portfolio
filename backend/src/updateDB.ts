@@ -19,6 +19,7 @@ import sizeof from "object-sizeof";
 import updateStakingPositions from "./functions/updateStakingPositions";
 import logToFile from "./utils/log";
 import { writeFile } from "fs/promises";
+import moment from "moment";
 
 const exchangeRatesUSDT: ExchangeRates = {};
 
@@ -77,12 +78,13 @@ const run = async (test: boolean) => {
   data = await processStaking(data);
   data = await updatePriceValues(data, exchangeRatesUSDT);
   data.coins = await calculateSyncData(data);
-
   data["coins"] = data["general"].passedFirstRun
     ? await updateStakingPositions(data)
     : data["coins"];
+  data.coins = await calculateSyncData(data);
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
+  data["general"].lastRunTime = moment().unix();
   await logToFile(
     "general",
     `size of Meta: ${sizeof(data["meta"])}, size Of general and coins: ${sizeof(

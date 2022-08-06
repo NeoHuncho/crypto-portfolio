@@ -1,6 +1,6 @@
 import { getStakingPositions, purchaseStaking } from "../data/dataBinance";
 import type { Coin, Data } from "../../../common/types/interfaces";
-import logToFile from "../utils/log";
+
 import updateSavingPositions from "./updateSavingPositions";
 
 const updateStakingPositions = async (data: Data) => {
@@ -9,10 +9,11 @@ const updateStakingPositions = async (data: Data) => {
     if (!coins[key]) continue;
     const coin: Coin | undefined = coins[key];
 
-    if (!coin || coin.remainingStakingAmount <= 0) continue;
+    if (!coin) continue;
     const stakingPositions = await getStakingPositions(key);
 
     await updateSavingPositions(data, key, stakingPositions.length);
+    if (coin.remainingStakingAmount <= 0) continue;
     if (stakingPositions.length === 0) continue;
     for (const index in stakingPositions) {
       let quota = stakingPositions[index].quota.totalPersonalQuota;

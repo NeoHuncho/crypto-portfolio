@@ -1,4 +1,4 @@
-import admin, { ServiceAccount } from "firebase-admin";
+import admin from "firebase-admin";
 import { getDatabase } from "firebase-admin/database";
 import { getFirestore } from "firebase-admin/firestore";
 import dotenv from "dotenv";
@@ -15,10 +15,10 @@ const initFirebase = async () => {
   fireStore.settings({ ignoreUndefinedProperties: true });
   return { app, db, fireStore };
 };
+const private_key = process.env["FIREBASE_PRIVATE_KEY"] || "";
+const { privateKey } = JSON.parse(private_key);
 
-const { privateKey } = JSON.parse(process.env["FIREBASE_PRIVATE_KEY"]);
-
-const service_account: ServiceAccount = {
+const service_account: any = {
   projectId: process.env["FIREBASE_PROJECT_ID"],
   privateKey: privateKey,
   clientEmail:

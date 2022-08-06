@@ -2,22 +2,33 @@
   "name": "crypto-portfolio",
   "private": true,
   "scripts": {
-
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "^4.2.2",
+    "@emotion/react": "^11.10.0",
+    "@mantine/core": "^5.0.2",
+    "@mantine/dates": "^5.0.2",
+    "@mantine/form": "^5.0.2",
+    "@mantine/hooks": "^5.0.2",
+    "@mantine/modals": "^5.0.2",
+    "@mantine/notifications": "^5.0.2",
+    "@radix-ui/colors": "^0.1.8",
+    "@stitches/react": "^1.2.8",
+    "dayjs": "^1.11.4",
     "firebase": "^9.7.0",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "next": "^12.0.9",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-useanimations": "^2.0.8",
+    "stitches-native": "^0.2.0",
     "swr": "^1.2.0",
     "swr-firestore-v9": "^1.0.5",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "zustand": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",

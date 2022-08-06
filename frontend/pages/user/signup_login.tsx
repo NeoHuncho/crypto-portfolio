@@ -49,7 +49,7 @@ export default function Home() {
           onClick={signInUserGoogle}
           className="flex flex-col justify-center cursor-pointer"
         >
-          <Image src={GoogleSignIn} width={191} height={46} />
+          <Image alt="google sign in button" src={GoogleSignIn} width={191} height={46} />
         </div>
       </div>
 
