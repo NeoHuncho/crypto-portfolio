@@ -4,7 +4,7 @@ import Flex from "stiches/components/flex/flex";
 import UseAnimations from "react-useanimations";
 import IconAnimationLibrary from "config/iconAnimations";
 interface HeaderProps {}
-
+import { isMobile } from "react-device-detect";
 export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <Flex
@@ -16,18 +16,20 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       }}
       justify={"space-between"}
     >
-      <Flex gap={2} style={{ paddingTop: 10 }}>
-        <Title order={2} style={{ marginTop: -8 }}>
+      <Flex gap={2}>
+        <Title order={2} className="xs:text-xs mt-1 sm:-mt-2 text-xl">
           Binance Manager
         </Title>
+
         <UseAnimations
           animation={IconAnimationLibrary.activity}
           size={27}
           strokeColor={"#fff"}
+          className="xs:hidden"
         />
       </Flex>
       <Tabs defaultValue="portfolio">
-        <Tabs.List>
+        <Tabs.List className="xs:ml-4">
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
           <Tabs.Tab value="Bot">Bot</Tabs.Tab>
           <Tabs.Tab value="History">History</Tabs.Tab>

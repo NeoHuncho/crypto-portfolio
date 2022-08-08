@@ -7,6 +7,8 @@ import { Card, Group, Text, Title } from "@mantine/core";
 import valuesTitles from "config/valuesTitles";
 import Flex from "stiches/components/flex/flex";
 import { GroupItem } from "./coin/group_item";
+import { Carousel } from "@mantine/carousel";
+import { isMobile } from "react-device-detect";
 interface Props {
   coin: string;
   values: Coin;
@@ -16,7 +18,7 @@ export default function PortfolioCoin({ coin, values }: Props) {
   const uiSettings = useUIStore();
   return (
     <div key={coin} className=" flex flex-row mb-2">
-      <div className="flex flex-row items-center ml-2 w-28 ">
+      <div className="flex gap-2 flex-col mt-2 items-center ml-2 w-20 ">
         <Image
           alt={coin + " logo"}
           src={
@@ -24,114 +26,64 @@ export default function PortfolioCoin({ coin, values }: Props) {
               ? euroLogo
               : `https://raw.githubusercontent.com/jsupa/crypto-icons/main/icons/${coin.toLowerCase()}.png`
           }
-          width={30}
-          height={30}
+          width={35}
+          height={35}
         />
         <Title
-          style={{ marginLeft: 0, marginRight: 0, paddingLeft: 10 }}
-          order={5}
+          style={{ marginLeft: 0, marginRight: 0 }}
+          order={4}
           className="mx-5   text-gray-200 text-center self-center font-semibold"
         >
           {coin}
         </Title>
       </div>
-      <Flex justify={"space-around"} fullWidth>
-        {uiSettings.coinCards.map((keys, index) => {
-          return (
-            <Group key={index}>
-              {keys.map((key) => {
-                return (
-                  <GroupItem
-                    key={key}
-                    title={valuesTitles[key]}
-                    value={values[key]}
-                  />
-                );
-              })}
-            </Group>
-          );
-        })}
+      <Flex fullWidth>
+        <Carousel
+          withIndicators
+          withControls={false}
+          height={!isMobile ? 110 : 120}
+          slideSize={isMobile ? "90%" : "33.333333%"}
+          slideGap="xl"
+          breakpoints={
+            !isMobile
+              ? [
+                  { maxWidth: "md", slideSize: "50%" },
+                  { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
+                ]
+              : [{ slideSize: "90%", slideGap: 5 }]
+          }
+          loop
+          align="start"
+          styles={{
+            indicators: { bottom: 20, paddingRight: 25 },
+            indicator: { backgroundColor: "white !important" },
+            container: !isMobile ? { marginLeft: 20, marginRight: 60 } : {},
+
+          }}
+          style={{ width: "100%", justifyItems: "center" }}
+        >
+          {uiSettings.coinCards.map((keys, index) => {
+            return (
+              <Carousel.Slide>
+                <div
+                  className="grid grid-cols-3  border rounded-lg xs:gap-2"
+                  style={{ width: "100%" }}
+                >
+                  {keys.map((name) => {
+                    return (
+                      <GroupItem
+                        title={valuesTitles[name]}
+                        value={values[name]}
+                        name={name}
+                      />
+                    );
+                  })}
+                </div>
+              </Carousel.Slide>
+            );
+          })}
+        </Carousel>
       </Flex>
-      {/* <div className="flex col-span-2 flex-row items-center">
-        <div className="flex flex-col items-center  w-full">
-          <h1 className="mx-5 text-gray-200 text-xs item-start">Total:</h1>
-          <h1 className="  text-center text-gray-200 text-l justify-self-end w-full">
-            {values.amountValue.value?.toFixed(2)}€
-          </h1>
-        </div>
-        <div className="flex flex-col items-center  w-full">
-          <h1 className="mx-5 text-gray-200 text-xs item-start">
-            Spot/Savings:
-          </h1>
-          <h1 className="mx-5  text-l text-gray-200 text-center">
-            {values.spot.value?.toFixed(2)}€
-          </h1>
-        </div>
-
-        <div className="flex flex-col items-center   w-full">
-          <h1 className="mx-5 text-gray-200 text-xs item-end">Staking:</h1>
-          <h1 className="mx-5 text-gray-200 text-l">
-            {values.staked.value ? values.staked.value.toFixed(2) + "€" : "--"}
-          </h1>
-        </div>
-      </div>
-      <div className=" col-span-2 flex flex-row items-center">
-        <div className="flex flex-col items-center justify-center">
-          {values.currentCoinValue && (
-            <>
-              <h1 className="mx-5  text-xs text-gray-200 text-center self-center">
-                Current Value:
-              </h1>
-              
-            </>
-          )}
-        </div>
-        <div className="flex flex-row items-center">
-          <div className="flex flex-col items-center">
-            <h1 className=" text-gray-200 text-xs">Avg Buy Price:</h1>
-            <h1 className=" text-gray-200 text-l">
-              {values.avgBuyPrice ? values.avgBuyPrice?.toFixed(2) + "€" : "--"}
-            </h1>
-          </div>
-
-          <div className="flex flex-col items-center ml-4">
-            <h1 className="text-gray-200 text-xs">Avg Sell Price:</h1>
-            <h1 className="text-gray-200 text-l">
-              {values.allTimeSellPrice
-                ? values.allTimeSellPrice?.toFixed(2) + "€"
-                : "--"}
-            </h1>
-          </div>
-        </div>
-      </div>
-      {values.staked.amount ? (
-        <div className="col-span-2 flex flex-row items-center">
-          {values.remainingStakingAmount && (
-            <div className="flex flex-col items-center mr-5">
-              <h1 className=" text-gray-200 text-xs">Remaining Amount</h1>
-              <h1 className=" text-gray-200 text-xs">to be Stacked :</h1>
-              <h1 className=" text-gray-200 text-l">
-                {values.remainingStakingAmount.toFixed(2)}
-              </h1>
-            </div>
-          )}
-          <div className="flex flex-col items-center">
-            <h1 className=" text-gray-200 text-xs">Total interest</h1>
-            <h1 className=" text-gray-200 text-xs">at expiration :</h1>
-            <h1 className=" text-gray-200 text-l">
-              {values.interest.value?.toFixed(2)}€
-            </h1>
-          </div>
-          <div className="flex flex-col items-center">
-            <h1 className=" text-gray-200 text-xs">days to</h1>
-            <h1 className=" text-gray-200 text-xs">next/last expiration:</h1>
-
-            
-          </div>
-        </div>
-      ) : (
-        <></>
-      )} */}
     </div>
   );
 }

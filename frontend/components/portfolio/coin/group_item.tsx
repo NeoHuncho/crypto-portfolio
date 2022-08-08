@@ -4,10 +4,9 @@ import React from "react";
 import Flex from "stiches/components/flex/flex";
 
 interface GroupItemProps {
-  key: string;
+  name: string;
   title: string;
   value: number | string | DaysTo | AmountValue;
-  
 }
 
 interface IDaysTo {
@@ -17,8 +16,8 @@ interface IDaysTo {
 const DaysTo = ({ value }: IDaysTo) => {
   return (
     <div className="flex flex-row justify-center">
-      <h1 className=" text-green-600 text-lg">{value.next}d/</h1>
-      <h1 className=" text-red-600 text-lg">{value.last}d</h1>
+      <h1 className=" text-green-600 text-lg xs:text-xs">{value.next}d/</h1>
+      <h1 className=" text-red-600 text-lg xs:text-xs">{value.last}d</h1>
     </div>
   );
 };
@@ -32,35 +31,38 @@ const isAmountValue = (value: any): value is AmountValue => {
   return value.value !== undefined;
 };
 
-export const GroupItem: React.FC<GroupItemProps> = ({ key, title, value }) => {
+export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
+  console.log(name);
   typeof value === "number"
     ? value === 0
       ? "--"
+      : name === "remainingStakingAmount"
+      ? (value = value.toFixed(2))
       : (value = value.toFixed(2) + "€")
     : isAmountValue(value) &&
-      (value = !value.value  ? "--" : value.value.toFixed(2) + "€");
+      (value = !value.value ? "--" : value.value.toFixed(2) + "€");
 
   return (
-    <Flex direction={"column"}>
-      <Text
-        style={{ fontSize: 15 }}
-        className="text-center text-gray-200  justify-self-end w-full"
-      >
-        {title.split("\n").map(function (item, key) {
+    <Flex
+      style={{ minHeight: 70, height: "100%", justifyContent: "center" }}
+      direction={"column"}
+      
+    >
+      <Text className=" text-center text-gray-200 w-full xs:text-xs">
+        {title.split("\n").map(function (item, name) {
           return (
-            <span key={key}>
+            <span name={name}>
               {item}
               <br />
             </span>
           );
         })}{" "}
       </Text>
-      <Title
-        style={{ fontSize: 20 }}
-        className="text-center text-gray-200  justify-self-end w-full"
-      >
+      {isDaysTo(value) && <DaysTo value={value} />}
+      <Title className="text-lg text-center text-gray-200  justify-self-end w-full xs:text-sm">
+        {!value && "--"}
+        {value === "string" && name === "remainingStakingAmount"}
         {typeof value === "string" && value}
-        {isDaysTo(value) && <DaysTo value={value} />}
       </Title>
     </Flex>
   );
