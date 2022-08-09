@@ -35,7 +35,7 @@ export default function Settings({ showSettings, setShowSettings }: Props) {
               general: {
                 ...data.general,
                 coinsData: {
-                  ...data.general.coinsData,
+                  ...data.general?.coinsData,
                   percentageToNotStake: e.target.value,
                 },
               },
