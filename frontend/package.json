@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@firebase/database-types":"^0.9.11",
-    "@firebase/firestore":"^3.14.13",
+    "@firebase/firestore":"^3.4.13",
     "@emotion/react": "^11.10.0",
     "@mantine/carousel": "^5.1.0",
     "@mantine/core": "^5.0.2",
