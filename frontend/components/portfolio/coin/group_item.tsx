@@ -46,12 +46,11 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
     <Flex
       style={{ minHeight: 70, height: "100%", justifyContent: "center" }}
       direction={"column"}
-      
     >
       <Text className=" text-center text-gray-200 w-full xs:text-xs">
         {title.split("\n").map(function (item, name) {
           return (
-            <span name={name}>
+            <span key={name}>
               {item}
               <br />
             </span>

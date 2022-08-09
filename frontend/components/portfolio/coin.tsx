@@ -58,13 +58,12 @@ export default function PortfolioCoin({ coin, values }: Props) {
             indicators: { bottom: 20, paddingRight: 25 },
             indicator: { backgroundColor: "white !important" },
             container: !isMobile ? { marginLeft: 20, marginRight: 60 } : {},
-
           }}
           style={{ width: "100%", justifyItems: "center" }}
         >
           {uiSettings.coinCards.map((keys, index) => {
             return (
-              <Carousel.Slide>
+              <Carousel.Slide key={index}>
                 <div
                   className="grid grid-cols-3  border rounded-lg xs:gap-2"
                   style={{ width: "100%" }}
@@ -72,6 +71,7 @@ export default function PortfolioCoin({ coin, values }: Props) {
                   {keys.map((name) => {
                     return (
                       <GroupItem
+                        key={name}
                         title={valuesTitles[name]}
                         value={values[name]}
                         name={name}
