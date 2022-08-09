@@ -20,6 +20,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <Title order={2} className="xs:text-xs mt-1 sm:-mt-2 text-xl">
           Binance Manager
         </Title>
+        
 
         <UseAnimations
           animation={IconAnimationLibrary.activity}
