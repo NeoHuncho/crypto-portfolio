@@ -1,5 +1,5 @@
-import type { Database } from "@firebase/database-types";
-import type { Firestore } from "@firebase/firestore";
+// import type { Database } from "@firebase/database-types";
+import type { FirebaseFirestore } from "@firebase/firestore-types";
 
 export interface InnerStakingData {
   subscriptionHistory: any | [];
@@ -45,8 +45,8 @@ export interface ExchangeRates {
 }
 
 export interface FirebaseData {
-  fireStore: Firestore;
-  db: Database;
+  fireStore: FirebaseFirestore;
+  db: any;
   test?: boolean;
 }
 export interface Data {
