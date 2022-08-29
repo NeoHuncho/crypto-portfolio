@@ -130,7 +130,7 @@ export const FirstSetup: React.FC<FirstSetupProps> = ({}) => {
                 }
               />
               <Title order={6}>
-                Discount on avg buy price you're okay with 🥲
+                Discount on avg buy price you are okay with 🥲
               </Title>
             </Flex>
           </Flex>
@@ -184,7 +184,7 @@ export const FirstSetup: React.FC<FirstSetupProps> = ({}) => {
                 }
               />
               <Title order={6}>
-                Profit on avg buy price you're okay with 🥲
+                Profit on avg buy price you are okay with 🥲
               </Title>
             </Flex>
           </Flex>

@@ -44,12 +44,10 @@ const processSpot = async (data: Data) => {
           : item.asset;
       if (!coinName) return;
       const coinData = coins[coinName];
-      if (coinData) {
-        coinData.spot.amount = totalAmount;
-      } else {
+      if (coinData) coinData.spot.amount += totalAmount;
+      else {
         coins[coinName] = new defaultCoin();
         const coinData = coins[coinName];
-
         if (coinData) coinData.spot.amount = totalAmount;
       }
     }

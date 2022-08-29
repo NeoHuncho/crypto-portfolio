@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import styles from "../../styles/Home.module.css";
 import GoogleSignIn from "assets/signIn/google_sign_in.png";
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Crypto Portfolio</title>
         <meta
@@ -49,7 +48,12 @@ export default function Home() {
           onClick={signInUserGoogle}
           className="flex flex-col justify-center cursor-pointer"
         >
-          <Image alt="google sign in button" src={GoogleSignIn} width={191} height={46} />
+          <Image
+            alt="google sign in button"
+            src={GoogleSignIn}
+            width={191}
+            height={46}
+          />
         </div>
       </div>
 

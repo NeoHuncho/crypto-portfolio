@@ -81,7 +81,6 @@ const run = async (test: boolean) => {
   data["coins"] = data["general"].passedFirstRun
     ? await updateStakingPositions(data)
     : data["coins"];
-  data.coins = await calculateSyncData(data);
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
   data["general"].lastRunTime = moment().unix();
