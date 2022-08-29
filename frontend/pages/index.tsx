@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
       if (user?.uid) return router.push("/user/portfolio");
-      else return router.push("/user/signup_login");
+      else return router.push("signup_login");
     });
   });
 

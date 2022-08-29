@@ -18,7 +18,7 @@ import processStaking from "./functions/processStaking";
 import sizeof from "object-sizeof";
 import updateStakingPositions from "./functions/updateStakingPositions";
 import logToFile from "./utils/log";
-import { writeFile } from "fs/promises";
+
 import moment from "moment";
 
 const exchangeRatesUSDT: ExchangeRates = {};

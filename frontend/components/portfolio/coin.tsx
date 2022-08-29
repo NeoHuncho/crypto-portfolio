@@ -62,6 +62,8 @@ export default function PortfolioCoin({ coin, values }: Props) {
           style={{ width: "100%", justifyItems: "center" }}
         >
           {uiSettings.coinCards.map((keys, index) => {
+            if (keys.includes("remainingStakingAmount") && !values.canBeStaked)
+              return null;
             return (
               <Carousel.Slide key={index}>
                 <div

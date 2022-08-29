@@ -1,33 +1,42 @@
-// import { Input, Checkbox } from "@mantine/core";
-// import Head from "next/head";
-// import Image from "next/image";
-// import { useDocument } from "swr-firestore-v9";
-// import { getAuth } from "firebase/auth";
-// import { sortDataDesc } from "../../utils/sortDataCrypto";
-// import { useEffect, useState } from "react";
-// import { useRouter } from "next/router";
+import { Input, Checkbox, Button, Loader } from "@mantine/core";
+import Head from "next/head";
+import Image from "next/image";
+import { useDocument } from "swr-firestore-v9";
+import { getAuth } from "firebase/auth";
+import { sortDataDesc } from "../../utils/sortDataCrypto";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { FirstSetup } from "../../components/bot/first_setup";
+import { defaultButtonProps } from "config/mantine";
+import { BotSettings } from "components/bot/bot_settings";
 
-export default function Home() {
-  //   const router = useRouter();
-  //   const auth = getAuth();
-  //   const [userUID, setUserUID] = useState(null);
-  //   useEffect(() => {
-  //     auth.onAuthStateChanged(function (user) {
-  //       console.log(user);
-  //       if (user?.uid) setUserUID(user.uid);
-  //       else return router.push("/user/signup_login");
-  //     });
-  //   });
+export default function Bot() {
+  const router = useRouter();
+  const auth = getAuth();
+  const [userUID, setUserUID] = useState("");
+  useEffect(() => {
+    auth.onAuthStateChanged(function (user) {
+      if (user?.uid) setUserUID(user.uid);
+      else return router.push("signup_login");
+    });
+  });
+  
+  const { data, update, error } = useDocument(`users_bot/${userUID}`, {
+    listen: true,
+  });
 
-  //   const { data, update, error } = useDocument(`users/${userUID}`, {
-  //     listen: true,
-  //   });
-
-  //   if (!data) return <p>Loading...</p>;
   //   const profitLoss = (
   //     data.general.totalValue - data.general.totalSpend
   //   ).toFixed(2);
-  return <div className="bg-gray-900"></div>;
+  console.log(data);
+  if (!data) return <Loader />;
+  if (!data.exists) return <BotSettings data={data} />;
+  return (
+    <div className="bg-gray-900">
+      {!data.exists}
+      <Button {...defaultButtonProps}>Settings</Button>
+    </div>
+  );
   //       <Head>
   //         <title>Crypto Portfolio</title>
   //         <meta

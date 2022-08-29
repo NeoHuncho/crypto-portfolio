@@ -5,7 +5,10 @@ import UseAnimations from "react-useanimations";
 import IconAnimationLibrary from "config/iconAnimations";
 interface HeaderProps {}
 import { isMobile } from "react-device-detect";
+import { useRouter } from "next/router";
 export const Header: React.FC<HeaderProps> = ({}) => {
+  const router = useRouter();
+
   return (
     <Flex
       style={{
@@ -20,7 +23,6 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <Title order={2} className="xs:text-xs mt-1 sm:-mt-2 text-xl">
           Binance Manager
         </Title>
-        
 
         <UseAnimations
           animation={IconAnimationLibrary.activity}
@@ -29,11 +31,31 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           className="xs:hidden"
         />
       </Flex>
-      <Tabs defaultValue="portfolio">
+      <Tabs
+        defaultValue={
+          router.asPath.includes("portfolio")
+            ? "portfolio"
+            : router.asPath.includes("bot")
+            ? "bot"
+            : "history"
+        }
+      >
         <Tabs.List className="xs:ml-4">
-          <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
-          <Tabs.Tab value="Bot">Bot</Tabs.Tab>
-          <Tabs.Tab value="History">History</Tabs.Tab>
+          <Tabs.Tab
+            onClick={() => router.push("/user/portfolio")}
+            value="portfolio"
+          >
+            Portfolio
+          </Tabs.Tab>
+          <Tabs.Tab onClick={() => router.push("/user/bot")} value="bot">
+            Bot
+          </Tabs.Tab>
+          <Tabs.Tab
+            onClick={() => router.push("/user/history")}
+            value="history"
+          >
+            History
+          </Tabs.Tab>
         </Tabs.List>
       </Tabs>
       <Flex justify={"flex-end"} style={{ width: 240, paddingTop: 2 }}>

@@ -45,9 +45,25 @@ export interface ExchangeRates {
 }
 
 export interface FirebaseData {
-  fireStore:any;
+  fireStore: any;
   db: any;
   test?: boolean;
+}
+
+export interface GeneralBotData {
+  buyPreferences: {
+    best: number;
+    better: number;
+    good: number;
+  };
+  sellPreferences: {
+    best: number;
+    better: number;
+    good: number;
+  };
+}
+export interface BotData {
+  general: GeneralBotData;
 }
 export interface Data {
   general: General | null;

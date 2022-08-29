@@ -275,16 +275,18 @@ const purchaseStaking = async (
 ) => {
   const res = await client
     .stakingPurchaseProduct(type, product, amount)
-    .then(async () => {
+    .then(async (res: any) => {
       await logToFile(
         "general",
         `${product} (staking) purchased for amount  ${amount}.`
       );
+      return res;
     })
-    .catch(() => {
+    .catch((err: any) => {
       console.log(
         `error when purchasing staking: ${product} for amount ${amount}`
       );
+      return err;
     });
 
   return res;

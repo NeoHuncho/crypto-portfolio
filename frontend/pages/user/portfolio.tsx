@@ -36,7 +36,7 @@ export default function Home() {
   useEffect(() => {
     if (!firebaseData || typeof firebaseData?.coins !== "string") return;
     firebaseData.coins = JSON.parse(firebaseData.coins);
-    console.log("dkd");
+
     usePortfolioStore.setState({
       coins: firebaseData.coins,
       general: firebaseData.general,

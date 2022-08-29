@@ -1,6 +1,7 @@
 import { AmountValue, DaysTo } from "@common/types/interfaces";
 import { Text, Title } from "@mantine/core";
 import React from "react";
+import { isMobile } from "react-device-detect";
 import Flex from "stiches/components/flex/flex";
 
 interface GroupItemProps {
@@ -47,7 +48,10 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
       style={{ minHeight: 70, height: "100%", justifyContent: "center" }}
       direction={"column"}
     >
-      <Text className=" text-center text-gray-200 w-full xs:text-xs">
+      <Text
+        size={!isMobile ? "md" : "xs"}
+        className=" text-center text-gray-200 w-full xs:text-xs"
+      >
         {title.split("\n").map(function (item, name) {
           return (
             <span key={name}>
@@ -58,7 +62,10 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
         })}{" "}
       </Text>
       {isDaysTo(value) && <DaysTo value={value} />}
-      <Title className="text-lg text-center text-gray-200  justify-self-end w-full xs:text-sm">
+      <Title
+        order={4}
+        className=" text-center text-gray-200  justify-self-end w-full xs:text-sm"
+      >
         {!value && "--"}
         {value === "string" && name === "remainingStakingAmount"}
         {typeof value === "string" && value}

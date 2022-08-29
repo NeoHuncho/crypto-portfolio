@@ -15,11 +15,11 @@ export default function PortfolioHeader() {
     <header>
       <div className="xs:{flex flex-col}  bg-background p-5 mb-10 sm:flex flex-row justify-between items-start">
         {!isMobile && (
-          <Card className="flex-col flex gap-2" style={{ width: 150 }}>
-            <Button size={"sm"} {...defaultButtonProps}>
+          <Card className="flex-col flex" style={{ width: 150 }}>
+            <Button style={{ width: "100%", marginBottom: 10 }} size={"sm"}>
               Filters
             </Button>
-            <Button size={"sm"} {...defaultButtonProps}>
+            <Button style={{ width: "100%" }} size={"sm"}>
               Layout
             </Button>
           </Card>
@@ -67,9 +67,7 @@ export default function PortfolioHeader() {
               <p className="text-gray-200 text-xs font-bold mb-3">
                 {moment.unix(general.lastRunTime).format("lll")}
               </p>
-              <Button size="xs" {...defaultButtonProps}>
-                Update Portfolio
-              </Button>
+              <Button size="xs">Update Portfolio</Button>
             </div>
           </Card>
         )}
