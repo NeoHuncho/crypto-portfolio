@@ -5,6 +5,7 @@ import React from "react";
 import moment from "moment";
 import { defaultButtonProps } from "config/mantine";
 import { isMobile } from "react-device-detect";
+import Flex from "stiches/components/flex/flex";
 export default function PortfolioHeader() {
   const general: General | null = usePortfolioStore((state) => state.general);
   if (!general) return <></>;
@@ -56,6 +57,17 @@ export default function PortfolioHeader() {
                 {general.coinsData.taxes.toFixed(2) + general.currencySymbol})
               </p>
             </div>
+            {isMobile && (
+              <div className="mt-10 flex-col flex items-center justify-center">
+                <Flex gap={2} align={"center"} className="mb-3">
+                  <p className="text-gray-200 text-sm font-bold">Last Update:</p>
+                  <p className="text-gray-200  text-sm font-bold ">
+                    {moment.unix(general.lastRunTime).format("lll")}
+                  </p>
+                </Flex>
+                <Button size="xs">Update Portfolio</Button>
+              </div>
+            )}
           </div>
         </Card>
         {!isMobile && (

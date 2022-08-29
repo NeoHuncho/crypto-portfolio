@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       justify={"space-between"}
     >
       <Flex gap={2}>
-        <Title order={2} className="xs:text-xs mt-1 sm:-mt-2 text-xl">
+        <Title order={2} className="xs:!text-xs xs:!mt-1.5 sm:!-mt-2 text-xl">
           Binance Manager
         </Title>
 

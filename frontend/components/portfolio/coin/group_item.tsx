@@ -33,7 +33,7 @@ const isAmountValue = (value: any): value is AmountValue => {
 };
 
 export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
-  console.log(name);
+
   typeof value === "number"
     ? value === 0
       ? "--"
