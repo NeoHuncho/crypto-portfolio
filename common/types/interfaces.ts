@@ -63,7 +63,7 @@ export interface GeneralBotData {
   };
 }
 export interface BotData {
-  general: GeneralBotData;
+  general: GeneralBotData | null;
 }
 export interface Data {
   general: General | null;

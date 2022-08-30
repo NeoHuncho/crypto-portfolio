@@ -1,5 +1,5 @@
 import { Accordion, Avatar, Tabs, Title } from "@mantine/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Flex from "stiches/components/flex/flex";
 import UseAnimations from "react-useanimations";
 import IconAnimationLibrary from "config/iconAnimations";
@@ -8,7 +8,10 @@ import { isMobile } from "react-device-detect";
 import { useRouter } from "next/router";
 export const Header: React.FC<HeaderProps> = ({}) => {
   const router = useRouter();
-
+  const [pathname, setPathname] = useState(router.asPath);
+  useEffect(() => {
+    setPathname(router.asPath);
+  }, [router.asPath]);
   return (
     <Flex
       style={{
@@ -19,8 +22,11 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       }}
       justify={"space-between"}
     >
-      <Flex gap={2}>
-        <Title order={2} className="xs:!text-xs xs:!mt-1.5 sm:!-mt-2 text-xl">
+      <Flex gap={2} className="xs:w-10">
+        <Title
+          order={2}
+          className="xs:!text-xs xs:!mt-1.5     sm:!-mt-2 text-xl"
+        >
           Binance Manager
         </Title>
 
@@ -33,9 +39,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       </Flex>
       <Tabs
         defaultValue={
-          router.asPath.includes("portfolio")
+          pathname.includes("portfolio")
             ? "portfolio"
-            : router.asPath.includes("bot")
+            : pathname.includes("bot")
             ? "bot"
             : "history"
         }
@@ -58,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           </Tabs.Tab>
         </Tabs.List>
       </Tabs>
-      <Flex justify={"flex-end"} style={{ width: 240, paddingTop: 2 }}>
+      <Flex justify={"flex-end"} className="xs:w-fit w-60 pt-1">
         <Avatar radius="xl" />
       </Flex>
     </Flex>

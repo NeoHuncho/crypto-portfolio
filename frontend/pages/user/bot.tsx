@@ -6,36 +6,45 @@ import { getAuth } from "firebase/auth";
 import { sortDataDesc } from "../../utils/sortDataCrypto";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { FirstSetup } from "../../components/bot/first_setup";
+import { useDisclosure } from "@mantine/hooks";
 import { defaultButtonProps } from "config/mantine";
 import { BotSettings } from "components/bot/bot_settings";
+import { BotData } from "@common/types/interfaces";
+import { useBotStore } from "data/bot_store";
 
 export default function Bot() {
   const router = useRouter();
   const auth = getAuth();
   const [userUID, setUserUID] = useState("");
+  const [showSettings, handlers] = useDisclosure(false);
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
       if (user?.uid) setUserUID(user.uid);
       else return router.push("signup_login");
     });
   });
-  
-  const { data, update, error } = useDocument(`users_bot/${userUID}`, {
+
+  const { data, update, error } = useDocument<BotData>(`users_bot/${userUID}`, {
     listen: true,
   });
+  useEffect(() => {
+    if (!data?.exists) return;
+    useBotStore.setState({
+      general: data.general,
+    });
+  }, [data]);
 
-  //   const profitLoss = (
-  //     data.general.totalValue - data.general.totalSpend
-  //   ).toFixed(2);
-  console.log(data);
   if (!data) return <Loader />;
-  if (!data.exists) return <BotSettings data={data} />;
+  if (!data.exists) return <BotSettings />;
   return (
-    <div className="bg-gray-900">
-      {!data.exists}
-      <Button {...defaultButtonProps}>Settings</Button>
-    </div>
+    <>
+      <div className="bg-gray-900">
+        <Button onClick={handlers.open} {...defaultButtonProps}>
+          Settings
+        </Button>
+      </div>
+      {showSettings && <BotSettings />}
+    </>
   );
   //       <Head>
   //         <title>Crypto Portfolio</title>
