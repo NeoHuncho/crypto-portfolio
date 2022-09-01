@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useDisclosure } from "@mantine/hooks";
 import { defaultButtonProps } from "config/mantine";
-import { BotSettings } from "components/bot/bot_settings";
+import { BotSettings } from "components/bot/settings/bot_settings";
 import { BotData } from "@common/types/interfaces";
 import { useBotStore } from "data/bot_store";
 
@@ -35,7 +35,7 @@ export default function Bot() {
   }, [data]);
 
   if (!data) return <Loader />;
-  if (!data.exists) return <BotSettings />;
+  if (!data.exists || !data?.general) return <BotSettings />;
   return (
     <>
       <div className="bg-gray-900">
@@ -43,7 +43,7 @@ export default function Bot() {
           Settings
         </Button>
       </div>
-      {showSettings && <BotSettings />}
+      {showSettings && <BotSettings closeButton={true} />}
     </>
   );
   //       <Head>

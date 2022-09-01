@@ -33,18 +33,22 @@ const updateSavingPositions = async (
     }
   } else {
     let remainingSavingsAmount: number = 0;
-    if (coin.remainingStakingAmount < 0)
+
+    data["binance"]?.spotAccount.balances.map((balance: any) => {
+      if (balance.asset === coinName)
+        if (coin.remainingStakingAmount < 0)
+          remainingSavingsAmount = parseFloat(balance.free);
+        else
+          remainingSavingsAmount =
+            parseFloat(balance.free) - coin.remainingStakingAmount;
+    });
+
+    if (!remainingSavingsAmount) return;
+    if (remainingSavingsAmount < 0)
       await redeemSaving(
         product.productId,
         Number(coin.remainingStakingAmount.toFixed(7)) * -1
       );
-    data["binance"]?.spotAccount.balances.map((balance: any) => {
-      if (balance.asset === coinName)
-        remainingSavingsAmount =
-          parseFloat(balance.free) - coin.remainingStakingAmount;
-    });
-
-    if (!remainingSavingsAmount) return;
     if (remainingSavingsAmount < 0)
       await redeemSaving(
         product.productId,

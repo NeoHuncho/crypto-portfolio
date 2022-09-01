@@ -51,15 +51,22 @@ export interface FirebaseData {
 }
 
 export interface GeneralBotData {
-  buyPreferences: {
-    best: number;
-    better: number;
-    good: number;
+  tradeBot: {
+    buyPreferences: {
+      best: number;
+      better: number;
+      good: number;
+    };
+    sellPreferences: {
+      best: number;
+      better: number;
+      good: number;
+    };
+    enabled: boolean;
   };
-  sellPreferences: {
-    best: number;
-    better: number;
-    good: number;
+  stakingBot: {
+    enabled: boolean;
+    percentageToNotStake: number;
   };
 }
 export interface BotData {
