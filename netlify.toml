@@ -1,7 +1,7 @@
 
 [build]
   publish = "./frontend/next"
-  base='/'
-  command="echo 'yarn front_build'"
+  base='./'
+  command="yarn front_build"
 [functions]
   directory = "./backend/src/netlify"
