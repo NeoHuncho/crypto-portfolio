@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var dataBinance_1 = require("../data/dataBinance");
-var log_1 = require("../utils/log");
 var updatePriceValues = function (data, exchangeRatesUSDT) { return __awaiter(void 0, void 0, void 0, function () {
     var _loop_1, _a, _b, _i, key, state_1;
     return __generator(this, function (_c) {
@@ -56,7 +55,7 @@ var updatePriceValues = function (data, exchangeRatesUSDT) { return __awaiter(vo
                                     return [2 /*return*/, { value: void 0 }];
                                 _f.label = 1;
                             case 1:
-                                _f.trys.push([1, 5, , 7]);
+                                _f.trys.push([1, 5, , 6]);
                                 if (!!key.includes("USD")) return [3 /*break*/, 3];
                                 _e = parseFloat;
                                 return [4 /*yield*/, (0, dataBinance_1.getAvgPrice)(key.substring(0, 2) === "LD"
@@ -100,14 +99,12 @@ var updatePriceValues = function (data, exchangeRatesUSDT) { return __awaiter(vo
                                     }
                                     return item;
                                 });
-                                return [3 /*break*/, 7];
+                                return [3 /*break*/, 6];
                             case 5:
                                 error_1 = _f.sent();
-                                return [4 /*yield*/, (0, log_1["default"])("errors", "error in updatePriceValues for " + coin)];
-                            case 6:
-                                _f.sent();
-                                return [3 /*break*/, 7];
-                            case 7: return [2 /*return*/];
+                                console.log("errors", "error in updatePriceValues for " + coin);
+                                return [3 /*break*/, 6];
+                            case 6: return [2 /*return*/];
                         }
                     });
                 };

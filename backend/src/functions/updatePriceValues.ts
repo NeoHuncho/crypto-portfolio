@@ -1,6 +1,5 @@
 import { getAvgPrice } from "../data/dataBinance";
 import type { Data, ExchangeRates } from "../../../common/types/interfaces";
-import logToFile from "../utils/log";
 
 const updatePriceValues = async (
   data: Data,
@@ -59,7 +58,7 @@ const updatePriceValues = async (
         return item;
       });
     } catch (error) {
-      await logToFile("errors", "error in updatePriceValues for " + coin);
+      console.log("errors", "error in updatePriceValues for " + coin);
     }
   }
 

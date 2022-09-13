@@ -1,7 +1,7 @@
 import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
-import logToFile from "../utils/log";
+
 
 const apiKey = process.env["BINANCE_API_KEY"];
 const apiSecret = process.env["BINANCE_API_SECRET"];
@@ -49,7 +49,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
       return (await client[name](params)).data;
     } catch (error) {
       try {
-        await logToFile("errors", "error from binance- waiting");
+        console.log("errors", "error from binance- waiting");
 
         await new Promise((resolve) => setTimeout(resolve, 60000));
 
@@ -60,7 +60,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
           return (await client[name](setting1, setting2, { ...params })).data;
         return (await client[name](params)).data;
       } catch (error) {
-        await logToFile(
+        console.log(
           "errors",
           `error while making request ${name}, ${params}`
         );
@@ -276,7 +276,7 @@ const purchaseStaking = async (
   const res = await client
     .stakingPurchaseProduct(type, product, amount)
     .then(async (res: any) => {
-      await logToFile(
+      console.log(
         "general",
         `${product} (staking) purchased for amount  ${amount}.`
       );
@@ -295,7 +295,7 @@ const purchaseSaving = async (productID: string, amount: number) => {
   await client
     .savingsPurchaseFlexibleProduct(productID, amount)
     .then(async () => {
-      await logToFile(
+      console.log(
         "general",
         `${productID} (saving) purchased for amount  ${amount}.`
       );
@@ -310,7 +310,7 @@ const redeemSaving = async (productID: string, amount: number) => {
   await client
     .savingsFlexibleRedeem(productID, amount, "FAST")
     .then(async () => {
-      await logToFile(
+      console.log(
         "general",
         `${productID}(saving) redeemed for amount of ${amount}.`
       );

@@ -41,7 +41,6 @@ var dataBinance_1 = require("../data/dataBinance");
 var dataGecko_1 = require("../data/dataGecko");
 var getCurrencySymbol_1 = require("../utils/getCurrencySymbol");
 var xlsx_1 = require("xlsx");
-var log_1 = require("../utils/log");
 var processAccountHistory = function (data, db) { return __awaiter(void 0, void 0, void 0, function () {
     var general, processDepositHistory, processDirectBuyHistory, processCoinWithdrawalHistory, processCoinDepositHistory, processCardPayments, buyWorkbook, buySheet, error_1;
     return __generator(this, function (_a) {
@@ -127,18 +126,18 @@ var processAccountHistory = function (data, db) { return __awaiter(void 0, void 
                     return __generator(this, function (_c) {
                         switch (_c.label) {
                             case 0:
-                                if (!coinWithdrawalHistory) return [3 /*break*/, 7];
+                                if (!coinWithdrawalHistory) return [3 /*break*/, 5];
                                 _a = [];
                                 for (_b in coinWithdrawalHistory)
                                     _a.push(_b);
                                 _i = 0;
                                 _c.label = 1;
                             case 1:
-                                if (!(_i < _a.length)) return [3 /*break*/, 7];
+                                if (!(_i < _a.length)) return [3 /*break*/, 5];
                                 index = _a[_i];
                                 item = coinWithdrawalHistory[index];
                                 if (!(item.confirmNo &&
-                                    !data["meta"].IDs.coinWithdrawalIDs.includes(item.id))) return [3 /*break*/, 6];
+                                    !data["meta"].IDs.coinWithdrawalIDs.includes(item.id))) return [3 /*break*/, 4];
                                 data["meta"].IDs.coinWithdrawalIDs.push(item.id);
                                 coin = data["coins"][item.coin];
                                 if (!coin) return [3 /*break*/, 2];
@@ -153,7 +152,7 @@ var processAccountHistory = function (data, db) { return __awaiter(void 0, void 
                                 data["general"].coinsData.taxes += parseFloat(item.transactionFee);
                                 data["general"].coinsData.spend -=
                                     parseFloat(item.amount) * avgPrice;
-                                return [3 /*break*/, 6];
+                                return [3 /*break*/, 4];
                             case 2: return [4 /*yield*/, (0, dataGecko_1.getHistoricPriceUSD)({
                                     db: db,
                                     coin: item.coin.toLowerCase(),
@@ -161,27 +160,26 @@ var processAccountHistory = function (data, db) { return __awaiter(void 0, void 
                                 })];
                             case 3:
                                 historicPrice = _c.sent();
-                                if (!historicPrice) return [3 /*break*/, 4];
-                                data["meta"].coinWithdrawalHistory.push({
-                                    coin: item.coin,
-                                    amount: parseFloat(item.amount),
-                                    value: parseFloat(item.amount) * historicPrice,
-                                    timeUnix: (0, moment_1["default"])(item.applyTime).unix(),
-                                    id: item.confirmNo
-                                });
-                                data["general"].coinsData.taxes +=
-                                    parseFloat(item.transactionFee) * historicPrice;
-                                data["general"].coinsData.spend -=
-                                    parseFloat(item.amount) * historicPrice;
-                                return [3 /*break*/, 6];
-                            case 4: return [4 /*yield*/, (0, log_1["default"])("errors", "".concat(item.coin, " historic price not found"))];
-                            case 5:
-                                _c.sent();
-                                _c.label = 6;
-                            case 6:
+                                if (historicPrice) {
+                                    data["meta"].coinWithdrawalHistory.push({
+                                        coin: item.coin,
+                                        amount: parseFloat(item.amount),
+                                        value: parseFloat(item.amount) * historicPrice,
+                                        timeUnix: (0, moment_1["default"])(item.applyTime).unix(),
+                                        id: item.confirmNo
+                                    });
+                                    data["general"].coinsData.taxes +=
+                                        parseFloat(item.transactionFee) * historicPrice;
+                                    data["general"].coinsData.spend -=
+                                        parseFloat(item.amount) * historicPrice;
+                                }
+                                else
+                                    console.log("errors", "".concat(item.coin, " historic price not found"));
+                                _c.label = 4;
+                            case 4:
                                 _i++;
                                 return [3 /*break*/, 1];
-                            case 7: return [2 /*return*/];
+                            case 5: return [2 /*return*/];
                         }
                     });
                 }); };
@@ -278,20 +276,18 @@ var processAccountHistory = function (data, db) { return __awaiter(void 0, void 
                 _a.sent();
                 _a.label = 3;
             case 3:
-                _a.trys.push([3, 5, , 7]);
+                _a.trys.push([3, 5, , 6]);
                 buyWorkbook = xlsx_1["default"].readFile("imports/CardHistoryFinal.xlsx");
                 buySheet = buyWorkbook.SheetNames;
                 return [4 /*yield*/, processCardPayments(xlsx_1["default"].utils.sheet_to_json(buyWorkbook.Sheets[buySheet[0]]))];
             case 4:
                 _a.sent();
-                return [3 /*break*/, 7];
+                return [3 /*break*/, 6];
             case 5:
                 error_1 = _a.sent();
-                return [4 /*yield*/, (0, log_1["default"])("errors", "cardHistory does not exist")];
-            case 6:
-                _a.sent();
-                return [3 /*break*/, 7];
-            case 7: return [2 /*return*/, data];
+                console.log("errors", "cardHistory does not exist");
+                return [3 /*break*/, 6];
+            case 6: return [2 /*return*/, data];
         }
     });
 }); };

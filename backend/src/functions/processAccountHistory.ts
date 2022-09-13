@@ -6,7 +6,6 @@ import { getHistoricPriceUSD } from "../data/dataGecko";
 import type { Data } from "../../../common/types/interfaces";
 import getCurrencySymbol from "../utils/getCurrencySymbol";
 import XLSX from "xlsx";
-import logToFile from "../utils/log";
 
 const processAccountHistory = async (data: Data, db: Database) => {
   const general = data["general"];
@@ -130,7 +129,7 @@ const processAccountHistory = async (data: Data, db: Database) => {
               data["general"].coinsData.spend -=
                 parseFloat(item.amount) * historicPrice;
             } else
-              await logToFile(
+              console.log(
                 "errors",
                 `${item.coin} historic price not found`
               );
@@ -252,7 +251,7 @@ const processAccountHistory = async (data: Data, db: Database) => {
       XLSX.utils.sheet_to_json(buyWorkbook.Sheets[buySheet[0]])
     );
   } catch (error) {
-    await logToFile("errors", "cardHistory does not exist");
+    console.log("errors", "cardHistory does not exist");
   }
 
   return data;

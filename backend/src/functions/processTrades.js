@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var dataBinance_1 = require("../data/dataBinance");
-var log_1 = require("../utils/log");
 var processTrades = function (data) { return __awaiter(void 0, void 0, void 0, function () {
     var checkKey, _loop_1, _a, _b, _i, key, state_1;
     return __generator(this, function (_c) {
@@ -56,7 +55,7 @@ var processTrades = function (data) { return __awaiter(void 0, void 0, void 0, f
                     return __generator(this, function (_f) {
                         switch (_f.label) {
                             case 0:
-                                _f.trys.push([0, 3, , 5]);
+                                _f.trys.push([0, 3, , 4]);
                                 tradeKey = checkKey(key);
                                 if (!tradeKey) return [3 /*break*/, 2];
                                 return [4 /*yield*/, (0, dataBinance_1.getAllOrders)(tradeKey)];
@@ -148,14 +147,12 @@ var processTrades = function (data) { return __awaiter(void 0, void 0, void 0, f
                                 data["meta"].coinBuyBalance[key] = priceDataBuy_1;
                                 data["meta"].coinSellBalance[key] = priceDataSell_1;
                                 _f.label = 2;
-                            case 2: return [3 /*break*/, 5];
+                            case 2: return [3 /*break*/, 4];
                             case 3:
                                 error_1 = _f.sent();
-                                return [4 /*yield*/, (0, log_1["default"])("errors", "error in trades for " + key)];
-                            case 4:
-                                _f.sent();
-                                return [3 /*break*/, 5];
-                            case 5: return [2 /*return*/];
+                                console.log("errors", "error in trades for " + key);
+                                return [3 /*break*/, 4];
+                            case 4: return [2 /*return*/];
                         }
                     });
                 };

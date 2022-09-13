@@ -17,7 +17,6 @@ import type { DocumentData } from "firebase-admin/firestore";
 import processStaking from "./functions/processStaking";
 import sizeof from "object-sizeof";
 import updateStakingPositions from "./functions/updateStakingPositions";
-import logToFile from "./utils/log";
 
 import moment from "moment";
 
@@ -57,7 +56,7 @@ interface runUpdate {
 }
 
 const runUpdate = async ({ test }: runUpdate) => {
-  await logToFile("general", "--START--");
+
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
 
@@ -88,7 +87,7 @@ const runUpdate = async ({ test }: runUpdate) => {
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
   data["general"].lastRunTime = moment().unix();
-  await logToFile(
+console.log(
     "general",
     `size of Meta: ${sizeof(data["meta"])}, size Of general and coins: ${sizeof(
       data["general"] + sizeof(JSON.stringify(data["coins"]))
@@ -104,7 +103,7 @@ const runUpdate = async ({ test }: runUpdate) => {
       coins: JSON.stringify(data["coins"]),
     })
     .then(async () => {
-      await logToFile("general", "--END--");
+   
       return;
     });
 };

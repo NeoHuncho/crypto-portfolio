@@ -50,7 +50,6 @@ exports.__esModule = true;
 exports.redeemSaving = exports.purchaseSaving = exports.getSavingPositions = exports.purchaseStaking = exports.getStakingPositions = exports.getAllOrders = exports.getAvgPrice = exports.getBinanceData = void 0;
 var connector_1 = require("@binance/connector");
 var moment_1 = require("moment");
-var log_1 = require("../utils/log");
 var apiKey = process.env["BINANCE_API_KEY"];
 var apiSecret = process.env["BINANCE_API_SECRET"];
 var client = new connector_1.Spot(apiKey, apiSecret);
@@ -89,7 +88,7 @@ var getBinanceData = function (_a) {
                         return __generator(this, function (_a) {
                             switch (_a.label) {
                                 case 0:
-                                    _a.trys.push([0, 6, , 18]);
+                                    _a.trys.push([0, 6, , 16]);
                                     if (!(setting1 !== "undefined" && !setting2)) return [3 /*break*/, 2];
                                     return [4 /*yield*/, client[name](setting1, __assign({}, params))];
                                 case 1: return [2 /*return*/, (_a.sent()).data];
@@ -103,30 +102,26 @@ var getBinanceData = function (_a) {
                                     error_1 = _a.sent();
                                     _a.label = 7;
                                 case 7:
-                                    _a.trys.push([7, 15, , 17]);
-                                    return [4 /*yield*/, (0, log_1["default"])("errors", "error from binance- waiting")];
+                                    _a.trys.push([7, 14, , 15]);
+                                    console.log("errors", "error from binance- waiting");
+                                    return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 60000); })];
                                 case 8:
                                     _a.sent();
-                                    return [4 /*yield*/, new Promise(function (resolve) { return setTimeout(resolve, 60000); })];
-                                case 9:
-                                    _a.sent();
-                                    if (!(setting1 === 0 && !setting2)) return [3 /*break*/, 11];
+                                    if (!(setting1 === 0 && !setting2)) return [3 /*break*/, 10];
                                     return [4 /*yield*/, client[name](setting1, __assign({}, params))];
-                                case 10: return [2 /*return*/, (_a.sent()).data];
-                                case 11:
-                                    if (!(setting1 && setting2)) return [3 /*break*/, 13];
+                                case 9: return [2 /*return*/, (_a.sent()).data];
+                                case 10:
+                                    if (!(setting1 && setting2)) return [3 /*break*/, 12];
                                     return [4 /*yield*/, client[name](setting1, setting2, __assign({}, params))];
-                                case 12: return [2 /*return*/, (_a.sent()).data];
-                                case 13: return [4 /*yield*/, client[name](params)];
-                                case 14: return [2 /*return*/, (_a.sent()).data];
-                                case 15:
+                                case 11: return [2 /*return*/, (_a.sent()).data];
+                                case 12: return [4 /*yield*/, client[name](params)];
+                                case 13: return [2 /*return*/, (_a.sent()).data];
+                                case 14:
                                     error_2 = _a.sent();
-                                    return [4 /*yield*/, (0, log_1["default"])("errors", "error while making request ".concat(name, ", ").concat(params))];
-                                case 16:
-                                    _a.sent();
+                                    console.log("errors", "error while making request ".concat(name, ", ").concat(params));
                                     return [2 /*return*/];
-                                case 17: return [3 /*break*/, 18];
-                                case 18: return [2 /*return*/];
+                                case 15: return [3 /*break*/, 16];
+                                case 16: return [2 /*return*/];
                             }
                         });
                     }); };
@@ -341,12 +336,8 @@ var purchaseStaking = function (type, product, amount) { return __awaiter(void 0
                     .stakingPurchaseProduct(type, product, amount)
                     .then(function (res) { return __awaiter(void 0, void 0, void 0, function () {
                     return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, (0, log_1["default"])("general", "".concat(product, " (staking) purchased for amount  ").concat(amount, "."))];
-                            case 1:
-                                _a.sent();
-                                return [2 /*return*/, res];
-                        }
+                        console.log("general", "".concat(product, " (staking) purchased for amount  ").concat(amount, "."));
+                        return [2 /*return*/, res];
                     });
                 }); })["catch"](function (err) {
                     console.log("error when purchasing staking: ".concat(product, " for amount ").concat(amount));
@@ -366,12 +357,8 @@ var purchaseSaving = function (productID, amount) { return __awaiter(void 0, voi
                     .savingsPurchaseFlexibleProduct(productID, amount)
                     .then(function () { return __awaiter(void 0, void 0, void 0, function () {
                     return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, (0, log_1["default"])("general", "".concat(productID, " (saving) purchased for amount  ").concat(amount, "."))];
-                            case 1:
-                                _a.sent();
-                                return [2 /*return*/];
-                        }
+                        console.log("general", "".concat(productID, " (saving) purchased for amount  ").concat(amount, "."));
+                        return [2 /*return*/];
                     });
                 }); })["catch"](function () {
                     console.log("error when purchasing saving: ".concat(productID, " for amount ").concat(amount));
@@ -390,12 +377,8 @@ var redeemSaving = function (productID, amount) { return __awaiter(void 0, void 
                     .savingsFlexibleRedeem(productID, amount, "FAST")
                     .then(function () { return __awaiter(void 0, void 0, void 0, function () {
                     return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, (0, log_1["default"])("general", "".concat(productID, "(saving) redeemed for amount of ").concat(amount, "."))];
-                            case 1:
-                                _a.sent();
-                                return [2 /*return*/];
-                        }
+                        console.log("general", "".concat(productID, "(saving) redeemed for amount of ").concat(amount, "."));
+                        return [2 /*return*/];
                     });
                 }); })["catch"](function () {
                     console.log("error when redeeming saving: ".concat(productID, " for amount ").concat(amount));
