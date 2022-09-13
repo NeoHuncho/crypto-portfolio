@@ -2,3 +2,5 @@
 
 # Local Netlify folder
 .netlify
+node_modules
+yarn.lock

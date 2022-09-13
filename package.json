@@ -1,0 +1,5 @@
+{
+  "name": "crypto-portfolio",
+  "private": true,
+  "workspaces": ["frontend", "backend"]
+}

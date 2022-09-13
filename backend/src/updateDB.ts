@@ -52,7 +52,11 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-const run = async (test: boolean) => {
+interface runUpdate {
+  test?: boolean;
+}
+
+const runUpdate = async ({ test }: runUpdate) => {
   await logToFile("general", "--START--");
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
@@ -101,8 +105,8 @@ const run = async (test: boolean) => {
     })
     .then(async () => {
       await logToFile("general", "--END--");
-      process.exit();
+      return;
     });
 };
 
-run(false);
+export default runUpdate;

@@ -1,23 +1,23 @@
-import initFireStore from "../src/initFireBase";
+import initFireStore from "../initFireBase";
 
 import type {
   Coin,
   ExchangeRates,
   General,
-} from "../../common/types/interfaces";
-import { getDBData } from "../src/data/dataDB";
-import { getAvgPrice, getBinanceData } from "../src/data/dataBinance";
+} from "../../../common/types/interfaces";
+import { getDBData } from "../data/dataDB";
+import { getAvgPrice, getBinanceData } from "../data/dataBinance";
 
-import checkAndUpdateCardHistory from "../src/functions/checkUpdateCardHistory";
-import processTrades from "../src/functions/processTrades";
-import processSpot from "../src/functions/processSpot";
-import processAccountHistory from "../src/functions/processAccountHistory";
-import updatePriceValues from "../src/functions/updatePriceValues";
+import checkAndUpdateCardHistory from "../functions/checkUpdateCardHistory";
+import processTrades from "../functions/processTrades";
+import processSpot from "../functions/processSpot";
+import processAccountHistory from "../functions/processAccountHistory";
+import updatePriceValues from "../functions/updatePriceValues";
 import type { DocumentData } from "firebase-admin/firestore";
-import processStaking from "../src/functions/processStaking";
+import processStaking from "../functions/processStaking";
 import sizeof from "object-sizeof";
-import updateStakingPositions from "../src/functions/updateStakingPositions";
-import logToFile from "../src/utils/log";
+import updateStakingPositions from "../functions/updateStakingPositions";
+import logToFile from "../utils/log";
 
 import moment from "moment";
 
@@ -52,7 +52,11 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-exports.handler = async (test: boolean) => {
+interface runUpdate {
+  test?: boolean;
+}
+
+const runUpdate = async ({ test }: runUpdate) => {
   await logToFile("general", "--START--");
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
@@ -101,9 +105,8 @@ exports.handler = async (test: boolean) => {
     })
     .then(async () => {
       await logToFile("general", "--END--");
-      return {
-        statusCode: 200,
-        body: "Success",
-      };
+      return;
     });
 };
+
+export default runUpdate;

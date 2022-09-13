@@ -1,6 +1,6 @@
 
 [build]
-  base = "./frontend"
-  publish = "./.next"
+ command = "echo 'cd frontend && yarn build'"
+  publish = "./frontend/next"
 [functions]
-  directory = "../backend/netlify"
+  directory = "./backend/src/netlify"
