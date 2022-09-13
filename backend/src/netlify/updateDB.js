@@ -47,6 +47,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.handler = void 0;
 var initFireBase_1 = require("../initFireBase");
 var dataDB_1 = require("../data/dataDB");
 var dataBinance_1 = require("../data/dataBinance");
@@ -91,97 +92,102 @@ var calculateSyncData = function (data) {
     }
     return data["coins"];
 };
-exports.runUpdate = function (_a) {
-    var test = _a.test;
-    return __awaiter(void 0, void 0, void 0, function () {
-        var _b, db, fireStore, data, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
-        return __generator(this, function (_p) {
-            switch (_p.label) {
-                case 0:
-                    console.log("general", "--START--");
-                    return [4 /*yield*/, (0, initFireBase_1["default"])()];
-                case 1:
-                    _b = _p.sent(), db = _b.db, fireStore = _b.fireStore;
-                    return [4 /*yield*/, (0, dataDB_1.getDBData)({ fireStore: fireStore, db: db, test: test })];
-                case 2:
-                    data = _p.sent();
-                    _c = data;
-                    _d = "binance";
-                    return [4 /*yield*/, (0, dataBinance_1.getBinanceData)({
-                            passedFirstRun: data["general"].passedFirstRun
-                        })];
-                case 3:
-                    _c[_d] = _p.sent();
-                    if (!data["general"].currency) return [3 /*break*/, 5];
-                    _e = exchangeRatesUSDT;
-                    _f = "currency";
-                    _g = parseFloat;
-                    return [4 /*yield*/, (0, dataBinance_1.getAvgPrice)(data["general"].currency + "USDT")];
-                case 4:
-                    _e[_f] = _g.apply(void 0, [_p.sent()]);
-                    _p.label = 5;
-                case 5:
-                    data["general"] = resetData(data["general"]);
-                    return [4 /*yield*/, (0, checkUpdateCardHistory_1["default"])()];
-                case 6:
-                    _p.sent();
-                    _h = data;
-                    _j = "coins";
-                    return [4 /*yield*/, (0, processSpot_1["default"])(data)];
-                case 7:
-                    _h[_j] = _p.sent();
-                    return [4 /*yield*/, (0, processTrades_1["default"])(data)];
-                case 8:
-                    data = _p.sent();
-                    return [4 /*yield*/, (0, processAccountHistory_1["default"])(data, db)];
-                case 9:
-                    data = _p.sent();
-                    return [4 /*yield*/, (0, processStaking_1["default"])(data)];
-                case 10:
-                    data = _p.sent();
-                    return [4 /*yield*/, (0, updatePriceValues_1["default"])(data, exchangeRatesUSDT)];
-                case 11:
-                    data = _p.sent();
-                    _k = data;
-                    return [4 /*yield*/, calculateSyncData(data)];
-                case 12:
-                    _k.coins = _p.sent();
-                    _l = data;
-                    _m = "coins";
-                    if (!data["general"].passedFirstRun) return [3 /*break*/, 14];
-                    return [4 /*yield*/, (0, updateStakingPositions_1["default"])(data)];
-                case 13:
-                    _o = _p.sent();
-                    return [3 /*break*/, 15];
-                case 14:
-                    _o = data["coins"];
-                    _p.label = 15;
-                case 15:
-                    _l[_m] = _o;
-                    if (!data["general"].passedFirstRun)
-                        data["general"].passedFirstRun = true;
-                    data["general"].lastRunTime = (0, moment_1["default"])().unix();
-                    console.log("general", "size of Meta: ".concat((0, object_sizeof_1["default"])(data["meta"]), ", size Of general and coins: ").concat((0, object_sizeof_1["default"])(data["general"] + (0, object_sizeof_1["default"])(JSON.stringify(data["coins"]))), " "));
-                    return [4 /*yield*/, db.ref("users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1").set(data["meta"])];
-                case 16:
-                    _p.sent();
-                    return [4 /*yield*/, fireStore
-                            .collection("users")
-                            .doc("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1")
-                            .set({
-                            general: __assign({}, data["general"]),
-                            coins: JSON.stringify(data["coins"])
-                        })
-                            .then(function () { return __awaiter(void 0, void 0, void 0, function () {
-                            return __generator(this, function (_a) {
-                                console.log("general", "--END--");
-                                return [2 /*return*/];
-                            });
-                        }); })];
-                case 17:
-                    _p.sent();
-                    return [2 /*return*/];
-            }
-        });
+var handler = function () { return __awaiter(void 0, void 0, void 0, function () {
+    var test, _a, db, fireStore, data, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
+    return __generator(this, function (_o) {
+        switch (_o.label) {
+            case 0:
+                test = false;
+                console.log("general", "--START--");
+                return [4 /*yield*/, (0, initFireBase_1["default"])()];
+            case 1:
+                _a = _o.sent(), db = _a.db, fireStore = _a.fireStore;
+                return [4 /*yield*/, (0, dataDB_1.getDBData)({ fireStore: fireStore, db: db, test: test })];
+            case 2:
+                data = _o.sent();
+                _b = data;
+                _c = "binance";
+                return [4 /*yield*/, (0, dataBinance_1.getBinanceData)({
+                        passedFirstRun: data["general"].passedFirstRun
+                    })];
+            case 3:
+                _b[_c] = _o.sent();
+                if (!data["general"].currency) return [3 /*break*/, 5];
+                _d = exchangeRatesUSDT;
+                _e = "currency";
+                _f = parseFloat;
+                return [4 /*yield*/, (0, dataBinance_1.getAvgPrice)(data["general"].currency + "USDT")];
+            case 4:
+                _d[_e] = _f.apply(void 0, [_o.sent()]);
+                _o.label = 5;
+            case 5:
+                data["general"] = resetData(data["general"]);
+                return [4 /*yield*/, (0, checkUpdateCardHistory_1["default"])()];
+            case 6:
+                _o.sent();
+                _g = data;
+                _h = "coins";
+                return [4 /*yield*/, (0, processSpot_1["default"])(data)];
+            case 7:
+                _g[_h] = _o.sent();
+                return [4 /*yield*/, (0, processTrades_1["default"])(data)];
+            case 8:
+                data = _o.sent();
+                return [4 /*yield*/, (0, processAccountHistory_1["default"])(data, db)];
+            case 9:
+                data = _o.sent();
+                return [4 /*yield*/, (0, processStaking_1["default"])(data)];
+            case 10:
+                data = _o.sent();
+                return [4 /*yield*/, (0, updatePriceValues_1["default"])(data, exchangeRatesUSDT)];
+            case 11:
+                data = _o.sent();
+                _j = data;
+                return [4 /*yield*/, calculateSyncData(data)];
+            case 12:
+                _j.coins = _o.sent();
+                _k = data;
+                _l = "coins";
+                if (!data["general"].passedFirstRun) return [3 /*break*/, 14];
+                return [4 /*yield*/, (0, updateStakingPositions_1["default"])(data)];
+            case 13:
+                _m = _o.sent();
+                return [3 /*break*/, 15];
+            case 14:
+                _m = data["coins"];
+                _o.label = 15;
+            case 15:
+                _k[_l] = _m;
+                if (!data["general"].passedFirstRun)
+                    data["general"].passedFirstRun = true;
+                data["general"].lastRunTime = (0, moment_1["default"])().unix();
+                console.log("general", "size of Meta: ".concat((0, object_sizeof_1["default"])(data["meta"]), ", size Of general and coins: ").concat((0, object_sizeof_1["default"])(data["general"] + (0, object_sizeof_1["default"])(JSON.stringify(data["coins"]))), " "));
+                return [4 /*yield*/, db.ref("users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1").set(data["meta"])];
+            case 16:
+                _o.sent();
+                return [4 /*yield*/, fireStore
+                        .collection("users")
+                        .doc("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1")
+                        .set({
+                        general: __assign({}, data["general"]),
+                        coins: JSON.stringify(data["coins"])
+                    })
+                        .then(function () { return __awaiter(void 0, void 0, void 0, function () {
+                        return __generator(this, function (_a) {
+                            console.log("general", "--END--");
+                            return [2 /*return*/, {
+                                    statusCode: 200,
+                                    body: JSON.stringify({ message: "Hello World" })
+                                }];
+                        });
+                    }); })];
+            case 17:
+                _o.sent();
+                return [2 /*return*/, {
+                        statusCode: 200,
+                        body: JSON.stringify({ message: "Hello World" })
+                    }];
+        }
     });
-};
+}); };
+exports.handler = handler;

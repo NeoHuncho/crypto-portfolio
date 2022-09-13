@@ -1,5 +1,5 @@
 import initFireStore from "../initFireBase";
-
+import { Handler } from "@netlify/functions";
 import type {
   Coin,
   ExchangeRates,
@@ -17,7 +17,6 @@ import type { DocumentData } from "firebase-admin/firestore";
 import processStaking from "../functions/processStaking";
 import sizeof from "object-sizeof";
 import updateStakingPositions from "../functions/updateStakingPositions";
-
 
 import moment from "moment";
 
@@ -52,11 +51,8 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-interface runUpdate {
-  test?: boolean;
-}
-
-exports.runUpdate = async ({ test }: runUpdate) => {
+const handler: Handler = async () => {
+  const test = false;
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
@@ -105,8 +101,14 @@ exports.runUpdate = async ({ test }: runUpdate) => {
     })
     .then(async () => {
       console.log("general", "--END--");
-      return;
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: "Hello World" }),
+      };
     });
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Hello World" }),
+  };
 };
-
-
+export { handler };
