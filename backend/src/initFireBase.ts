@@ -1,8 +1,7 @@
 import admin from "firebase-admin";
 import { getDatabase } from "firebase-admin/database";
 import { getFirestore } from "firebase-admin/firestore";
-import dotenv from "dotenv";
-dotenv.config();
+
 const initFirebase = async () => {
   const app = admin.initializeApp({
     credential: admin.credential.cert(service_account),
