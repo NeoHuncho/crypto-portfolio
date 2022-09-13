@@ -9,6 +9,7 @@
     "front_dev": "cd frontend &&next dev",
     "front_build": "cd frontend &&next build",
     "front_start": "cd frontend &&next start",
-    "front_lint": "cd frontend &&next lint"
+    "front_lint": "cd frontend &&next lint",
+    "updateDB": "cd backend/src/netlify && npx ts-node-transpile-only updateDB.ts"
   }
 }
