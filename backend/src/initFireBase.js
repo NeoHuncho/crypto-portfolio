@@ -39,8 +39,6 @@ exports.__esModule = true;
 var firebase_admin_1 = require("firebase-admin");
 var database_1 = require("firebase-admin/database");
 var firestore_1 = require("firebase-admin/firestore");
-var dotenv_1 = require("dotenv");
-dotenv_1["default"].config();
 var initFirebase = function () { return __awaiter(void 0, void 0, void 0, function () {
     var app, fireStore, db;
     return __generator(this, function (_a) {
