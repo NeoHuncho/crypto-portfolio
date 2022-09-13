@@ -91,7 +91,7 @@ var calculateSyncData = function (data) {
     }
     return data["coins"];
 };
-var runUpdate = function (_a) {
+exports.runUpdate = function (_a) {
     var test = _a.test;
     return __awaiter(void 0, void 0, void 0, function () {
         var _b, db, fireStore, data, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
@@ -185,4 +185,3 @@ var runUpdate = function (_a) {
         });
     });
 };
-exports["default"] = runUpdate;

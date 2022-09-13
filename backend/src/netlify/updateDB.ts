@@ -56,7 +56,7 @@ interface runUpdate {
   test?: boolean;
 }
 
-const runUpdate = async ({ test }: runUpdate) => {
+exports.runUpdate = async ({ test }: runUpdate) => {
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
   let data = await getDBData({ fireStore, db, test });
@@ -109,4 +109,4 @@ const runUpdate = async ({ test }: runUpdate) => {
     });
 };
 
-export default runUpdate;
+
