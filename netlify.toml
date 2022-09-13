@@ -1,6 +1,6 @@
 
 [build]
-  publish = "./frontend/next"
+  publish = "./frontend/.next"
   base='./'
   command="yarn front_build"
 [functions]
