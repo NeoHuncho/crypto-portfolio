@@ -1,0 +1,6 @@
+
+[build]
+  base = "./frontend"
+  publish = "./frontend/.next"
+[functions]
+  directory = "./backend/netlify"
