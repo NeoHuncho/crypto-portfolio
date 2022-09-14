@@ -26,4 +26,5 @@ const service_account: any = {
   clientEmail:
     "firebase-adminsdk-sidut@crypto-portfolio-df8df.iam.gserviceaccount.com",
 };
+
 export default initFirebase;
