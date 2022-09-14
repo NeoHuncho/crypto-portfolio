@@ -1,7 +1,8 @@
 import admin from "firebase-admin";
 import { getDatabase } from "firebase-admin/database";
 import { getFirestore } from "firebase-admin/firestore";
-
+import * as dotenv from "dotenv";
+dotenv.config({path:'.env'});
 const initFirebase = async () => {
   const app = admin.initializeApp({
     credential: admin.credential.cert(service_account),
@@ -15,6 +16,7 @@ const initFirebase = async () => {
   return { app, db, fireStore };
 };
 const private_key = process.env["FIREBASE_PRIVATE_KEY"] || "";
+
 const { privateKey } = JSON.parse(private_key);
 
 const service_account: any = {

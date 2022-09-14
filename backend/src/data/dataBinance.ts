@@ -1,7 +1,8 @@
 import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
-
+import * as dotenv from "dotenv";
+dotenv.config({path:'.env'});
 
 const apiKey = process.env["BINANCE_API_KEY"];
 const apiSecret = process.env["BINANCE_API_SECRET"];

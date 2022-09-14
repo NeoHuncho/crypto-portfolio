@@ -36,7 +36,6 @@ const updateStakingPositions = async (data: Data) => {
       );
       if (!res) continue;
       if (res?.name === "Error") continue;
-      console.log(res);
       if (!res.data?.success) continue;
       coin.remainingStakingAmount = coin.remainingStakingAmount - stakingAmount;
     }

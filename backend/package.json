@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "initFireBase.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "updateDB": "npx ts-node-transpile-only ./src/netlify/updateDB.ts",
+    "test": "npx ts-node-transpile-only test.ts"
   },
   "author": "",
   "license": "ISC",

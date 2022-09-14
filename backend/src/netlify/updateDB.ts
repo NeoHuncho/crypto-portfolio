@@ -1,5 +1,4 @@
 import initFireStore from "../initFireBase";
-import { Handler } from "@netlify/functions";
 import type {
   Coin,
   ExchangeRates,
@@ -51,7 +50,7 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-const handler: Handler = async () => {
+exports.run = async () => {
   const test = false;
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
@@ -111,4 +110,4 @@ const handler: Handler = async () => {
     body: JSON.stringify({ message: "Hello World" }),
   };
 };
-export { handler };
+
