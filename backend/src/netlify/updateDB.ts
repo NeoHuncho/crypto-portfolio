@@ -50,7 +50,7 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-exports.run = async () => {
+exports.handler = async () => {
   const test = false;
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
