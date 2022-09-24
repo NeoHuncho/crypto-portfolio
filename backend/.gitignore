@@ -9,4 +9,4 @@ typings/
 node_modules/
 
 .env
-proxies.txt
+/proxies.txt
