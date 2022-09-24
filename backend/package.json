@@ -1,13 +1,16 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
+  "name": "functions",
   "scripts": {
-    "updateDB": "npx ts-node-transpile-only ./src/netlify/updateDB.ts",
-    "test": "npx ts-node-transpile-only test.ts"
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "npm init cloud"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "18"
+  },
+  "type": "module",
+  "main": "index.ts",
   "dependencies": {
     "@binance/connector": "^1.10.0",
     "@netlify/functions": "^1.2.0",
@@ -16,14 +19,27 @@
     "cross-env": "5.0.5",
     "dotenv": "^16.0.1",
     "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
     "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
     "object-sizeof": "^1.6.3",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.4",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/coingecko-api": "^1.0.10",
-    "@types/node": "^14.18.28"
+    "@types/node": "^14.18.28",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "^4.7.4"
+  },
+  "private": true,
+  "serverless": {
+    "app": "crypto-portfolio",
+    "org": "neohuncho"
   }
 }

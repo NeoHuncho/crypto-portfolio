@@ -1,4 +1,4 @@
-import initFireStore from "../initFireBase";
+import initFireStore from "../initFireBase"
 import type {
   Coin,
   ExchangeRates,
@@ -7,18 +7,19 @@ import type {
 import { getDBData } from "../data/dataDB";
 import { getAvgPrice, getBinanceData } from "../data/dataBinance";
 
-import checkAndUpdateCardHistory from "../functions/checkUpdateCardHistory";
-import processTrades from "../functions/processTrades";
-import processSpot from "../functions/processSpot";
-import processAccountHistory from "../functions/processAccountHistory";
-import updatePriceValues from "../functions/updatePriceValues";
+import checkAndUpdateCardHistory from "../calc/checkUpdateCardHistory";
+import processTrades from "../calc/processTrades";
+import processSpot from "../calc/processSpot";
+import processAccountHistory from "../calc/processAccountHistory";
+import updatePriceValues from "../calc/updatePriceValues";
 import type { DocumentData } from "firebase-admin/firestore";
-import processStaking from "../functions/processStaking";
+import processStaking from "../calc/processStaking";
 import sizeof from "object-sizeof";
-import updateStakingPositions from "../functions/updateStakingPositions";
+import updateStakingPositions from "../calc/updateStakingPositions";
 
 import moment from "moment";
-
+import * as dotenv from "dotenv";
+dotenv.config();
 const exchangeRatesUSDT: ExchangeRates = {};
 
 const resetData = (general: General) => {
@@ -50,7 +51,7 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-exports.handler = async () => {
+const updateDB = async () => {
   const test = false;
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
@@ -68,7 +69,7 @@ exports.handler = async () => {
 
   data["general"] = resetData(data["general"]);
 
-  await checkAndUpdateCardHistory();
+  // await checkAndUpdateCardHistory();
 
   data["coins"] = await processSpot(data);
   data = await processTrades(data);
@@ -110,4 +111,6 @@ exports.handler = async () => {
     body: JSON.stringify({ message: "Hello World" }),
   };
 };
+
+export default updateDB;
 

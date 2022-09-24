@@ -12,6 +12,7 @@ import { AppShell } from "@mantine/core";
 import { usePortfolioStore } from "data/portfolio_store";
 import PortfolioHeader from "components/portfolio/header";
 import PortfolioCoin from "components/portfolio/coin";
+import CenteredLoader from "components/loader/centered";
 
 export default function Home() {
   const router = useRouter();
@@ -50,7 +51,7 @@ export default function Home() {
     !data.general ||
     !data.coins
   )
-    return <p>Loading....</p>;
+    return <CenteredLoader />;
   return (
     <div className="bg-gray-900">
       <Head>

@@ -11,6 +11,7 @@ import { defaultButtonProps } from "config/mantine";
 import { BotSettings } from "components/bot/settings/bot_settings";
 import { BotData } from "@common/types/interfaces";
 import { useBotStore } from "data/bot_store";
+import CenteredLoader from "components/loader/centered";
 
 export default function Bot() {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function Bot() {
     });
   }, [data]);
 
-  if (!data) return <Loader />;
+  if (!data) return <CenteredLoader />;
   if (!data.exists || !data?.general) return <BotSettings />;
   return (
     <>

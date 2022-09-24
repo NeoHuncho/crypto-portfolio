@@ -9,5 +9,4 @@
             "@imports/*": ["/imports/*"]
         },
     },
-"include": ["/**/*"]
 }

@@ -43,7 +43,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             ? "portfolio"
             : pathname.includes("bot")
             ? "bot"
-            : "history"
+            : pathname.includes("history")
+            ? "history"
+            : "portfolio"
         }
       >
         <Tabs.List className="xs:ml-4">

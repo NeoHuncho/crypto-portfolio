@@ -1,11 +1,10 @@
 import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
-import * as dotenv from "dotenv";
-dotenv.config({path:'.env'});
+import {params} from '@serverless/cloud'
 
-const apiKey = process.env["BINANCE_API_KEY"];
-const apiSecret = process.env["BINANCE_API_SECRET"];
+const apiKey = params["BINANCE_API_KEY"];
+const apiSecret = params  ["BINANCE_API_SECRET"];
 
 let client = new Spot(apiKey, apiSecret);
 let date = moment("2021-08-01");
