@@ -9,7 +9,6 @@
   "engines": {
     "node": "18"
   },
-  "type": "module",
   "main": "index.ts",
   "dependencies": {
     "@binance/connector": "^1.10.0",

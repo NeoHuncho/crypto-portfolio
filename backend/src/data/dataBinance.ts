@@ -169,7 +169,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     }
   } else {
     data.stakingSubscriptionHistory.push(
-      (await client.stakingHistory("STAKING", "SUBSCRIPTION", { size: 100 }))
+        (await client.stakingHistory("STAKING", "SUBSCRIPTION", { size: 100 }))
         .data
     );
     data.stakingRedemptionHistory.push(

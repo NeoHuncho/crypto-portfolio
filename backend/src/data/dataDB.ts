@@ -1,19 +1,15 @@
 import type { FirebaseData } from "../../../common/types/interfaces";
 import { defaultData } from "./defaultValues";
 
-const getDBData = async ({ fireStore, db, test }: FirebaseData) => {
-  if (test) return defaultData;
+const getDBData = async ({ fireStore, db, reset, userID }: FirebaseData) => {
+  console.log(2, userID);
+  if (reset) return defaultData;
   let data: any = await (
-    await fireStore
-      .collection("users")
-      .doc("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1")
-      .get()
+    await fireStore.collection("users").doc(userID).get()
   ).data();
   if (!data) return defaultData;
   data["coins"] = JSON.parse(data["coins"]);
-  data["meta"] = await (
-    await db.ref("users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1").get()
-  ).val();
+  data["meta"] = await (await db.ref("users_meta/" + userID).get()).val();
 
   const checkObject = (data: any) => {
     (Object.keys(defaultData) as (keyof typeof defaultData)[]).map((key) => {
@@ -32,6 +28,7 @@ const getDBData = async ({ fireStore, db, test }: FirebaseData) => {
       }
     });
   };
+
   checkObject(data);
   return data;
 };

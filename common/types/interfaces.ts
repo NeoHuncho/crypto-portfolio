@@ -47,7 +47,8 @@ export interface ExchangeRates {
 export interface FirebaseData {
   fireStore: any;
   db: any;
-  test?: boolean | undefined;
+  reset?: boolean | undefined;
+  userID: string;
 }
 
 export interface GeneralBotData {

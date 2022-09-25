@@ -1,4 +1,4 @@
-import initFireStore from "../initFireBase"
+import initFireStore from "../initFireBase";
 import type {
   Coin,
   ExchangeRates,
@@ -51,11 +51,15 @@ const calculateSyncData = (data: DocumentData) => {
   return data["coins"];
 };
 
-const updateDB = async () => {
-  const test = false;
+interface IUpdateDB {
+  userID: string;
+  reset?: boolean;
+}
+
+const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
   console.log("general", "--START--");
   const { db, fireStore } = await initFireStore();
-  let data = await getDBData({ fireStore, db, test });
+  let data = await getDBData({ fireStore, db, reset, userID });
 
   data["binance"] = await getBinanceData({
     passedFirstRun: data["general"].passedFirstRun,
@@ -91,10 +95,10 @@ const updateDB = async () => {
     )} `
   );
 
-  await db.ref("users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1").set(data["meta"]);
+  await db.ref("users_meta/" + userID).set(data["meta"]);
   await fireStore
     .collection("users")
-    .doc("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1")
+    .doc(userID)
     .set({
       general: { ...data["general"] },
       coins: JSON.stringify(data["coins"]),
@@ -113,4 +117,3 @@ const updateDB = async () => {
 };
 
 export default updateDB;
-

@@ -10,6 +10,10 @@ const run = async () => {
     "XIw5VDBOHv38p6fyFFmoKxj9s9yuWXvu5jr1PHxvYrWoqemSqKEothKlFl5AktlD";
   // console.log(apiKey, apiSecret);
   let client = new Spot(apiKey, apiSecret);
-  console.log(await client.savingsCustomizedPosition('BCH'));
+  console.log(
+    await client.stakingProductPosition("STAKING", {
+      recvWindow: 5000,
+    })
+  );
 };
 run();

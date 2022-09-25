@@ -1,7 +1,6 @@
 import { getAllOrders } from "../data/dataBinance";
 import type { Data } from "../../../common/types/interfaces";
 
-
 const processTrades = async (data: Data) => {
   const checkKey = (key: string) => {
     if (key === "XNO") return "NANO";
@@ -95,6 +94,7 @@ const processTrades = async (data: Data) => {
         data["meta"].coinSellBalance[key] = priceDataSell;
       }
     } catch (error) {
+      console.log(error);
       console.log("errors", "error in trades for " + key);
     }
   }
