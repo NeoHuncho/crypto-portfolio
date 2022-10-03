@@ -1,5 +1,5 @@
-import { getStakingPositions, purchaseStaking } from "../data/dataBinance";
-import type { Coin, Data } from "../../../common/types/interfaces";
+import { getStakingPositions, purchaseStaking } from "../../data/dataBinance";
+import type { Coin, Data } from "../../../../common/types/interfaces";
 
 import updateSavingPositions from "./updateSavingPositions";
 

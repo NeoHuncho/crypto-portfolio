@@ -1,10 +1,10 @@
 import type { Database } from "@firebase/database-types";
 import moment from "moment";
-import { getAvgPrice } from "../data/dataBinance";
-import { getHistoricPriceUSD } from "../data/dataGecko";
+import { getAvgPrice } from "../../data/dataBinance";
+import { getHistoricPriceUSD } from "../../data/dataGecko";
 
-import type { Data } from "../../../common/types/interfaces";
-import getCurrencySymbol from "../utils/getCurrencySymbol";
+import type { Data } from "../../../../common/types/interfaces";
+import getCurrencySymbol from "../../utils/getCurrencySymbol";
 import XLSX from "xlsx";
 
 const processAccountHistory = async (data: Data, db: Database) => {
@@ -129,10 +129,7 @@ const processAccountHistory = async (data: Data, db: Database) => {
               data["general"].coinsData.spend -=
                 parseFloat(item.amount) * historicPrice;
             } else
-              console.log(
-                "errors",
-                `${item.coin} historic price not found`
-              );
+              console.log("errors", `${item.coin} historic price not found`);
           }
         }
       }

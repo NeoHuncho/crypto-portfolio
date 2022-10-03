@@ -5,5 +5,6 @@ const usePortfolioStore = create<Data>((set) => ({
   coins: null,
   general: null,
   meta: null,
+  generalCoins: null,
 }));
 export { usePortfolioStore };

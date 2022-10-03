@@ -1,13 +1,23 @@
-import type { FirebaseData } from "../../../common/types/interfaces";
+import type { Database } from "firebase-admin/database";
+import type {
+  Data,
+  FirebaseData,
+  GeneralCoinsData,
+} from "../../../common/types/interfaces";
 import { defaultData } from "./defaultValues";
 
-const getDBData = async ({ fireStore, db, reset, userID }: FirebaseData) => {
-  console.log(2, userID);
+const getUserDBData = async ({
+  fireStore,
+  db,
+  reset,
+  userID,
+}: FirebaseData) => {
   if (reset) return defaultData;
-  let data: any = await (
+  let data: any = (
     await fireStore.collection("users").doc(userID).get()
   ).data();
   if (!data) return defaultData;
+
   data["coins"] = JSON.parse(data["coins"]);
   data["meta"] = await (await db.ref("users_meta/" + userID).get()).val();
 
@@ -28,10 +38,78 @@ const getDBData = async ({ fireStore, db, reset, userID }: FirebaseData) => {
       }
     });
   };
-
   checkObject(data);
+  const newData: Data = data;
+  return newData;
+};
+const updateUserDBData = async ({
+  fireStore,
+  db,
+  data,
+  userID,
+}: FirebaseData) => {
+  if (!data) throw "Did not find data";
+  try {
+    await db.ref("users_meta/" + userID).set(data["meta"]);
+    await fireStore
+      .collection("users")
+      .doc(userID)
+      .set({
+        general: { ...data["general"] },
+        coins: JSON.stringify(data["coins"]),
+      })
+      .then(async () => {
+        console.log("timeLog_updateUserDB", "--END--");
+
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ message: "Hello World" }),
+        };
+      });
+  } catch (error) {
+    console.log(error);
+    throw "Error updating data";
+
+  }
+};
+
+const getGeneralCoinDBData = async ({
+  fireStore,
+  db,
+  userID,
+}: FirebaseData) => {
+  const data: GeneralCoinsData = {
+    generalCoins: {},
+    coinKeys: [],
+    geckoKeys: [],
+  };
+  const generalCoins = await (await db.ref("general_coins").get()).val();
+  data["generalCoins"] = generalCoins ? generalCoins : {};
+  data["geckoKeys"] = await (await db.ref("gecko_ids").get()).val();
+  const userData = (
+    await fireStore.collection("users").doc(userID).get()
+  ).data();
+  const userCoins = JSON.parse(userData["coins"]);
+  data["coinKeys"] = Object.keys(userCoins);
   return data;
 };
 
-export { getDBData };
-getDBData;
+interface IUpdateGeneralCoinDBData {
+  db: Database;
+  data: GeneralCoinsData;
+  key: string;
+}
+const updateGeneralCoinDBData = async ({
+  db,
+  data,
+  key,
+}: IUpdateGeneralCoinDBData) => {
+  await db.ref("general_coins/" + key).set(data);
+};
+
+export {
+  getUserDBData,
+  updateUserDBData,
+  getGeneralCoinDBData,
+  updateGeneralCoinDBData,
+};

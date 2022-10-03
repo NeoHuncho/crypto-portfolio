@@ -11,3 +11,4 @@ node_modules/
 .env
 /proxies.txt
 /src/test.ts
+yarn.lock

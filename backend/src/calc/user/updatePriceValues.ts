@@ -1,5 +1,5 @@
-import { getAvgPrice } from "../data/dataBinance";
-import type { Data, ExchangeRates } from "../../../common/types/interfaces";
+import { getAvgPrice } from "../../data/dataBinance";
+import type { Data, ExchangeRates } from "../../../../common/types/interfaces";
 
 const updatePriceValues = async (
   data: Data,
@@ -25,7 +25,18 @@ const updatePriceValues = async (
       coin.currentCoinValue = value;
       coin.amountValue.value =
         ((coin.staked.amount || 0) + (coin.staked.amount || 0)) * value;
-
+      if (coin.currentCoinValue && coin.avgBuyPrice)
+        coin.priceDiff =
+          coin.currentCoinValue / coin.avgBuyPrice < 1
+            ? "-" +
+              ((1 - coin.currentCoinValue / coin.avgBuyPrice) * 100).toFixed(
+                2
+              ) +
+              "%"
+            : ((coin.currentCoinValue / coin.avgBuyPrice - 1) * 100).toFixed(
+                2
+              ) + "%";
+      else delete coin.priceDiff;
       coin.spot.value = coin.spot.amount * value;
       if (coin.avgBuyPrice)
         coin.currentValueDiff = -(
@@ -37,7 +48,7 @@ const updatePriceValues = async (
         coin.bought.cash = coin.bought.cash * reverseExchangeRate;
         coin.sold.cash = coin.sold.cash * reverseExchangeRate;
         coin.spent = coin.bought.cash - coin.sold.cash;
-        coin.currentProfitLoss = coin.amountValue.value - coin.spent;
+        coin.profitLoss = coin.amountValue.value - coin.spent;
       }
       coin.staked.value = coin.staked.amount * value;
       coin.amountValue.amount = coin.spot.amount + coin.staked.amount;

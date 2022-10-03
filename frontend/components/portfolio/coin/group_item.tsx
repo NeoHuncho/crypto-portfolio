@@ -7,7 +7,7 @@ import Flex from "stiches/components/flex/flex";
 interface GroupItemProps {
   name: string;
   title: string;
-  value: number | string | DaysTo | AmountValue;
+  value: number | string | DaysTo | AmountValue|undefined;
 }
 
 interface IDaysTo {
@@ -33,7 +33,6 @@ const isAmountValue = (value: any): value is AmountValue => {
 };
 
 export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
-
   typeof value === "number"
     ? value === 0
       ? "--"
@@ -42,10 +41,12 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
       : (value = value.toFixed(2) + "€")
     : isAmountValue(value) &&
       (value = !value.value ? "--" : value.value.toFixed(2) + "€");
-
   return (
     <Flex
-      style={{ minHeight: 70, height: "100%", justifyContent: "center" }}
+      style={{
+        height: 85,
+        justifyContent: "center",
+      }}
       direction={"column"}
     >
       <Text
@@ -61,15 +62,16 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
           );
         })}{" "}
       </Text>
-      {isDaysTo(value) && <DaysTo value={value} />}
-      <Title
-        order={4}
-        className=" text-center text-gray-200  justify-self-end w-full xs:text-sm"
-      >
-        {!value && "--"}
-        {value === "string" && name === "remainingStakingAmount"}
-        {typeof value === "string" && value}
-      </Title>
+      {isDaysTo(value) ? (
+        <DaysTo value={value} />
+      ) : (
+        <Title
+          order={4}
+          className=" text-center text-gray-200  justify-self-end w-full xs:text-sm"
+        >
+          {value && typeof value === "string" ? value : "--"}
+        </Title>
+      )}
     </Flex>
   );
 };

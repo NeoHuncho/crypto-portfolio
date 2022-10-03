@@ -11,7 +11,8 @@ class defaultCoin implements Coin {
   allTimeSellPrice = 0;
   avgBuyPrice = 0;
   currentCoinValue = 0;
-  currentProfitLoss = 0;
+  profitLoss = 0;
+  priceDiff = "0";
   currentValueDiff = 0;
   daysToStaking = new daysTo();
   remainingStakingAmount = 0;
@@ -63,6 +64,7 @@ const defaultData: Data = {
     currency: "EUR",
     passedFirstRun: false,
     currencySymbol: "€",
+    lastRunTime: 0,
   },
   coins: {},
 };

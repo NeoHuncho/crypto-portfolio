@@ -6,18 +6,26 @@ import moment from "moment";
 import { defaultButtonProps } from "config/mantine";
 import { isMobile } from "react-device-detect";
 import Flex from "stiches/components/flex/flex";
+import { useDisclosure } from "@mantine/hooks";
+import { Filters } from "components/modals/portfolio/filters";
 export default function PortfolioHeader() {
   const general: General | null = usePortfolioStore((state) => state.general);
+  const [showFilters, filtersControls] = useDisclosure(false);
   if (!general) return <></>;
   const profitLoss = parseFloat(
     (general.coinsData.value - general.coinsData.spend).toFixed(2)
   );
   return (
     <header>
+      {<Filters opened={showFilters} onClose={filtersControls.toggle} />}
       <div className="xs:{flex flex-col}  bg-background p-5 mb-10 sm:flex flex-row justify-between items-start">
         {!isMobile && (
           <Card className="flex-col flex" style={{ width: 150 }}>
-            <Button style={{ width: "100%", marginBottom: 10 }} size={"sm"}>
+            <Button
+              onClick={filtersControls.toggle}
+              style={{ width: "100%", marginBottom: 10 }}
+              size={"sm"}
+            >
               Filters
             </Button>
             <Button style={{ width: "100%" }} size={"sm"}>
@@ -60,7 +68,9 @@ export default function PortfolioHeader() {
             {isMobile && (
               <div className="mt-10 flex-col flex items-center justify-center">
                 <Flex gap={2} align={"center"} className="mb-3">
-                  <p className="text-gray-200 text-sm font-bold">Last Update:</p>
+                  <p className="text-gray-200 text-sm font-bold">
+                    Last Update:
+                  </p>
                   <p className="text-gray-200  text-sm font-bold ">
                     {moment.unix(general.lastRunTime).format("lll")}
                   </p>

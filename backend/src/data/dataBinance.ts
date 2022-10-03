@@ -1,10 +1,10 @@
 import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
-import {params} from '@serverless/cloud'
+import { params } from "@serverless/cloud";
 
 const apiKey = params["BINANCE_API_KEY"];
-const apiSecret = params  ["BINANCE_API_SECRET"];
+const apiSecret = params["BINANCE_API_SECRET"];
 
 let client = new Spot(apiKey, apiSecret);
 let date = moment("2021-08-01");
@@ -60,10 +60,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
           return (await client[name](setting1, setting2, { ...params })).data;
         return (await client[name](params)).data;
       } catch (error) {
-        console.log(
-          "errors",
-          `error while making request ${name}, ${params}`
-        );
+        console.log("errors", `error while making request ${name}, ${params}`);
 
         return;
       }
@@ -169,7 +166,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     }
   } else {
     data.stakingSubscriptionHistory.push(
-        (await client.stakingHistory("STAKING", "SUBSCRIPTION", { size: 100 }))
+      (await client.stakingHistory("STAKING", "SUBSCRIPTION", { size: 100 }))
         .data
     );
     data.stakingRedemptionHistory.push(

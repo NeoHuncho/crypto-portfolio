@@ -1,55 +1,23 @@
 import initFireStore from "../initFireBase";
-import type {
-  Coin,
-  ExchangeRates,
-  General,
-} from "../../../common/types/interfaces";
-import { getDBData } from "../data/dataDB";
+import type { ExchangeRates } from "../../../common/types/interfaces";
+import { getUserDBData, updateUserDBData } from "../data/dataDB";
 import { getAvgPrice, getBinanceData } from "../data/dataBinance";
 
-import checkAndUpdateCardHistory from "../calc/checkUpdateCardHistory";
-import processTrades from "../calc/processTrades";
-import processSpot from "../calc/processSpot";
-import processAccountHistory from "../calc/processAccountHistory";
-import updatePriceValues from "../calc/updatePriceValues";
-import type { DocumentData } from "firebase-admin/firestore";
-import processStaking from "../calc/processStaking";
+// import checkAndUpdateCardHistory from "../calc/user/checkUpdateCardHistory";
+import processTrades from "../calc/user/processTrades";
+import processSpot from "../calc/user/processSpot";
+import processAccountHistory from "../calc/user/processAccountHistory";
+import updatePriceValues from "../calc/user/updatePriceValues";
+import processStaking from "../calc/user/processStaking";
 import sizeof from "object-sizeof";
-import updateStakingPositions from "../calc/updateStakingPositions";
+import updateStakingPositions from "../calc/user/updateStakingPositions";
 
 import moment from "moment";
 import * as dotenv from "dotenv";
+import calculateSyncData from "../calc/user/calculateSyncData";
+import resetData from "../utils/resetData";
 dotenv.config();
 const exchangeRatesUSDT: ExchangeRates = {};
-
-const resetData = (general: General) => {
-  if (general.coinsData.value) {
-    general.coinsData.value = 0;
-    general.coinsData.spotValue = 0;
-    general.coinsData.spotValue = 0;
-    general.coinsData.interestHistoryValue = 0;
-  }
-  return general;
-};
-
-const calculateSyncData = (data: DocumentData) => {
-  for (const key in data["coins"]) {
-    const coin: Coin = data["coins"][key];
-    if (!coin) continue;
-    if (!data["general"].coinsData.percentageToNotStake) continue;
-    if (!coin.amountValue.amount) continue;
-    if (coin.staked.amount) {
-      coin.remainingStakingAmount =
-        (coin.staked.amount + coin.spot.amount) *
-          (1 - data["general"].coinsData.percentageToNotStake / 100) -
-        coin.staked.amount;
-    } else if (coin.spot.amount)
-      coin.remainingStakingAmount =
-        coin.spot.amount *
-        (1 - data["general"].coinsData.percentageToNotStake / 100);
-  }
-  return data["coins"];
-};
 
 interface IUpdateDB {
   userID: string;
@@ -57,9 +25,9 @@ interface IUpdateDB {
 }
 
 const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
-  console.log("general", "--START--");
+  console.log("timeLog_updateUserDB", "--START--");
   const { db, fireStore } = await initFireStore();
-  let data = await getDBData({ fireStore, db, reset, userID });
+  let data: any = await getUserDBData({ fireStore, db, reset, userID });
 
   data["binance"] = await getBinanceData({
     passedFirstRun: data["general"].passedFirstRun,
@@ -95,25 +63,8 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
     )} `
   );
 
-  await db.ref("users_meta/" + userID).set(data["meta"]);
-  await fireStore
-    .collection("users")
-    .doc(userID)
-    .set({
-      general: { ...data["general"] },
-      coins: JSON.stringify(data["coins"]),
-    })
-    .then(async () => {
-      console.log("general", "--END--");
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ message: "Hello World" }),
-      };
-    });
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "Hello World" }),
-  };
+  await updateUserDBData({ fireStore, db, data, userID });
+  return "done";
 };
 
 export default updateDB;

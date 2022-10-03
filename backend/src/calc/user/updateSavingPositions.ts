@@ -1,5 +1,5 @@
-import { purchaseSaving, redeemSaving } from "../data/dataBinance";
-import type { Data } from "../../../common/types/interfaces";
+import { purchaseSaving, redeemSaving } from "../../data/dataBinance";
+import type { Data } from "../../../../common/types/interfaces";
 
 const updateSavingPositions = async (
   data: Data,

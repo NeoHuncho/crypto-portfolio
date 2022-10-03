@@ -1,5 +1,5 @@
-import { getAllOrders } from "../data/dataBinance";
-import type { Data } from "../../../common/types/interfaces";
+import { getAllOrders } from "../../data/dataBinance";
+import type { Data } from "../../../../common/types/interfaces";
 
 const processTrades = async (data: Data) => {
   const checkKey = (key: string) => {
@@ -14,6 +14,7 @@ const processTrades = async (data: Data) => {
       if (tradeKey) {
         //todo ADD other trading pairs such as EUR, BTC ect..
         const trades = await getAllOrders(tradeKey);
+
         const coinData = data["coins"][key];
         if (!coinData) return;
 
@@ -94,7 +95,6 @@ const processTrades = async (data: Data) => {
         data["meta"].coinSellBalance[key] = priceDataSell;
       }
     } catch (error) {
-      console.log(error);
       console.log("errors", "error in trades for " + key);
     }
   }

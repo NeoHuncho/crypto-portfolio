@@ -1,6 +1,7 @@
 // import type { Database } from "@firebase/database-types";
 // import type { FirebaseFirestore } from "@firebase/firestore-types";
-
+import type { Database } from "firebase-admin/database";
+import type { CurrencyListString } from "./types";
 export interface InnerStakingData {
   subscriptionHistory: any | [];
   redemptionHistory: any | [];
@@ -46,9 +47,10 @@ export interface ExchangeRates {
 
 export interface FirebaseData {
   fireStore: any;
-  db: any;
+  db: Database;
   reset?: boolean | undefined;
   userID: string;
+  data?: Data;
 }
 
 export interface GeneralBotData {
@@ -78,6 +80,7 @@ export interface Data {
   coins: Coins | null;
   meta: Meta | null;
   binance?: BinanceData | null;
+  generalCoins?: CoinsGeneralDB | null;
 }
 export interface CoinsData {
   percentageToNotStake: number;
@@ -87,6 +90,28 @@ export interface CoinsData {
   interestHistoryValue: number;
   taxes: number;
   value: number;
+}
+
+export interface GeneralCoinsData {
+  generalCoins: GeneralCoins;
+  coinKeys: string[];
+  geckoKeys: string[];
+}
+export interface GeneralCoins {
+  [key: string]: GeneralCoin;
+}
+
+export interface GeneralCoin {
+  creationDate: number;
+  historyEvolution: HistoryEvolution;
+}
+export interface HistoryEvolution {
+  [key: string]: CoinHistory;
+}
+export interface CoinHistory {
+  priceChange: number;
+  mintChange: number;
+  circulatingSupplyChange: number;
 }
 
 export interface General {
@@ -100,10 +125,11 @@ export interface Coins {
   [key: string]: Coin;
 }
 export interface Coin {
+  priceDiff?: string;
   allTimeSellPrice: number;
   avgBuyPrice: number;
   currentCoinValue: number;
-  currentProfitLoss: number;
+  profitLoss: number;
   currentValueDiff: number;
   daysToStaking: DaysTo;
   remainingStakingAmount: number;
@@ -146,6 +172,37 @@ export interface Meta {
     liquidityIDs: number[];
     cardPaymentIDs: number[];
   };
+}
+
+export interface CoinsGeneralDB {
+  [key: string]: CoinGeneralDB;
+}
+export interface CoinGeneralDB {
+  market: CGeneralMarket;
+  price_change: CGeneralPrice;
+  ranking: CGeneralRanking;
+}
+
+export interface CGeneralMarket {
+  ath_date: CurrencyListString;
+  atl_date: CurrencyListString;
+}
+
+export interface CGeneralPrice {
+  "24h": number;
+  "7d": number;
+  "30d": number;
+  "200d": number;
+  "1y": number;
+}
+
+export interface CGeneralRanking {
+  global_rank: number;
+  coingecko_score: number;
+  developer_score: number;
+  community_score: number;
+  liquidity_score: number;
+  public_interest_score: number;
 }
 
 export interface History {
