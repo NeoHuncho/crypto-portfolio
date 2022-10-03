@@ -1,3 +1,4 @@
+import type { Database } from "firebase-admin/database";
 import type {
   CurrencyListNumber,
   CurrencyListString,
@@ -61,7 +62,13 @@ export interface CoinsFetchData {
   last_updated: string;
   tickers: CoinsFetchDataTicker[];
 }
-
+export interface FirebaseData {
+  fireStore: any;
+  db: Database;
+  reset?: boolean | undefined;
+  userID: string;
+  data?: Data;
+}
 interface CoinsFetchDataTicker {
   base: string;
   target: string;

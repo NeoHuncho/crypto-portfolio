@@ -1,6 +1,5 @@
 // import type { Database } from "@firebase/database-types";
 // import type { FirebaseFirestore } from "@firebase/firestore-types";
-import type { Database } from "firebase-admin/database";
 import type { CurrencyListString } from "./types";
 export interface InnerStakingData {
   subscriptionHistory: any | [];
@@ -45,13 +44,7 @@ export interface ExchangeRates {
   [key: string]: number;
 }
 
-export interface FirebaseData {
-  fireStore: any;
-  db: Database;
-  reset?: boolean | undefined;
-  userID: string;
-  data?: Data;
-}
+
 
 export interface GeneralBotData {
   tradeBot: {

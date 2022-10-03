@@ -1,9 +1,6 @@
 import type { Database } from "firebase-admin/database";
-import type {
-  Data,
-  FirebaseData,
-  GeneralCoinsData,
-} from "../../../common/types/interfaces";
+import type { Data, GeneralCoinsData } from "../../../common/types/interfaces";
+import type { FirebaseData } from "../interfaces";
 import { defaultData } from "./defaultValues";
 
 const getUserDBData = async ({
@@ -69,7 +66,6 @@ const updateUserDBData = async ({
   } catch (error) {
     console.log(error);
     throw "Error updating data";
-
   }
 };
 
