@@ -3,13 +3,13 @@ import { toggle0Balance, useUIStore } from "data/ui_store";
 import React, { useState } from "react";
 import Flex from "stiches/components/flex/flex";
 
-interface FiltersProps {
+interface LayoutProps {
   opened: boolean;
   onClose: () => void;
 }
 
-export const Filters: React.FC<FiltersProps> = ({ opened, onClose }) => {
-  const [hide0Balance, setHide0Balance] = useState(true);
+export const Layout: React.FC<LayoutProps> = ({ opened, onClose }) => {
+  const uiStore = useUIStore();
   return (
     <Modal opened={opened} onClose={onClose}>
       <Flex
@@ -20,14 +20,22 @@ export const Filters: React.FC<FiltersProps> = ({ opened, onClose }) => {
         className="ml-3"
       >
         <Switch
-          styles={{ root: { width: "100%" } }}
           size="md"
-          checked={hide0Balance}
+          checked={uiStore.layout.syncCarouselMoves}
           onChange={() => {
-            toggle0Balance();
-            setHide0Balance(!hide0Balance);
+            uiStore.actions.toggleCarouselMoves();
           }}
-          label="Hide coins with empty balance"
+          label="Sync Carousel slide movements"
+          styles={{ root: { width: "100%" } }}
+        />
+        <Switch
+          size="md"
+          checked={uiStore.layout.syncPriceDayChanges}
+          onChange={() => {
+            uiStore.actions.togglePriceDayChanges();
+          }}
+          label="Sync Price Evolution date changes"
+          styles={{ root: { width: "100%" } }}
         />
       </Flex>
     </Modal>

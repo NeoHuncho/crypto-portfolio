@@ -27,8 +27,6 @@ export default function Home() {
   const router = useRouter();
   const data: Data = usePortfolioStore();
   const uiStore = useUIStore()
-  
-    // console.log(uiStore);
   const auth = getAuth();
   const [userUID, setUserUID] = useState("");
   useEffect(() => {

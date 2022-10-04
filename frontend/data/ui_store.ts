@@ -1,3 +1,4 @@
+import { Layout } from "components/modals/portfolio/layout";
 import create from "zustand";
 
 type CoinsCards =
@@ -17,13 +18,21 @@ interface IStore {
   filters: {
     hide0Balance: boolean;
   };
+  layout: {
+    syncCarouselMoves: boolean;
+    syncPriceDayChanges: boolean;
+  };
   actions: {
     toggle0Balance: () => void;
+    toggleCarouselMoves: () => void;
+    togglePriceDayChanges: () => void;
     incrementSlideIndex: () => void;
     decrementSlideIndex: () => void;
+    setPriceDate: (date: string) => void;
   };
   ui: {
     currentSlideIndex: number;
+    currentPriceDate: string;
   };
 }
 const useUIStore = create<IStore>((set) => ({
@@ -36,8 +45,13 @@ const useUIStore = create<IStore>((set) => ({
   filters: {
     hide0Balance: true,
   },
+  layout: {
+    syncCarouselMoves: false,
+    syncPriceDayChanges: true,
+  },
   ui: {
     currentSlideIndex: 0,
+    currentPriceDate: "24h",
   },
   actions: {
     toggle0Balance: () =>
@@ -45,10 +59,27 @@ const useUIStore = create<IStore>((set) => ({
         ...state,
         filters: { hide0Balance: !state.filters.hide0Balance },
       })),
+    toggleCarouselMoves: () =>
+      set((state) => ({
+        ...state,
+        layout: {
+          ...state.layout,
+          syncCarouselMoves: !state.layout.syncCarouselMoves,
+        },
+      })),
+    togglePriceDayChanges: () =>
+      set((state) => ({
+        ...state,
+        layout: {
+          ...state.layout,
+          syncPriceDayChanges: !state.layout.syncPriceDayChanges,
+        },
+      })),
     incrementSlideIndex: () =>
       set((state) => ({
         ...state,
         ui: {
+          ...state.ui,
           currentSlideIndex:
             state.ui.currentSlideIndex === state.coinCards.length - 1
               ? state.coinCards.length - 1
@@ -59,11 +90,17 @@ const useUIStore = create<IStore>((set) => ({
       set((state) => ({
         ...state,
         ui: {
+          ...state.ui,
           currentSlideIndex:
             state.ui.currentSlideIndex === 0
               ? 0
               : state.ui.currentSlideIndex - 1,
         },
+      })),
+    setPriceDate: (date: string) =>
+      set((state) => ({
+        ...state,
+        ui: { ...state.ui, currentPriceDate: date },
       })),
   },
 }));

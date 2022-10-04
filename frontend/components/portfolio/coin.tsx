@@ -68,10 +68,12 @@ export default function PortfolioCoin({ coin, values }: Props) {
         onNextSlide={() => uiSettings.actions.incrementSlideIndex()}
         onPreviousSlide={() => uiSettings.actions.decrementSlideIndex()}
         controlsOffset="xs"
-        height={100}
+        height={uiSettings.layout.syncCarouselMoves ? 100 : 125}
         slideSize={isMobile ? "80%" : "33.333333%"}
         slideGap="xl"
-        controlSize={isMobile ? 20 : 40}
+        withControls={uiSettings.layout.syncCarouselMoves ? true : false}
+        withIndicators={uiSettings.layout.syncCarouselMoves ? false : true}
+        controlSize={isMobile ? 20 : 25}
         classNames={!isMobile ? classes : {}}
         breakpoints={
           !isMobile

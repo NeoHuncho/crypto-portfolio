@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { usePortfolioStore } from "data/portfolio_store";
+import { useUIStore } from "data/ui_store";
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
 import Flex from "stiches/components/flex/flex";
@@ -19,8 +20,12 @@ interface GeckoSlideProps {
 }
 
 export const GeckoSlide: React.FC<GeckoSlideProps> = ({ coin }) => {
-  const [key, setKey] = useState("24h");
   const data: Data = usePortfolioStore();
+  const uiStore = useUIStore();
+  const [currentKey, setCurrentKey] = useState("24h");
+  const key = uiStore.layout.syncPriceDayChanges
+    ? uiStore.ui.currentPriceDate
+    : currentKey;
   if (!data.generalCoins || !data.generalCoins[coin]) return <></>;
   const coinData = data.generalCoins[coin];
   if (!coinData.price_change) return <></>;
@@ -29,7 +34,10 @@ export const GeckoSlide: React.FC<GeckoSlideProps> = ({ coin }) => {
       return { label: key, value: key };
     })
   );
-
+  const handleKeyChange = (value: string) =>
+    uiStore.layout.syncPriceDayChanges
+      ? uiStore.actions.setPriceDate(value)
+      : setCurrentKey(value);
   const priceValue: any = coinData.price_change[key];
   return (
     <Flex justify={"space-around"}>
@@ -44,7 +52,12 @@ export const GeckoSlide: React.FC<GeckoSlideProps> = ({ coin }) => {
           {!!priceValue ? priceValue + "%" : "--"}
         </Title>
 
-        <SegmentedControl value={key} onChange={setKey} size="xs" data={keys} />
+        <SegmentedControl
+          value={key}
+          onChange={(value) => handleKeyChange(value)}
+          size="xs"
+          data={keys}
+        />
       </Flex>
       {!isMobile && (
         <Flex align="center" className="ml-2 mr-2" gap={2}>
