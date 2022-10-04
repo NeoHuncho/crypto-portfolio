@@ -1,9 +1,9 @@
 import { Coin } from "@common/types/interfaces";
 import Image from "next/image";
 import euroLogo from "../../assets/cryptoLogos/euro.png";
-import React from "react";
+import React, { useState } from "react";
 import { useUIStore } from "data/ui_store";
-import { Card, Group, Text, Title } from "@mantine/core";
+import { Card, createStyles, Group, Text, Title } from "@mantine/core";
 import valuesTitles from "config/valuesTitles";
 import Flex from "stiches/components/flex/flex";
 import { GroupItem } from "./coin/group_item";
@@ -17,14 +17,33 @@ interface Props {
   values: Coin;
 }
 
+const useStyles = createStyles((_theme, _params, getRef) => ({
+  controls: {
+    ref: getRef("controls"),
+    transition: "opacity 150ms ease",
+    opacity: 0,
+  },
+
+  root: {
+    "&:hover": {
+      [`& .${getRef("controls")}`]: {
+        opacity: 1,
+      },
+    },
+  },
+}));
+
 export default function PortfolioCoin({ coin, values }: Props) {
+  const { classes } = useStyles();
   const isMobile = useMediaQuery("(max-width: 500px)");
+
   const uiSettings = useUIStore();
   const data = usePortfolioStore();
   if (!data.generalCoins) return <></>;
   const generalCoins = data.generalCoins;
+
   return (
-    <div key={coin} className=" flex flex-row mb-2 ">
+    <div key={coin} className=" flex flex-row mb-2 xs:mb-10 ">
       <div className="flex gap-2 flex-col mt-2 items-center ml-2 w-20 xs:w-10  xs:ml-5">
         <Image
           alt={coin + " logo"}
@@ -45,11 +64,15 @@ export default function PortfolioCoin({ coin, values }: Props) {
         </Title>
       </div>
       <Carousel
-        withIndicators
-        withControls={false}
-        height={!isMobile ? 130 : 140}
+        initialSlide={uiSettings.ui.currentSlideIndex}
+        onNextSlide={() => uiSettings.actions.incrementSlideIndex()}
+        onPreviousSlide={() => uiSettings.actions.decrementSlideIndex()}
+        controlsOffset="xs"
+        height={100}
         slideSize={isMobile ? "80%" : "33.333333%"}
         slideGap="xl"
+        controlSize={isMobile ? 20 : 40}
+        classNames={!isMobile ? classes : {}}
         breakpoints={
           !isMobile
             ? [

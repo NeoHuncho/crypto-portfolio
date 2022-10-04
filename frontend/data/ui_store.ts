@@ -19,6 +19,11 @@ interface IStore {
   };
   actions: {
     toggle0Balance: () => void;
+    incrementSlideIndex: () => void;
+    decrementSlideIndex: () => void;
+  };
+  ui: {
+    currentSlideIndex: number;
   };
 }
 const useUIStore = create<IStore>((set) => ({
@@ -31,14 +36,37 @@ const useUIStore = create<IStore>((set) => ({
   filters: {
     hide0Balance: true,
   },
+  ui: {
+    currentSlideIndex: 0,
+  },
   actions: {
     toggle0Balance: () =>
       set((state) => ({
         ...state,
         filters: { hide0Balance: !state.filters.hide0Balance },
       })),
+    incrementSlideIndex: () =>
+      set((state) => ({
+        ...state,
+        ui: {
+          currentSlideIndex:
+            state.ui.currentSlideIndex === state.coinCards.length - 1
+              ? state.coinCards.length - 1
+              : state.ui.currentSlideIndex + 1,
+        },
+      })),
+    decrementSlideIndex: () =>
+      set((state) => ({
+        ...state,
+        ui: {
+          currentSlideIndex:
+            state.ui.currentSlideIndex === 0
+              ? 0
+              : state.ui.currentSlideIndex - 1,
+        },
+      })),
   },
 }));
 const toggle0Balance = () => useUIStore.getState().actions.toggle0Balance();
 
-export { useUIStore,toggle0Balance };
+export { useUIStore, toggle0Balance };

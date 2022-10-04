@@ -28,7 +28,7 @@ export default function Home() {
   const data: Data = usePortfolioStore();
   const uiStore = useUIStore()
   
-  console.log(uiStore);
+    // console.log(uiStore);
   const auth = getAuth();
   const [userUID, setUserUID] = useState("");
   useEffect(() => {
