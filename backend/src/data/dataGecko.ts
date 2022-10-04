@@ -44,7 +44,6 @@ const getGeneralCoinData = async (geckoID: string) => {
   return res.data;
 };
 const getCoinList = async () => {
-  await new Promise(r => setTimeout(r, 800));
   const list = (await axios.get("https://api.coingecko.com/api/v3/coins/list"))
     .data;
   return list;

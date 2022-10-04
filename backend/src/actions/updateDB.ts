@@ -63,7 +63,9 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
     )} `
   );
 
-  await updateUserDBData({ fireStore, db, data, userID });
+  updateUserDBData({ fireStore, db, data, userID });
+  console.log("timeLog_updateUserDB", "--END--");
+
   return "done";
 };
 

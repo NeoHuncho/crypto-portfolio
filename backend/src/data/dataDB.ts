@@ -39,29 +39,16 @@ const getUserDBData = async ({
   const newData: Data = data;
   return newData;
 };
-const updateUserDBData = async ({
-  fireStore,
-  db,
-  data,
-  userID,
-}: FirebaseData) => {
+const updateUserDBData = ({ fireStore, db, data, userID }: FirebaseData) => {
   if (!data) throw "Did not find data";
   try {
-    await db.ref("users_meta/" + userID).set(data["meta"]);
-    await fireStore
+    db.ref("users_meta/" + userID).set(data["meta"]);
+    fireStore
       .collection("users")
       .doc(userID)
       .set({
         general: { ...data["general"] },
         coins: JSON.stringify(data["coins"]),
-      })
-      .then(async () => {
-        console.log("timeLog_updateUserDB", "--END--");
-
-        return {
-          statusCode: 200,
-          body: JSON.stringify({ message: "Hello World" }),
-        };
       });
   } catch (error) {
     console.log(error);
