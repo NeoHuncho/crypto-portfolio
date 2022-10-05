@@ -10,6 +10,8 @@ const sortPriceChangeKeys = (keys: any) => {
     if (bKey === "7d") return 1;
     if (aKey === "30d") return -1;
     if (bKey === "30d") return 1;
+    if (aKey === "60d") return -1;
+    if (bKey === "60d") return 1;
     if (aKey === "200d") return -1;
     if (bKey === "200d") return 1;
     if (aKey === "1y") return -1;

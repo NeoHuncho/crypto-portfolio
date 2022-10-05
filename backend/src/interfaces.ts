@@ -36,6 +36,7 @@ export interface CoinsFetchData {
     price_change_percentage_24h: number;
     price_change_percentage_7d: number;
     price_change_percentage_30d: number;
+    price_change_percentage_60d: number;
     price_change_percentage_200d: number;
     price_change_percentage_1y: number;
   };

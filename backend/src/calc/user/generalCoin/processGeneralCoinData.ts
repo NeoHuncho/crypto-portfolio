@@ -20,6 +20,7 @@ const processGeneralCoinData = (coinData: CoinsFetchData) => {
   data.price_change["7d"] = market_data.price_change_percentage_7d.toFixed(2);
 
   data.price_change["30d"] = market_data.price_change_percentage_30d.toFixed(2);
+  data.price_change["60d"] = market_data.price_change_percentage_60d.toFixed(2);
 
   data.price_change["200d"] =
     market_data.price_change_percentage_200d.toFixed(2);

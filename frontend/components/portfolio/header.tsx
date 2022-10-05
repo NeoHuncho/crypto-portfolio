@@ -103,7 +103,7 @@ export default function PortfolioHeader() {
 const Buttons = ({ filterControls, layoutControls }: any) => {
   return (
     <Card
-      className=" flex-col flex !important xs:flex-row xs:justify-between xs:mt-6"
+      className=" flex-col !flex  xs:flex-row xs:justify-between xs:mt-6"
       style={{ width: isMobile ? "100%" : 150 }}
     >
       <Button
