@@ -23,17 +23,21 @@ import { get, onValue, ref } from "firebase/database";
 import filterGeneralCoins from "utils/filterGeneralCoins";
 import { useUIStore } from "data/ui_store";
 
-export default function Home() {
+export default function Portfolio() {
   const router = useRouter();
   const data: Data = usePortfolioStore();
-  const uiStore = useUIStore()
+  const uiStore = useUIStore();
   const auth = getAuth();
+
   const [userUID, setUserUID] = useState("");
   useEffect(() => {
     auth.onAuthStateChanged(function (user) {
-      if (user?.uid) setUserUID(user.uid);
+      if (user?.isAnonymous) setUserUID("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1");
+      else if (user?.uid) setUserUID(user.uid);
       else return router.push("/user/signup_login");
     });
+    if (!userUID) return;
+    console.log(userUID);
     onSnapshot(getUserDataRef(userUID ? userUID : "no"), (doc) => {
       if (doc.exists())
         usePortfolioStore.setState({

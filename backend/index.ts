@@ -3,13 +3,13 @@ import updateGeneralCoinData from "./src/actions/updateGeneralCoinData";
 import updateGeckoIDs from "./src/actions/updateGeckoIDS";
 import updateDB from "./src/actions/updateDB";
 //add to prod
-schedule.every("30 minutes", { timeout: 300000 }, async () => {
+schedule.every("1 hours", { timeout: 300000 }, async () => {
   await updateDB({ userID: "VafhUIU2Z4Mt1HoNQnNr11pEZ4z1" });
   console.log('done') 
   return;
 });
 
-schedule.every("20 minutes", { timeout: 300000 }, async () => {
+schedule.every("1 hours", { timeout: 300000 }, async () => {
   await updateGeneralCoinData();
   console.log('done')
   return;
@@ -32,16 +32,16 @@ events.on("updateDB", { timeout: 300000 }, async ({ body }) => {
 });
 
 //remove from prod
-// api.get("/updateGeneralCoinData", async (req, res) => {
-//   events.publish("updateGeneralCoinData", {});
-//   return res.send({
-//     status: 200,
-//     message: "updateGeneralCoinData event published",
-//   });
-// });
-// events.on("updateGeneralCoinData", { timeout: 200000 }, async () => {
-//   await updateGeneralCoinData();
-// });
+api.get("/updateGeneralCoinData", async (req, res) => {
+  events.publish("updateGeneralCoinData", {});
+  return res.send({
+    status: 200,
+    message: "updateGeneralCoinData event published",
+  });
+});
+events.on("updateGeneralCoinData", { timeout: 200000 }, async () => {
+  await updateGeneralCoinData();
+});
 // api.get("/updateGeckoIDs", async (req, res) => {
 //   events.publish("updateGeckoIDs", {});
 //   return res.send({

@@ -13,7 +13,7 @@
   "dependencies": {
     "@binance/connector": "^1.10.0",
     "@netlify/functions": "^1.2.0",
-    "@serverless/cloud": "^2.10.22",
+    "@serverless/cloud": "^2.10.23",
     "axios": "^0.25.0",
     "coingecko-api": "^1.0.10",
     "cross-env": "5.0.5",

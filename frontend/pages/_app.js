@@ -1,13 +1,12 @@
 import "../styles/globals.css";
 import "firebase/firestore";
-import { initializeApp } from "firebase/app";
+
 import "firebase/app";
 import "firebase/auth";
 import { AppShell, createEmotionCache, MantineProvider } from "@mantine/core";
 import { Header } from "components/app_shell/header/Header";
 import { firebaseConfig } from "data/firebase";
 function MyApp({ Component, pageProps }) {
-
   const myCache = createEmotionCache({ key: "mantine", prepend: false });
   return (
     <MantineProvider

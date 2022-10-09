@@ -1,4 +1,4 @@
-import initFireStore from "../initFireBase";
+import initFirebase from "../initFireBase";
 import type { ExchangeRates } from "../../../common/types/interfaces";
 import { getUserDBData, updateUserDBData } from "../data/dataDB";
 import { getAvgPrice, getBinanceData } from "../data/dataBinance";
@@ -26,7 +26,7 @@ interface IUpdateDB {
 
 const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
   console.log("timeLog_updateUserDB", "--START--");
-  const { db, fireStore } = await initFireStore();
+  const { db, fireStore } = await initFirebase('user_update');
   let data: any = await getUserDBData({ fireStore, db, reset, userID });
 
   data["binance"] = await getBinanceData({

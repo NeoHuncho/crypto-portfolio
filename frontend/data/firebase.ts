@@ -13,9 +13,16 @@ const firebaseConfig = {
   databaseURL:
     "https://crypto-portfolio-df8df-default-rtdb.europe-west1.firebasedatabase.app",
 };
-initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase();
 const firestore = getFirestore();
 const generalCoinsRef = ref(database, "general_coins");
 const getUserDataRef = (userID: string) => doc(firestore, "users", userID);
-export { firebaseConfig, database, firestore, generalCoinsRef, getUserDataRef };
+export {
+  firebaseApp,
+  firebaseConfig,
+  database,
+  firestore,
+  generalCoinsRef,
+  getUserDataRef,
+};

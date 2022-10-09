@@ -44,8 +44,6 @@ export interface ExchangeRates {
   [key: string]: number;
 }
 
-
-
 export interface GeneralBotData {
   tradeBot: {
     buyPreferences: {
@@ -75,6 +73,10 @@ export interface Data {
   binance?: BinanceData | null;
   generalCoins?: CoinsGeneralDB | null;
 }
+
+export interface GeneralDB {
+  user: string;
+}
 export interface CoinsData {
   percentageToNotStake: number;
   spend: number;
@@ -88,7 +90,10 @@ export interface CoinsData {
 export interface GeneralCoinsData {
   generalCoins: GeneralCoins;
   coinKeys: string[];
-  geckoKeys: string[];
+  geckoKeys: GeckoKeys;
+}
+export interface GeckoKeys {
+  [key: string]: string;
 }
 export interface GeneralCoins {
   [key: string]: GeneralCoin;

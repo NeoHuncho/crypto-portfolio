@@ -2,8 +2,7 @@ import admin from "firebase-admin";
 import { getDatabase } from "firebase-admin/database";
 import { getFirestore } from "firebase-admin/firestore";
 import { params } from "@serverless/cloud";
-const initFirebase = async () => {
-
+const initFirebase = async (type: string) => {
   const private_key = params["FIREBASE_PRIVATE_KEY"] || "";
   const { privateKey } = JSON.parse(private_key);
   const service_account: any = {
@@ -13,11 +12,14 @@ const initFirebase = async () => {
       "firebase-adminsdk-sidut@crypto-portfolio-df8df.iam.gserviceaccount.com",
   };
 
-  const app = admin.initializeApp({
-    credential: admin.credential.cert(service_account),
-    databaseURL:
-      "https://crypto-portfolio-df8df-default-rtdb.europe-west1.firebasedatabase.app/",
-  });
+  const app = admin.initializeApp(
+    {
+      credential: admin.credential.cert(service_account),
+      databaseURL:
+        "https://crypto-portfolio-df8df-default-rtdb.europe-west1.firebasedatabase.app/",
+    },
+    type
+  );
 
   const fireStore = await getFirestore();
   const db = await getDatabase(app);

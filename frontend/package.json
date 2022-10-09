@@ -31,6 +31,7 @@
     "react": "^18.0.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.0.0",
+    "react-icons": "^4.4.0",
     "react-useanimations": "^2.0.8",
     "stitches-native": "^0.2.0",
     "swr": "^1.2.0",
