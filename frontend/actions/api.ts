@@ -12,7 +12,7 @@ const UpdateUserSpent = async (post: IPost) => {
   await axios
     .post(
       process.env.BACKEND_API_URL +
-        "user/modifyUserSpent",
+        "/user/modifyUserSpent",
       post
     )
     .catch((err) => {
