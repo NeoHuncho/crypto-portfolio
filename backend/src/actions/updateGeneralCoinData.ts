@@ -6,7 +6,7 @@ import initFirebase from "../initFireBase";
 const updateGeneralCoinData = async () => {
   console.log("timeLog_updateGeneralCoin", "--START--");
   //todo if we have users we must loop over more than one user
-  const { db, fireStore } = await initFirebase("coin_update");
+  const { db, fireStore } = await initFirebase();
   const data = await getGeneralCoinDBData({
     db,
     fireStore,

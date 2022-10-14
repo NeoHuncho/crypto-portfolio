@@ -74,6 +74,7 @@ export interface Data {
   generalCoins?: CoinsGeneralDB | null;
 }
 
+
 export interface GeneralDB {
   user: string;
 }

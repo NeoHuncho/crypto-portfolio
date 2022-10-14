@@ -21,7 +21,7 @@ export default function Home() {
     const auth = getAuth();
     signInWithPopup(auth, provider)
       .then(
-        () => router.push("/user/portfolio")
+        () => router.push("portfolio")
         // ...
       )
       .catch((error) => {
@@ -41,7 +41,7 @@ export default function Home() {
     setLoading("anon");
     const auth = getAuth();
     await signInAnonymously(auth);
-    router.push("/user/portfolio");
+    router.push("portfolio");
   };
 
   return (

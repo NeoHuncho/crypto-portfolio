@@ -17,6 +17,8 @@ const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase();
 const firestore = getFirestore();
 const generalCoinsRef = ref(database, "general_coins");
+const userMetaRef = (meta: string) =>
+  ref(database, "users_meta/VafhUIU2Z4Mt1HoNQnNr11pEZ4z1/" + meta);
 const getUserDataRef = (userID: string) => doc(firestore, "users", userID);
 export {
   firebaseApp,
@@ -25,4 +27,5 @@ export {
   firestore,
   generalCoinsRef,
   getUserDataRef,
+  userMetaRef,
 };

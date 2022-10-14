@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { doc, getDoc, onSnapshot } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { sortDataDesc } from "../../utils/sortDataCrypto";
+import { sortDataDesc } from "../utils/sortDataCrypto";
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -34,7 +34,7 @@ export default function Portfolio() {
     auth.onAuthStateChanged(function (user) {
       if (user?.isAnonymous) setUserUID("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1");
       else if (user?.uid) setUserUID(user.uid);
-      else return router.push("/user/signup_login");
+      else return router.push("signup_login");
     });
     if (!userUID) return;
     console.log(userUID);

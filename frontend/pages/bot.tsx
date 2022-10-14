@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useDocument } from "swr-firestore-v9";
 import { getAuth } from "firebase/auth";
-import { sortDataDesc } from "../../utils/sortDataCrypto";
+import { sortDataDesc } from "../utils/sortDataCrypto";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useDisclosure } from "@mantine/hooks";

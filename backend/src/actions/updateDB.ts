@@ -26,7 +26,7 @@ interface IUpdateDB {
 
 const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
   console.log("timeLog_updateUserDB", "--START--");
-  const { db, fireStore } = await initFirebase('user_update');
+  const { db, fireStore } = await initFirebase();
   let data: any = await getUserDBData({ fireStore, db, reset, userID });
 
   data["binance"] = await getBinanceData({

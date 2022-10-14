@@ -12,9 +12,8 @@ const processGeneralCoinData = (coinData: CoinsFetchData) => {
     liquidity_score,
     public_interest_score,
   } = coinData;
-  if (!market_data?.price_change_percentage_24h) {
-    return;
-  }
+  if (typeof market_data?.price_change_percentage_24h !== "number") return;
+
   data.price_change["24h"] = market_data.price_change_percentage_24h.toFixed(2);
 
   data.price_change["7d"] = market_data.price_change_percentage_7d.toFixed(2);

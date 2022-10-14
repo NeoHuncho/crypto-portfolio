@@ -57,16 +57,16 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         >
           <Tabs.List className="xs:ml-4">
             <Tabs.Tab
-              onClick={() => router.push("/user/portfolio")}
+              onClick={() => router.push("portfolio")}
               value="portfolio"
             >
               Portfolio
             </Tabs.Tab>
-            <Tabs.Tab onClick={() => router.push("/user/bot")} value="bot">
+            <Tabs.Tab onClick={() => router.push("bot")} value="bot">
               Bot
             </Tabs.Tab>
             <Tabs.Tab
-              onClick={() => router.push("/user/history")}
+              onClick={() => router.push("history")}
               value="history"
             >
               History
