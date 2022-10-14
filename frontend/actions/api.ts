@@ -8,7 +8,7 @@ interface IPost {
 }
 const UpdateUserSpent = async (post: IPost) => {
 
-  console.log(process.env.STAGING_BACKEND_API_URL);
+  console.log(process.env);
   await axios
     .post(
       process.env.BACKEND_API_URL +
