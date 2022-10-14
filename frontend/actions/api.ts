@@ -7,12 +7,10 @@ interface IPost {
   isRemoved: boolean;
 }
 const UpdateUserSpent = async (post: IPost) => {
-
   console.log(process.env);
   await axios
     .post(
-      process.env.BACKEND_API_URL +
-        "/user/modifyUserSpent",
+      "https://fabulous-build-3pkyv.cloud.serverless.com/user/modifyUserSpent",
       post
     )
     .catch((err) => {
