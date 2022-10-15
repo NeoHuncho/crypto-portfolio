@@ -18,7 +18,7 @@ const initFirebase = async () => {
       databaseURL:
         "https://crypto-portfolio-df8df-default-rtdb.europe-west1.firebasedatabase.app/",
     });
-  } else app = admin.app();
+  } else app = admin.app()
 
   const fireStore = await getFirestore();
   const db = await getDatabase(app);

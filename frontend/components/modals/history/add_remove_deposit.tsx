@@ -35,7 +35,7 @@ const AddRemoveDeposit = ({ opened, onClose, item, type }: Props) => {
                 amount: item.amount,
                 type: type,
                 isRemoved: !isRemoved,
-                id: item.id,
+                metaID: item.id,
                 userID: auth.currentUser?.uid,
               }));
           }}

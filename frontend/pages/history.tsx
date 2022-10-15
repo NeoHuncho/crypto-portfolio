@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import Flex from "stiches/components/flex/flex";
 import { Pencil } from "design/icons";
 import AddRemoveDeposit from "components/modals/history/add_remove_deposit";
+import { useMediaQuery } from "@mantine/hooks";
 interface HistoryProps {}
 
 const History: React.FC<HistoryProps> = ({}) => {
@@ -15,6 +16,7 @@ const History: React.FC<HistoryProps> = ({}) => {
   const [data, setData] = useState<any>(null);
   const [canEdit, setCanEdit] = useState<boolean | undefined>(false);
   const [editingItem, setEditingItem] = useState<any>(null);
+  const isMobile = useMediaQuery("(max-width: 500px)");
 
   const HistoryStore = useHistoryStore();
   useEffect(() => {
@@ -33,6 +35,8 @@ const History: React.FC<HistoryProps> = ({}) => {
         value={activeTab}
         onTabChange={setActiveTab}
         className="mb-5 mt-7"
+        styles={{ tabsList: { justifyContent: "center" } }}
+        // styles={{ tabsList:{isMobile?{width:"100%"}:{width:"50%"}} }}
       >
         <Tabs.List>
           {HistoryStore.tabs.map((item) => {
@@ -50,7 +54,7 @@ const History: React.FC<HistoryProps> = ({}) => {
           })}
         </Tabs.List>
         {activeTab && data ? (
-          <Tabs.Panel value={activeTab} className="mt-3">
+          <Tabs.Panel value={activeTab} className="mt-8">
             <Flex direction="column" align="center" gap={5}>
               {data.map((item: any, index: number) => (
                 <Item
