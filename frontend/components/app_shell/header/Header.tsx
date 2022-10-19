@@ -8,15 +8,18 @@ import { isMobile } from "react-device-detect";
 import { useRouter } from "next/router";
 import { BiLogOut } from "react-icons/bi";
 import { getAuth, signOut } from "firebase/auth";
+import useUserStore from "data/user_store";
 export const Header: React.FC<HeaderProps> = ({}) => {
   const router = useRouter();
   const auth = getAuth();
-  const [loggedIn, setLoggedIn] = useState(false);
-  auth.onAuthStateChanged(function (user) {
-    if (user?.uid) setLoggedIn(true);
-    else setLoggedIn(false);
-  });
+  const { userUID, setUserUID } = useUserStore();
   const [pathname, setPathname] = useState(router.asPath);
+  const signOutAction = () => {
+    signOut(auth).then(() => {
+      console.log("Signed out");
+      setUserUID(null);
+    });
+  };
   useEffect(() => {
     setPathname(router.asPath);
   }, [router.asPath]);
@@ -43,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           className="xs:hidden"
         />
       </Flex>
-      {loggedIn && (
+      {userUID && (
         <Tabs
           defaultValue={
             pathname.includes("portfolio")
@@ -65,23 +68,20 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             <Tabs.Tab onClick={() => router.push("bot")} value="bot">
               Bot
             </Tabs.Tab>
-            <Tabs.Tab
-              onClick={() => router.push("history")}
-              value="history"
-            >
+            <Tabs.Tab onClick={() => router.push("history")} value="history">
               History
             </Tabs.Tab>
           </Tabs.List>
         </Tabs>
       )}
-      {loggedIn && (
+      {userUID && (
         <Flex justify={"flex-end"} className="xs:w-fit w-60 pt-1">
           <Menu trigger="hover" width={120}>
             <Menu.Target>
               <Avatar radius="xl" />
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item icon={<BiLogOut />} onClick={() => signOut(auth)}>
+              <Menu.Item icon={<BiLogOut />} onClick={() => signOutAction()}>
                 Log Out
               </Menu.Item>
             </Menu.Dropdown>

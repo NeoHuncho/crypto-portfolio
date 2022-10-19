@@ -17,6 +17,7 @@
     "axios": "^0.25.0",
     "coingecko-api": "^1.0.10",
     "cross-env": "5.0.5",
+    "date-fns": "^2.29.3",
     "dotenv": "^16.0.1",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",

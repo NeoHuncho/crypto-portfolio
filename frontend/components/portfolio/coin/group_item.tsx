@@ -7,7 +7,7 @@ import Flex from "stiches/components/flex/flex";
 interface GroupItemProps {
   name: string;
   title: string;
-  value: number | string | DaysTo | AmountValue|undefined;
+  value: number | string | DaysTo | AmountValue | undefined;
 }
 
 interface IDaysTo {
@@ -38,6 +38,8 @@ export const GroupItem: React.FC<GroupItemProps> = ({ title, value, name }) => {
       ? "--"
       : name === "remainingStakingAmount"
       ? (value = value.toFixed(2))
+      : name === "interestRoi"
+      ? (value = value.toFixed(2) + "%")
       : (value = value.toFixed(2) + "€")
     : isAmountValue(value) &&
       (value = !value.value ? "--" : value.value.toFixed(2) + "€");

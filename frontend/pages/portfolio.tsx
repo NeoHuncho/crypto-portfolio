@@ -22,22 +22,16 @@ import {
 import { get, onValue, ref } from "firebase/database";
 import filterGeneralCoins from "utils/filterGeneralCoins";
 import { useUIStore } from "data/ui_store";
+import useUserStore from "data/user_store";
 
 export default function Portfolio() {
-  const router = useRouter();
   const data: Data = usePortfolioStore();
   const uiStore = useUIStore();
-  const auth = getAuth();
+  const { userUID } = useUserStore();
+  const [formattedData, setFormattedData] = useState<any>(null);
 
-  const [userUID, setUserUID] = useState("");
   useEffect(() => {
-    auth.onAuthStateChanged(function (user) {
-      if (user?.isAnonymous) setUserUID("VafhUIU2Z4Mt1HoNQnNr11pEZ4z1");
-      else if (user?.uid) setUserUID(user.uid);
-      else return router.push("signup_login");
-    });
     if (!userUID) return;
-    console.log(userUID);
     onSnapshot(getUserDataRef(userUID ? userUID : "no"), (doc) => {
       if (doc.exists())
         usePortfolioStore.setState({
@@ -45,18 +39,6 @@ export default function Portfolio() {
           general: doc.data().general,
         });
     });
-
-    onValue(generalCoinsRef, (snapshot) => {
-      const dbData = snapshot.val();
-      data.coins &&
-        usePortfolioStore.setState({
-          generalCoins: filterGeneralCoins(dbData, Object.keys(data.coins)),
-        });
-    });
-  }, []);
-  useEffect(() => {
-    if (!userUID) return;
-
     getDoc(getUserDataRef(userUID)).then((doc) => {
       if (doc.exists()) {
         const data = doc.data();
@@ -76,8 +58,30 @@ export default function Portfolio() {
       }
     });
   }, [userUID]);
+  useEffect(() => {
+    onValue(generalCoinsRef, (snapshot) => {
+      const dbData = snapshot.val();
+      data.coins &&
+        usePortfolioStore.setState({
+          generalCoins: filterGeneralCoins(dbData, Object.keys(data.coins)),
+        });
+    });
+  }, [data.coins]);
+  useEffect(() => {
+    if (!data.coins) return;
+    setFormattedData(
+      Object.entries(data.coins)
+        .sort(sortDataDesc)
+        .filter(([coin, values]) => {
+          if (uiStore.filters.hide0Balance)
+            return values.amountValue.value > 0.2;
+          else return true;
+        })
+    );
+  }, [data.coins, uiStore.filters.hide0Balance]);
 
-  if (!data.general || !data.coins) return <CenteredLoader />;
+  if (!formattedData) return <CenteredLoader />;
+
   return (
     <div className="bg-gray-900">
       <Head>
@@ -92,16 +96,9 @@ export default function Portfolio() {
       <PortfolioHeader />
 
       <main>
-        {Object.entries(data.coins)
-          .sort(sortDataDesc)
-          .filter(([coin, values]) => {
-            if (uiStore.filters.hide0Balance)
-              return values.amountValue.value > 0.2;
-            else return true;
-          })
-          .map(([coin, values]) => {
-            return <PortfolioCoin key={coin} coin={coin} values={values} />;
-          })}
+        {formattedData.map(([coin, values]: any) => {
+          return <PortfolioCoin key={coin} coin={coin} values={values} />;
+        })}
       </main>
     </div>
   );

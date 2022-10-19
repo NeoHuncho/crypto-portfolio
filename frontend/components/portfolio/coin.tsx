@@ -89,7 +89,7 @@ export default function PortfolioCoin({ coin, values }: Props) {
           indicator: { backgroundColor: "white !important" },
           container: !isMobile ? { marginLeft: 20, marginRight: 60 } : {},
         }}
-        style={{ width: "100%", justifyItems: "center" }}
+        style={{ width: isMobile ? "95%" : "100%", justifyItems: "center" }}
       >
         {uiSettings.coinCards.map((keys, index) => {
           if (keys.includes("remainingStakingAmount") && !values.canBeStaked)

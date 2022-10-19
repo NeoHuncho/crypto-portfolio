@@ -5,7 +5,7 @@ export default {
   priceDiff: "Profit/Loss",
   avgBuyPrice: "Avg buy price",
   allTimeSellPrice: "Avg sell price",
-  remainingStakingAmount: `Remaining amount \n  to be stacked`,
+  interestRoi: `Annualized ROI`,
   interest: "Total interest \n at expiration",
   daysToStaking: "days to  next/last expiration",
 };

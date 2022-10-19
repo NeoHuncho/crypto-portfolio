@@ -1,7 +1,7 @@
 import { Modal, Switch } from "@mantine/core";
 import { UpdateUserSpent } from "actions/api";
 import { getAuth } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Flex from "stiches/components/flex/flex";
 
 interface Props {
@@ -14,7 +14,10 @@ interface Props {
 const AddRemoveDeposit = ({ opened, onClose, item, type }: Props) => {
   const auth = getAuth();
 
-  const [isRemoved, setIsRemoved] = useState(!!item?.isRemoved);
+  const [isRemoved, setIsRemoved] = useState(item?.isRemoved);
+  useEffect(() => {
+    setIsRemoved(item?.isRemoved);
+  }, [item]);
   return (
     <Modal opened={opened} onClose={onClose}>
       <Flex

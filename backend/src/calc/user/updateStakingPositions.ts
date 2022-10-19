@@ -1,4 +1,4 @@
-import { getStakingPositions, purchaseStaking } from "../../data/dataBinance";
+import { getStakingList, purchaseStaking } from "../../data/dataBinance";
 import type { Coin, Data } from "../../../../common/types/interfaces";
 
 import updateSavingPositions from "./updateSavingPositions";
@@ -10,7 +10,7 @@ const updateStakingPositions = async (data: Data) => {
     const coin: Coin | undefined = coins[key];
 
     if (!coin) continue;
-    const stakingPositions = await getStakingPositions(key);
+    const stakingPositions = await getStakingList(key);
     await updateSavingPositions(data, key, stakingPositions.length);
     if (coin.remainingStakingAmount <= 0) continue;
     if (stakingPositions.length === 0) {

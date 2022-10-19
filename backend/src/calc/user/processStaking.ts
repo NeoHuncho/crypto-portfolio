@@ -2,13 +2,16 @@ import moment from "moment";
 import { defaultCoin } from "../../data/defaultValues";
 import type { Data, StakingHistory } from "../../../../common/types/interfaces";
 import { numDaysBetween } from "../../utils/dates";
+import { getStakingPositions } from "../../data/dataBinance";
 
 const processStaking = (data: Data) => {
   const coins = data["coins"];
   const resetStaking = () => {
     Object.keys(coins).map((key) => {
       const coinData = coins[key];
-      if (coinData) coinData.staked.amount = 0;
+      if (!coinData) return;
+      coinData.staked.amount = 0;
+      coinData.staked.value = 0;
     });
   };
   const sortSubscriptions = (subscriptions: any) => {
@@ -48,7 +51,7 @@ const processStaking = (data: Data) => {
     });
   };
 
-  const sortInterest = async (interest: any) => {
+  const sortInterest = (interest: any) => {
     interest.map((item: any) => {
       const coin = coins[item.asset];
       if (!coin || !item.positionId) return;
@@ -102,27 +105,21 @@ const processStaking = (data: Data) => {
   sortInterest(data.binance.stakingInterestHistory);
   sortRedemptions(data.binance.stakingRedemptionHistory);
 
-  Object.entries(data.meta.stakingHistory).map(([coin, history]) => {
-    history.map((historyElement: StakingHistory) => {
-      const coinData = data.coins[coin];
-      if (!coinData) return;
-      if (!historyElement.redemptionDate) {
-        coinData.staked.amount += historyElement.amount;
-        const daysToExpiration = numDaysBetween(
-          historyElement.expiration,
-          new Date()
-        );
-
-        if (!coinData.daysToStaking.last)
-          coinData.daysToStaking.last = daysToExpiration;
-        if (!coinData.daysToStaking.next)
-          coinData.daysToStaking.next = daysToExpiration;
-        if (coinData.daysToStaking.last < daysToExpiration)
-          coinData.daysToStaking.last = daysToExpiration;
-        if (coinData.daysToStaking.next > daysToExpiration)
-          coinData.daysToStaking.next = daysToExpiration;
-      }
-    });
+  Object.entries(data.binance.stakingPositions).map((positionArray) => {
+    const position = positionArray[1];
+    if (!position) return;
+    const coinData = data.coins[position.asset];
+    if (!coinData) return;
+    coinData.staked.amount += parseFloat(position.amount);
+    const daysToExpiration = numDaysBetween(position.deliveryDate, new Date());
+    if (!coinData.daysToStaking.last)
+      coinData.daysToStaking.last = daysToExpiration;
+    if (!coinData.daysToStaking.next)
+      coinData.daysToStaking.next = daysToExpiration;
+    if (coinData.daysToStaking.last < daysToExpiration)
+      coinData.daysToStaking.last = daysToExpiration;
+    if (coinData.daysToStaking.next > daysToExpiration)
+      coinData.daysToStaking.next = daysToExpiration;
   });
   return data;
 };

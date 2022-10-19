@@ -3,17 +3,12 @@ import { getAuth } from "firebase/auth";
 
 import { useEffect, useState } from "react";
 import CenteredLoader from "components/loader/centered";
+import useUserStore from "data/user_store";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const userStore = useUserStore();
   const router = useRouter();
   const auth = getAuth();
-  useEffect(() => {
-    auth.onAuthStateChanged(function (user) {
-      if (user?.uid) return router.push("portfolio");
-      else return router.push("signup_login");
-    });
-  });
-
-  if (loading) return <CenteredLoader />;
+  if (userStore.userUID) router.push("/portfolio");
+  return <CenteredLoader />;
 }

@@ -28,6 +28,7 @@ export interface BinanceData {
   stakingSubscriptionHistory: any;
   stakingRedemptionHistory: any;
   stakingInterestHistory: any;
+  stakingPositions: any;
   depositHistory: any;
   directHistory: any;
   coinDepositHistory: any;
@@ -73,7 +74,6 @@ export interface Data {
   binance?: BinanceData | null;
   generalCoins?: CoinsGeneralDB | null;
 }
-
 
 export interface GeneralDB {
   user: string;
@@ -142,6 +142,7 @@ export interface Coin {
   stakedInterestAccumulated: AmountValue;
   amountValue: AmountValue;
   canBeStaked?: boolean;
+  interestRoi?: number;
 }
 
 export interface Meta {

@@ -22,6 +22,7 @@ class defaultCoin implements Coin {
   spent = 0;
   spot = new AmountValue();
   staked = new AmountValue();
+  savings = new AmountValue();
   stakedInterestAccumulated = new AmountValue();
   interest = new AmountValue();
   dailyInterest = new AmountValue();

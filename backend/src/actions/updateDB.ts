@@ -13,10 +13,9 @@ import sizeof from "object-sizeof";
 import updateStakingPositions from "../calc/user/updateStakingPositions";
 
 import moment from "moment";
-import * as dotenv from "dotenv";
 import calculateSyncData from "../calc/user/calculateSyncData";
 import resetData from "../utils/resetData";
-dotenv.config();
+
 const exchangeRatesUSDT: ExchangeRates = {};
 
 interface IUpdateDB {
@@ -41,13 +40,14 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
 
   data["general"] = resetData(data["general"]);
 
-  // await checkAndUpdateCardHistory();
+  // // await checkAndUpdateCardHistory();
 
   data["coins"] = await processSpot(data);
   data = await processTrades(data);
 
   data = await processAccountHistory(data, db);
-  data = await processStaking(data);
+  data = processStaking(data);
+
   data = await updatePriceValues(data, exchangeRatesUSDT);
   data.coins = await calculateSyncData(data);
   data["coins"] = data["general"].passedFirstRun
@@ -68,5 +68,6 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
 
   return "done";
 };
-
+// REMOVE FROM PROD
+// updateDB({ userID: "VafhUIU2Z4Mt1HoNQnNr11pEZ4z1" });
 export default updateDB;

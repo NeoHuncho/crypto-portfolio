@@ -69,7 +69,7 @@ const updatePriceValues = async (
         return item;
       });
     } catch (error) {
-      console.log("errors", "error in updatePriceValues for " + coin);
+      console.log( "error in updatePriceValues for " + key + ": " + error);
     }
   }
 

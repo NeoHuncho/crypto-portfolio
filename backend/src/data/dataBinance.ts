@@ -2,10 +2,11 @@ import { Spot } from "@binance/connector";
 import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
 import { params } from "@serverless/cloud";
-
-const apiKey = params["BINANCE_API_KEY"];
-const apiSecret = params["BINANCE_API_SECRET"];
-
+import dotenv from "dotenv";
+dotenv.config({ path: "../../.env" });
+const apiKey = params["BINANCE_API_KEY"] || process.env["BINANCE_API_KEY"];
+const apiSecret =
+  params["BINANCE_API_SECRET"] || process.env["BINANCE_API_SECRET"];
 let client = new Spot(apiKey, apiSecret);
 let date = moment("2021-08-01");
 
@@ -73,10 +74,10 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     stakingInterestHistory: [],
     depositHistory: [],
     directHistory: [],
+    stakingPositions: [],
     coinDepositHistory: [],
     coinWithdrawalHistory: [],
     liquidityHistory: [],
-
     savingProducts: {},
     IDs: {
       subscriptionIDs: [],
@@ -207,6 +208,7 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
     }
     index++;
   }
+  data.stakingPositions = await getStakingPositions("STAKING");
 
   data.stakingSubscriptionHistory = flattenAndFilter(
     data.stakingSubscriptionHistory,
@@ -252,8 +254,24 @@ const getAllOrders = async (key: string) => {
   return (await client.allOrders(key + "USDT")).data;
 };
 
-const getStakingPositions = async (key: string) => {
+const getStakingList = async (key: string) => {
   return (await client.stakingProductList("STAKING", { asset: key })).data;
+};
+const getStakingPositions = async (type: string) => {
+  let current: number | boolean = 1;
+  let data = [];
+  while (current) {
+    const res = (
+      await client.stakingProductPosition(type, { size: 100, current: current })
+    ).data;
+
+    if (!res?.length) current = false;
+    else {
+      data.push(...res);
+      current++;
+    }
+  }
+  return data;
 };
 const getSavingPositions = async () => {
   return (
@@ -264,6 +282,8 @@ const getSavingPositions = async () => {
     })
   ).data;
 };
+const getCoinSavingPosition = async (coin: string) =>
+  (await client.savingsFlexibleProductPosition(coin)).data;
 
 const purchaseStaking = async (
   type: string,
@@ -322,9 +342,11 @@ export {
   getBinanceData,
   getAvgPrice,
   getAllOrders,
+  getStakingList,
   getStakingPositions,
   purchaseStaking,
   getSavingPositions,
+  getCoinSavingPosition,
   purchaseSaving,
   redeemSaving,
 };

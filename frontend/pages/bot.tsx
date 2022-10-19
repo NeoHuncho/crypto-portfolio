@@ -34,7 +34,7 @@ export default function Bot() {
       general: data.general,
     });
   }, [data]);
-
+  console.log("hell", userUID, error);
   if (!data) return <CenteredLoader />;
   if (!data.exists || !data?.general) return <BotSettings />;
   return (

@@ -10,8 +10,9 @@ type CoinsCards =
   | "avgBuyPrice"
   | "allTimeSellPrice"
   | "allTimeSellPrice"
-  | "remainingStakingAmount"
+  | "interestRoi"
   | "interest"
+  | "remainingStakingAmount"
   | "daysToStaking";
 interface IStore {
   coinCards: CoinsCards[][];
@@ -40,7 +41,7 @@ const useUIStore = create<IStore>((set) => ({
     ["PriceSlider/Ranking"],
     ["amountValue", "spot", "staked"],
     ["priceDiff", "avgBuyPrice", "allTimeSellPrice"],
-    ["remainingStakingAmount", "interest", "daysToStaking"],
+    ["interestRoi", "interest", "daysToStaking"],
   ],
   filters: {
     hide0Balance: true,

@@ -35,12 +35,9 @@ events.on("updateDB", { timeout: 300000 }, async ({ body }) => {
 });
 
 api.post("/user/modifyUserSpent", async (req, res) => {
-  try {
-    await modifyUserSpent(req);
-  } catch (error) {
-    return res.send({ status: 500, success: false, message: error });
-  }
-  return res.send({ status: 200, success: true, message: "ok" });
+  const result = await modifyUserSpent(req);
+
+  return res.send({ status: 200, success: result.success, message: result.message });
 });
 
 //remove from prod
