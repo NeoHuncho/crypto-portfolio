@@ -6,13 +6,13 @@ import modifyUserSpent from "./src/api/ModifyUserSpent";
 import cors from "cors";
 api.use(cors());
 //add to prod
-schedule.every("50 minutes", { timeout: 300000 }, async () => {
+schedule.every("1 day", { timeout: 300000 }, async () => {
   await updateDB({ userID: "VafhUIU2Z4Mt1HoNQnNr11pEZ4z1" });
   console.log("done");
   return;
 });
 
-schedule.every("60 minutes", { timeout: 300000 }, async () => {
+schedule.every("50 minutes", { timeout: 300000 }, async () => {
   await updateGeneralCoinData();
   console.log("done");
   return;
