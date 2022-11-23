@@ -6,8 +6,7 @@ import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
 
 let app: any = null;
-let db: any = null;
-let fireStore: any = null;
+
 const initFirebase = async () => {
   const private_key =
     params["FIREBASE_PRIVATE_KEY"] || process.env["FIREBASE_PRIVATE_KEY"];
@@ -26,16 +25,22 @@ const initFirebase = async () => {
       databaseURL:
         "https://crypto-portfolio-df8df-default-rtdb.europe-west1.firebasedatabase.app/",
     });
-  if (!fireStore) {
-    fireStore = await getFirestore();
-    fireStore.settings({ ignoreUndefinedProperties: true });
-  }
-  if (!db) {
-    db = await getDatabase(app);
-    db.goOnline();
-  }
+  const fireStore = await getFireStore();
+  const db = await getDb(app);
 
   return { app, db, fireStore };
+};
+
+const getDb = async (app: any) => {
+  const db = await getDatabase(app);
+  db.goOnline();
+  return db;
+};
+
+const getFireStore = async () => {
+  const fireStore = await getFirestore();
+  fireStore.settings({ ignoreUndefinedProperties: true });
+  return fireStore;
 };
 
 export default initFirebase;

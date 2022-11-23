@@ -1,4 +1,4 @@
-import { getAllOrders } from "../../data/dataBinance";
+import { getAllOrders } from "../../foreign_api/dataBinance";
 import type { Data } from "../../../../common/types/interfaces";
 
 const processTrades = async (data: Data) => {

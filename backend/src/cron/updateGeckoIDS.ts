@@ -1,4 +1,4 @@
-import { getCoinList } from "../data/dataGecko";
+import { getCoinList } from "../foreign_api/dataGecko";
 import initFireStore from "../initFireBase";
 
 const updateGeckoIDs = async () => {

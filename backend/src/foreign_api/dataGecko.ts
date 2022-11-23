@@ -28,11 +28,12 @@ const getHistoricPriceUSD = async ({ db, coin, inputDate }: Props) => {
 };
 
 const getGeneralCoinData = async (geckoID: string) => {
-  
-  const res = await axios.get('https://api.coingecko.com/api/v3/coins/'+geckoID).catch(() => {
-    console.log("error getting gecko data for coin: ", geckoID);
-    return;
-  });
+  const res = await axios
+    .get("https://api.coingecko.com/api/v3/coins/" + geckoID)
+    .catch(() => {
+      console.log("error getting gecko data for coin: ", geckoID);
+      return;
+    });
   if (!res || !res.data) {
     console.log("error getting gecko data for coin: ", geckoID);
     return;
@@ -44,6 +45,10 @@ const getCoinList = async () => {
   const list = (await axios.get("https://api.coingecko.com/api/v3/coins/list"))
     .data;
   return list;
+};
+
+const getCoins3m = async (coins: string[]) => {
+  
 };
 
 export { getHistoricPriceUSD, getGeneralCoinData, getCoinList };

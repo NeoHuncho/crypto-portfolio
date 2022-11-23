@@ -301,7 +301,7 @@ const purchaseStaking = async (
     })
     .catch((err: any) => {
       console.log(
-        `error when purchasing staking: ${product} for amount ${amount}`
+        `error when purchasing staking: ${product} for amount ${amount} ${err}`
       );
       return err;
     });

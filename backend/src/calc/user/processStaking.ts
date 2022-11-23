@@ -1,8 +1,8 @@
 import moment from "moment";
-import { defaultCoin } from "../../data/defaultValues";
+import { defaultCoin } from "../../data/default/defaultValues";
 import type { Data, StakingHistory } from "../../../../common/types/interfaces";
 import { numDaysBetween } from "../../utils/dates";
-import { getStakingPositions } from "../../data/dataBinance";
+import { getStakingPositions } from "../../foreign_api/dataBinance";
 
 const processStaking = (data: Data) => {
   const coins = data["coins"];

@@ -1,6 +1,6 @@
 import { fromUnixTime, isBefore } from "date-fns";
 import type { Coin, Data } from "../../../../common/types/interfaces";
-import { getCoinSavingPosition } from "../../data/dataBinance";
+import { getCoinSavingPosition } from "../../foreign_api/dataBinance";
 
 const calculateSyncData = async (data: Data) => {
 

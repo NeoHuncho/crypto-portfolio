@@ -17,7 +17,7 @@ const History: React.FC<HistoryProps> = ({}) => {
   const [canEdit, setCanEdit] = useState<boolean | undefined>(false);
   const [editingItem, setEditingItem] = useState<any>(null);
   const isMobile = useMediaQuery("(max-width: 500px)");
-  console.log("rerender");
+ 
   const HistoryStore = useHistoryStore();
   useEffect(() => {
     if (activeTab) {

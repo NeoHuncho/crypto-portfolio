@@ -1,4 +1,4 @@
-import { purchaseSaving, redeemSaving } from "../../data/dataBinance";
+import { purchaseSaving, redeemSaving } from "../../foreign_api/dataBinance";
 import type { Data } from "../../../../common/types/interfaces";
 
 const updateSavingPositions = async (

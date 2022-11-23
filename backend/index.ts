@@ -1,7 +1,7 @@
 import { api, events, schedule } from "@serverless/cloud";
-import updateGeneralCoinData from "./src/actions/updateGeneralCoinData";
-import updateGeckoIDs from "./src/actions/updateGeckoIDS";
-import updateDB from "./src/actions/updateDB";
+import updateGeneralCoinData from "./src/cron/updateGeneralCoinData";
+import updateGeckoIDs from "./src/cron/updateGeckoIDS";
+import updateDB from "./src/cron/updateDB";
 import modifyUserSpent from "./src/api/ModifyUserSpent";
 import cors from "cors";
 api.use(cors());
@@ -14,12 +14,12 @@ schedule.every("1 day", { timeout: 300000 }, async () => {
 
 schedule.every("50 minutes", { timeout: 300000 }, async () => {
   await updateGeneralCoinData();
-  console.log("done");
+  
   return;
 });
 schedule.cron("0 0 ? * FRI *", { timeout: 300000 }, async () => {
   await updateGeckoIDs();
-  console.log("done");
+  
   return;
 });
 

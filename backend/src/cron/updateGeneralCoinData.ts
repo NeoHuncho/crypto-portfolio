@@ -1,6 +1,6 @@
 import processGeneralCoinData from "../calc/user/generalCoin/processGeneralCoinData";
-import { getGeneralCoinDBData, updateGeneralCoinDBData } from "../data/dataDB";
-import { getGeneralCoinData } from "../data/dataGecko";
+import { getGeneralCoinDBData, updateGeneralCoinDBData } from "../foreign_api/dataDB";
+import { getGeneralCoinData } from "../foreign_api/dataGecko";
 import initFirebase from "../initFireBase";
 
 const updateGeneralCoinData = async () => {

@@ -1,4 +1,4 @@
-import type { Coin, Data } from "../../../common/types/interfaces";
+import type { Coin, Data } from "../../../../common/types/interfaces";
 class AmountValue {
   amount = 0;
   value = 0;

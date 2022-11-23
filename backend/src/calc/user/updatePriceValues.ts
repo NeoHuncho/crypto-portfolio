@@ -1,4 +1,4 @@
-import { getAvgPrice } from "../../data/dataBinance";
+import { getAvgPrice } from "../../foreign_api/dataBinance";
 import type { Data, ExchangeRates } from "../../../../common/types/interfaces";
 
 const updatePriceValues = async (

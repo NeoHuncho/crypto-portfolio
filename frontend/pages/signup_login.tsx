@@ -12,10 +12,12 @@ import { Button, Divider } from "@mantine/core";
 import { AiFillEye, AiOutlineGoogle } from "react-icons/ai";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
+import { useUIStore } from "data/ui_store";
 export default function Home() {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean | string>(false);
   const provider = new GoogleAuthProvider();
+  const uiStore = useUIStore();
   const signInUserGoogle = () => {
     setLoading("google");
     const auth = getAuth();
@@ -39,6 +41,7 @@ export default function Home() {
   };
   const signInAnon = async () => {
     setLoading("anon");
+    uiStore.actions.toggleShowAnonModal();
     const auth = getAuth();
     await signInAnonymously(auth);
     router.push("portfolio");

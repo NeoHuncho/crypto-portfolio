@@ -1,7 +1,7 @@
 import type { Database } from "firebase-admin/database";
 import type { Data, GeneralCoinsData } from "../../../common/types/interfaces";
 import type { FirebaseData } from "../interfaces";
-import { defaultData } from "./defaultValues";
+import { defaultData } from "../data/default/defaultValues";
 
 const getUserDBData = async ({
   fireStore,

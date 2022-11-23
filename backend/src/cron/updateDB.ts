@@ -1,7 +1,7 @@
 import initFirebase from "../initFireBase";
 import type { ExchangeRates } from "../../../common/types/interfaces";
-import { getUserDBData, updateUserDBData } from "../data/dataDB";
-import { getAvgPrice, getBinanceData } from "../data/dataBinance";
+import { getUserDBData, updateUserDBData } from "../foreign_api/dataDB";
+import { getAvgPrice, getBinanceData } from "../foreign_api/dataBinance";
 
 // import checkAndUpdateCardHistory from "../calc/user/checkUpdateCardHistory";
 import processTrades from "../calc/user/processTrades";
@@ -50,9 +50,9 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
 
   data = await updatePriceValues(data, exchangeRatesUSDT);
   data.coins = await calculateSyncData(data);
-  data["coins"] = data["general"].passedFirstRun
-    ? await updateStakingPositions(data)
-    : data["coins"];
+  // data["coins"] = data["general"].passedFirstRun
+  //   ? await updateStakingPositions(data)
+  //   : data["coins"];
 
   if (!data["general"].passedFirstRun) data["general"].passedFirstRun = true;
   data["general"].lastRunTime = moment().unix();
@@ -68,6 +68,6 @@ const updateDB = async ({ userID, reset = false }: IUpdateDB) => {
 
   return "done";
 };
-// REMOVE FROM PROD
+//! REMOVE FROM PROD
 // updateDB({ userID: "VafhUIU2Z4Mt1HoNQnNr11pEZ4z1" });
 export default updateDB;

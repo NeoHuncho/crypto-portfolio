@@ -30,11 +30,15 @@ interface IStore {
     incrementSlideIndex: () => void;
     decrementSlideIndex: () => void;
     setPriceDate: (date: string) => void;
+    toggleShowAnonModal: () => void;
   };
   ui: {
     currentSlideIndex: number;
     currentPriceDate: string;
   };
+  modals:{
+    showAnonModal: boolean;
+  }
 }
 const useUIStore = create<IStore>((set) => ({
   coinCards: [
@@ -53,6 +57,9 @@ const useUIStore = create<IStore>((set) => ({
   ui: {
     currentSlideIndex: 0,
     currentPriceDate: "24h",
+  },
+  modals:{
+    showAnonModal: false,
   },
   actions: {
     toggle0Balance: () =>
@@ -74,6 +81,14 @@ const useUIStore = create<IStore>((set) => ({
         layout: {
           ...state.layout,
           syncPriceDayChanges: !state.layout.syncPriceDayChanges,
+        },
+      })),
+    toggleShowAnonModal: () =>
+      set((state) => ({
+        ...state,
+        modals: {
+          ...state.modals,
+          showAnonModal: !state.modals.showAnonModal,
         },
       })),
     incrementSlideIndex: () =>

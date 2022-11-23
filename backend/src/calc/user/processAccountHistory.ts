@@ -1,7 +1,7 @@
 import type { Database } from "@firebase/database-types";
 import moment from "moment";
-import { getAvgPrice } from "../../data/dataBinance";
-import { getHistoricPriceUSD } from "../../data/dataGecko";
+import { getAvgPrice } from "../../foreign_api/dataBinance";
+import { getHistoricPriceUSD } from "../../foreign_api/dataGecko";
 
 import type { Data } from "../../../../common/types/interfaces";
 import getCurrencySymbol from "../../utils/getCurrencySymbol";

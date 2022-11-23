@@ -1,6 +1,6 @@
 import { GiReceiveMoney } from "react-icons/gi";
 import { SiZcash } from "react-icons/si";
-import { FiSend } from "react-icons/fi";
+import { FiSend, FiSettings } from "react-icons/fi";
 import { AiFillCreditCard } from "react-icons/ai";
 import { BsFillPencilFill } from "react-icons/bs";
 
@@ -10,4 +10,5 @@ export {
   SiZcash as Staking,
   AiFillCreditCard as Card,
   BsFillPencilFill as Pencil,
+  FiSettings as Settings,
 };

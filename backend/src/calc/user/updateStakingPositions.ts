@@ -1,4 +1,4 @@
-import { getStakingList, purchaseStaking } from "../../data/dataBinance";
+import { getStakingList, purchaseStaking } from "../../foreign_api/dataBinance";
 import type { Coin, Data } from "../../../../common/types/interfaces";
 
 import updateSavingPositions from "./updateSavingPositions";

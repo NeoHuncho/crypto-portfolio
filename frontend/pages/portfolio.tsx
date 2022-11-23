@@ -23,12 +23,16 @@ import { get, onValue, ref } from "firebase/database";
 import filterGeneralCoins from "utils/filterGeneralCoins";
 import { useUIStore } from "data/ui_store";
 import useUserStore from "data/user_store";
+import { AnonModal } from "components/modals/general/anonModal";
 
 export default function Portfolio() {
   const data: Data = usePortfolioStore();
   const uiStore = useUIStore();
   const { userUID } = useUserStore();
   const [formattedData, setFormattedData] = useState<any>(null);
+  const [showAnonModal, setShowAnonModal] = useState<boolean>(
+    uiStore.modals.showAnonModal
+  );
 
   useEffect(() => {
     if (!userUID) return;
@@ -50,10 +54,9 @@ export default function Portfolio() {
         });
         get(generalCoinsRef).then((snapshot) => {
           const dbData = snapshot.val();
-          coins &&
-            usePortfolioStore.setState({
-              generalCoins: filterGeneralCoins(dbData, Object.keys(coins)),
-            });
+          usePortfolioStore.setState({
+            generalCoins: filterGeneralCoins(dbData, Object.keys(coins)),
+          });
         });
       }
     });
@@ -100,6 +103,13 @@ export default function Portfolio() {
           return <PortfolioCoin key={coin} coin={coin} values={values} />;
         })}
       </main>
+      <AnonModal
+        opened={showAnonModal}
+        onClose={() => {
+          uiStore.actions.toggleShowAnonModal();
+          setShowAnonModal(false);
+        }}
+      />
     </div>
   );
 }

@@ -45,7 +45,7 @@ export interface ExchangeRates {
   [key: string]: number;
 }
 
-export interface GeneralBotData {
+export interface SettingsBotData {
   tradeBot: {
     buyPreferences: {
       best: number;
@@ -65,7 +65,8 @@ export interface GeneralBotData {
   };
 }
 export interface BotData {
-  general: GeneralBotData | null;
+  settings: SettingsBotData | null;
+  coins: any;
 }
 export interface Data {
   general: General | null;
