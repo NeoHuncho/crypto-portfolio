@@ -2,6 +2,7 @@ import type { Database } from "firebase-admin/database";
 import type { Data, GeneralCoinsData } from "../../../common/types/interfaces";
 import type { FirebaseData } from "../interfaces";
 import { defaultData } from "../data/default/defaultValues";
+import moment from "moment";
 
 const getUserDBData = async ({
   fireStore,
@@ -77,6 +78,15 @@ const getGeneralCoinDBData = async ({
   return data;
 };
 
+interface getGeckoID {
+  coin: string;
+  db: Database;
+}
+
+const getGeckoID = async ({ coin, db }: getGeckoID) => {
+  return await (await db.ref("gecko_ids/" + coin).get()).val();
+};
+
 interface IUpdateGeneralCoinDBData {
   db: Database;
   data: GeneralCoinsData;
@@ -90,9 +100,41 @@ const updateGeneralCoinDBData = async ({
   await db.ref("general_coins/" + key).set(data);
 };
 
+const getDBData = async ({ db, path }: { db: Database; path: string }) => {
+  return (await db.ref(path).get()).val();
+};
+
+const updateMarginStats = async ({
+  db,
+  data,
+  userID,
+}: {
+  db: Database;
+  data: any;
+  userID: string;
+}) => {
+  const DBdata = (
+    await db.ref("users_margin/" + userID + "/stats").get()
+  ).val();
+  DBdata.profitLoss += data.profitLoss;
+  DBdata.totalCompleted += data.totalCompleted;
+  DBdata.totalLoosed += data.totalLoosed;
+  DBdata.totalProfited += data.totalProfited;
+  const today = moment().format("DD-MM-YYYY");
+
+  if (DBdata.dailyProfitLoss[today])
+    DBdata.dailyProfitLoss[today] += data.profitLoss;
+  else DBdata.dailyProfitLoss[today] = data.profitLoss;
+  console.log(DBdata);
+  await db.ref("users_margin/" + userID + "/stats").set(DBdata);
+};
+
 export {
   getUserDBData,
   updateUserDBData,
   getGeneralCoinDBData,
   updateGeneralCoinDBData,
+  getGeckoID,
+  getDBData,
+  updateMarginStats,
 };

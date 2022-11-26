@@ -1,6 +1,7 @@
 import type { Database } from "@firebase/database-types";
 import axios from "axios";
 import moment from "moment";
+
 type Props = {
   db: Database;
   coin: string;
@@ -47,8 +48,29 @@ const getCoinList = async () => {
   return list;
 };
 
-const getCoins3m = async (coins: string[]) => {
-  
-};
+// const getCoinsPrices = async (coins: MarginCoins) => {
+//   const promises = Object.entries(coins).map(
+//     ([key, value]) =>
+//       new Promise(async (resolve, reject) => {
+//         const res = await axios
+//           .get(
+//             `https://api.coingecko.com/api/v3/simple/price?ids=${value.geckoID}&vs_currencies=usd`
+//           )
+//           .catch(() => {
+//             console.log("error getting gecko data for coin: ", key);
+//             reject();
+//           });
+//         if (!res || !res.data) {
+//           console.log("error getting gecko data for coin: ", key);
+//           reject();
+//         }
+//         const price = Object.values(res?.data).map((val: any) => val?.usd)[0];
+//         resolve({ [key]: price });
+//       })
+//   );
+
+//   const promiseArray = await Promise.all(promises);
+//   return Object.assign({}, ...promiseArray);
+// };
 
 export { getHistoricPriceUSD, getGeneralCoinData, getCoinList };

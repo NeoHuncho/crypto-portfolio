@@ -1,5 +1,5 @@
-import { defaultCoin } from "../../data/default/defaultValues";
-import type { Coins, Data } from "../../../../common/types/interfaces";
+import { defaultCoin } from "../../../data/default/defaultValues";
+import type { Coins, Data } from "../../../../../common/types/interfaces";
 
 interface SpotBalanceItem {
   asset: string;

@@ -1,4 +1,5 @@
 import type { Coin, Data } from "../../../../common/types/interfaces";
+import type { IMarginPosition, IMarginStats } from "../../interfaces";
 class AmountValue {
   amount = 0;
   value = 0;
@@ -27,6 +28,16 @@ class defaultCoin implements Coin {
   interest = new AmountValue();
   dailyInterest = new AmountValue();
 }
+
+const defaultMarginPosition: IMarginPosition = {
+  prices: [],
+  change: 0.0,
+  toBeBought: false,
+  toBeSold: false,
+  investmentStart: 0,
+  investmentGain: 0.0,
+  maxGain: 0.0,
+};
 const defaultData: Data = {
   meta: {
     toAddToInterestTotal: [],
@@ -69,4 +80,12 @@ const defaultData: Data = {
   },
   coins: {},
 };
-export { defaultCoin, defaultData };
+
+const defaultMarginStats: IMarginStats = {
+  profitLoss: 0,
+  totalCompleted: 0,
+  totalProfited: 0,
+  totalLoosed: 0,
+  dailyProfitLoss: {},
+};
+export { defaultCoin, defaultData, defaultMarginPosition, defaultMarginStats };

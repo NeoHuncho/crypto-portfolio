@@ -3,6 +3,8 @@ import moment from "moment";
 import type { BinanceData } from "../../../common/types/interfaces";
 import { params } from "@serverless/cloud";
 import dotenv from "dotenv";
+import type { IMarginPosition } from "../interfaces";
+import { defaultMarginStats } from "../data/default/defaultValues";
 dotenv.config({ path: "../../.env" });
 const apiKey = params["BINANCE_API_KEY"] || process.env["BINANCE_API_KEY"];
 const apiSecret =
@@ -246,8 +248,23 @@ const getBinanceData = async ({ passedFirstRun }: Props) => {
   return data;
 };
 
-const getAvgPrice = async (name: string) => {
-  return (await client.avgPrice(name)).data.price;
+const getAvgPrice = async (name: string) =>
+  (await client.avgPrice(name))?.data?.price;
+const getAvgPrices = async (coins: string[]) => {
+  const promises = coins.map((coin) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const price = await getAvgPrice(coin + "USDT");
+        resolve({ [coin]: parseFloat(price) });
+      } catch (error) {
+        console.log("error getting price for coin", coin);
+        reject(error);
+      }
+    });
+  });
+  const promiseArray = await Promise.all(promises);
+
+  return Object.assign({}, ...promiseArray);
 };
 
 const getAllOrders = async (key: string) => {
@@ -338,6 +355,59 @@ const redeemSaving = async (productID: string, amount: number) => {
       );
     });
 };
+
+const borrowMargin = async (coin: string, margin: IMarginPosition) => {
+  try {
+    const maxAmount = (await client.marginMaxBorrowable(coin))?.data?.amount;
+    await client.marginBorrow(coin, (maxAmount * 0.5).toFixed());
+    const sellRes = await client.newMarginOrder(
+      coin + "BUSD",
+      "SELL",
+      "MARKET",
+      {
+        quantity: (maxAmount * 0.5).toFixed(),
+      }
+    );
+    let totalQty = 0;
+    const value = sellRes.data.fills.reduce((acc: number, item: any) => {
+      totalQty += parseFloat(item.qty);
+      return acc + parseFloat(item.qty) * parseFloat(item.price);
+    }, 0);
+    const avgPrice = value / totalQty;
+    margin.investmentStart = avgPrice;
+    margin.totalBought = totalQty;
+    margin.prices = [avgPrice];
+    margin.change = 0;
+    margin.toBeBought = false;
+  } catch (error) {
+    console.log("error when trying to buy margin for " + coin, error);
+  }
+};
+const repayMargin = async (coin: string, margin: IMarginPosition) => {
+  try {
+    const resBuy = await client.newMarginOrder(coin + "BUSD", "BUY", "MARKET", {
+      quantity: margin.totalBought,
+    });
+    await client.marginRepay(coin, margin.totalBought);
+    let totalQty = 0;
+    const value = resBuy.data.fills.reduce((acc: number, item: any) => {
+      totalQty += parseFloat(item.qty);
+      return acc + parseFloat(item.qty) * parseFloat(item.price);
+    }, 0);
+    const avgPrice = value / totalQty;
+    const profitLoss =
+      margin.investmentStart * margin.totalBought -
+      avgPrice * margin.totalBought;
+
+    defaultMarginStats.profitLoss += profitLoss;
+    defaultMarginStats.totalCompleted++;
+    if (profitLoss > 0) defaultMarginStats.totalProfited++;
+    else defaultMarginStats.totalLoosed++;
+  } catch (error) {
+    console.log("error when trying to repay margin for " + coin, error);
+  }
+};
+
 export {
   getBinanceData,
   getAvgPrice,
@@ -349,4 +419,7 @@ export {
   getCoinSavingPosition,
   purchaseSaving,
   redeemSaving,
+  getAvgPrices,
+  borrowMargin,
+  repayMargin,
 };

@@ -3,17 +3,15 @@ import type { ExchangeRates } from "../../../common/types/interfaces";
 import { getUserDBData, updateUserDBData } from "../foreign_api/dataDB";
 import { getAvgPrice, getBinanceData } from "../foreign_api/dataBinance";
 
-// import checkAndUpdateCardHistory from "../calc/user/checkUpdateCardHistory";
-import processTrades from "../calc/user/processTrades";
-import processSpot from "../calc/user/processSpot";
-import processAccountHistory from "../calc/user/processAccountHistory";
-import updatePriceValues from "../calc/user/updatePriceValues";
-import processStaking from "../calc/user/processStaking";
+// import checkAndUpdateCardHistory from "../calc/user/portfolio/checkUpdateCardHistory";
+import processTrades from "../calc/user/portfolio/processTrades";
+import processSpot from "../calc/user/portfolio/processSpot";
+import processAccountHistory from "../calc/user/portfolio/processAccountHistory";
+import updatePriceValues from "../calc/user/portfolio/updatePriceValues";
+import processStaking from "../calc/user/portfolio/processStaking";
 import sizeof from "object-sizeof";
-import updateStakingPositions from "../calc/user/updateStakingPositions";
-
 import moment from "moment";
-import calculateSyncData from "../calc/user/calculateSyncData";
+import calculateSyncData from "../calc/user/portfolio/calculateSyncData";
 import resetData from "../utils/resetData";
 
 const exchangeRatesUSDT: ExchangeRates = {};

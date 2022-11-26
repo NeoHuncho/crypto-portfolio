@@ -103,4 +103,30 @@ interface CoinsFetchDataTicker {
   target_coin_id: string;
 }
 
+export interface IMarginPositions {
+  [key: string]: IMarginPosition;
+}
+export interface IMarginPosition {
+  prices: number[];
+  change: number;
+  toBeBought: boolean;
+  toBeSold: boolean;
+  investmentStart: number;
+  totalBought: number;
+
+  maxGain: number;
+}
+
+export interface ILog {
+  timeElapsed: number;
+}
+
+export interface IMarginStats {
+  profitLoss: number;
+  totalCompleted: number;
+  totalProfited: number;
+  totalLoosed: number;
+  dailyProfitLoss: { [key: string]: number };
+}
+
 type TrustScore = "green" | "yellow" | "red";

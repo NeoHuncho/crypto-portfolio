@@ -1,5 +1,8 @@
-import { getAvgPrice } from "../../foreign_api/dataBinance";
-import type { Data, ExchangeRates } from "../../../../common/types/interfaces";
+import { getAvgPrice } from "../../../foreign_api/dataBinance";
+import type {
+  Data,
+  ExchangeRates,
+} from "../../../../../common/types/interfaces";
 
 const updatePriceValues = async (
   data: Data,
@@ -69,7 +72,7 @@ const updatePriceValues = async (
         return item;
       });
     } catch (error) {
-      console.log( "error in updatePriceValues for " + key + ": " + error);
+      console.log("error in updatePriceValues for " + key + ": " + error);
     }
   }
 

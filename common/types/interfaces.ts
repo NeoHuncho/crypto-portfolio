@@ -252,3 +252,8 @@ export interface TotalValue {
   valuePast: number;
   valuePresent: number;
 }
+
+export interface MarginData {
+  coins: MarginCoins;
+}
+export type MarginCoins = string[];

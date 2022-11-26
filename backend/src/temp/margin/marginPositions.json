@@ -1,0 +1,39 @@
+{
+  "MANA": {
+    "prices": [],
+    "change": 0,
+    "toBeBought": false,
+    "bought": false,
+    "investmentStart": 0,
+    "investmentGain": 0,
+    "maxGain": 0
+  },
+
+  "SAND": {
+    "prices": [],
+    "change": 0,
+    "toBeBought": false,
+    "bought": false,
+    "investmentStart": 0,
+    "investmentGain": 0,
+    "maxGain": 0
+  },
+  "SHIB": {
+    "prices": [],
+    "change": 0,
+    "toBeBought": false,
+    "bought": false,
+    "investmentStart": 0,
+    "investmentGain": 0,
+    "maxGain": 0
+  },
+  "DOGE": {
+    "prices": [],
+    "change": 0,
+    "toBeBought": false,
+    "bought": false,
+    "investmentStart": 0,
+    "investmentGain": 0,
+    "maxGain": 0
+  }
+}
